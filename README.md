@@ -8,10 +8,10 @@
 <a href="https://github.com/Sithuwa/SITHUWA-MD/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/Sithuwa/SITHUWA-MD?label=Watchers&color=blue&style=flat-square"></a>
 <a href="https://github.com/Sithuwa/SITHUWA-MD"><img title="Size" src="https://img.shields.io/github/repo-size/Sithuwa/SITHUWA-MD?style=flat-square&color=green"></a>
 ---
-<p align="center"><img src="https://profile-counter.glitch.me/SITHUWA-MD/count.svg" /></p>
----
-          <a href="https://m.facebook.com/100049977400815/"><img alt="FaceBook" src="https://img.shields.io/badge/-FaceBook%20-lightgrey?style=for-the-badge&logo=facebook&logoColor=blue"/></a>
-          <a href="https://youtube.com/channel/UCEgTWUb2UBR1DCEopugA9Zg"><img alt="YouTube" src="https://img.shields.io/badge/-YouTube%20-lightgrey?style=for-the-badge&logo=YouTube&logoColor=red"/></a>
+<a align="center"><img src="https://profile-counter.glitch.me/SITHUWA-MD/count.svg" /></a>
+
+<a href="https://m.facebook.com/100049977400815/"><img alt="FaceBook" src="https://img.shields.io/badge/-FaceBook%20-lightgrey?style=for-the-badge&logo=facebook&logoColor=blue"/></a>
+<a href="https://youtube.com/channel/UCEgTWUb2UBR1DCEopugA9Zg"><img alt="YouTube" src="https://img.shields.io/badge/-YouTube%20-lightgrey?style=for-the-badge&logo=YouTube&logoColor=red"/></a>
 
   
 ***
