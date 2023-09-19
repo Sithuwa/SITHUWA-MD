@@ -1,12 +1,12 @@
-<div align="center"><h1>🇱🇰 𝐒𝐈𝐓𝐇𝐔𝐖𝐀-𝐁𝐎𝐓-𝐌𝐃 🇱🇰</h1><a href="https://github.com/Sithuwa/SITHUWA-BOT-MD"><img src="https://telegra.ph/file/8f29a27dd91a19c21ae69.jpg" width="650" height="450"></a><h3>👻 Sithuwa-Md Is World Best Whatsapp Bot 👻</h3></div>
+<div align="center"><h1>🇱🇰 𝐒𝐈𝐓𝐇𝐔𝐖𝐀-𝐌𝐃 🇱🇰</h1><a href="https://github.com/Sithuwa/SITHUWA-BOT-MD"><img src="https://telegra.ph/file/8f29a27dd91a19c21ae69.jpg" width="650" height="450"></a><h3>👻 Sithuwa-Md Is World Best Whatsapp Bot 👻</h3></div>
 
 ***
 
-<a href="https://github.com/Sithuwa/SITHUWA-BOT-MD"><img title="Followers" src="https://img.shields.io/github/followers/Sithuwa?e=flat-square">
-<a href="https://github.com/Sithuwa/SITHUWA-BOT-MD/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/Sithuwa/SITHUWA-BOT-MD?color=blue&style=flat-square"></a>
-<a href="https://github.com/Sithuwa/SITHUWA-BOT-MD/network/members"><img title="Forks" src="https://img.shields.io/github/forks/Sithuwa/SITHUWA-BOT-MD?color=red&style=flat-square"></a>
-<a href="https://github.com/Sithuwa/SITHUWA-BOT-MD/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/Sithuwa/SITHUWA-BOT-MD?label=Watchers&color=blue&style=flat-square"></a>
-<a href="https://github.com/Sithuwa/SITHUWA-BOT-MD"><img title="Size" src="https://img.shields.io/github/repo-size/Sithuwa/SITHUWA-BOT-MD?style=flat-square&color=green"></a>
+<a href="https://github.com/Sithuwa/SITHUWA-MD"><img title="Followers" src="https://img.shields.io/github/followers/Sithuwa?e=flat-square">
+<a href="https://github.com/Sithuwa/SITHUWA-MD/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/Sithuwa/SITHUWA-MD?color=blue&style=flat-square"></a>
+<a href="https://github.com/Sithuwa/SITHUWA-MD/network/members"><img title="Forks" src="https://img.shields.io/github/forks/Sithuwa/SITHUWA-MD?color=red&style=flat-square"></a>
+<a href="https://github.com/Sithuwa/SITHUWA-MD/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/Sithuwa/SITHUWA-MD?label=Watchers&color=blue&style=flat-square"></a>
+<a href="https://github.com/Sithuwa/SITHUWA-MD"><img title="Size" src="https://img.shields.io/github/repo-size/Sithuwa/SITHUWA-MD?style=flat-square&color=green"></a>
 ---
 <a href="https://m.facebook.com/100049977400815/"><img alt="FaceBook" src="https://img.shields.io/badge/-FaceBook%20-lightgrey?style=for-the-badge&logo=facebook&logoColor=blue"/></a>
 <a href="https://youtube.com/channel/UCEgTWUb2UBR1DCEopugA9Zg"><img alt="YouTube" src="https://img.shields.io/badge/-YouTube%20-lightgrey?style=for-the-badge&logo=YouTube&logoColor=red"/></a>
