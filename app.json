@@ -1,8 +1,8 @@
 {
   "name": "SITHUWA-MD",
   "description": "A Whatsapp md bot built in NodeJs to make experience better",
-  "logo": "https://telegra.ph/file/8f29a27dd91a19c21ae69.jpg",
-  "keywords": ["nodejs", "bot", "whatsapp bot", "Zero-Two", "Sithuwa Bot", "sithuwa","SITHUWA-MD","theme bot","multi device","baileys","Sithuwa tv"],
+  "logo": "https://telegra.ph/file/90ecbecc7dcfb93ede0fa.jpg",
+  "keywords": ["nodejs", "bot", "whatsapp bot", "Zero-Two", "Sithuwa Bot", "sithuwa","SITHUWA-MD","theme bot","multi device","baileys","Sithum Kalhara"],
   "success_url": "/",
   "stack": "container",
 "env": {
@@ -73,7 +73,7 @@
        "value": "94761516805"
   },
    "SESSION_ID": {
-    "description": "Please put your Session ID that u scanned from the bot.... If u haven't scanned go to BLADE-MD Github Repo U can find the Scanner Option"
+    "description": "Please put your Session ID that u scanned from the bot.... If u haven't scanned go to SITHUWA-MD Github Repo U can find the Scanner Option"
   },
     "OPENAI_API_KEY": {
     "description": "Please put your OPENAI api key here.Get it from beta.openai.com(optional if u don't wan't then don't put it ",
@@ -85,7 +85,7 @@
     "value": "mongodb+srv://SithumKalhara:97531@cluster0.iva7dbo.mongodb.net/?retryWrites=true&w=majority"
   },
     "THEME": {
-    "description": "Put the theme name you want to use. Avilable themes are GOJO,blade-md,NEZUKO,LUFFY,GOKU and many more..",
+    "description": "Put the theme name you want to use. Avilable theme are sithuwa-md.(AVOID CHANGING)",
      "value": "sithuwa-md"
   },
     "WORKTYPE": {
