@@ -22,7 +22,7 @@
 
 ## Deploy කිරීමට පහත බටන් එක ක්ලික් කරන්න.
   
-<div align="left"><a href="https://dashboard.heroku.com/new?template=https://github.com/Sithuwa/SITHUWA-BOT-MD"><img src="https://www.herokucdn.com/deploy/button.svg" width="150" ></a></div>
+<div align="left"><a href="https://dashboard.heroku.com/new?template=https://github.com/Sithuwa/SITHUWA-MD"><img src="https://www.herokucdn.com/deploy/button.svg" width="150" ></a></div>
   
 # Developers
   
