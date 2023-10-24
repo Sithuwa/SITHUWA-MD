@@ -4,8 +4,8 @@
  You may not use this file except in compliance with the License.
  It is supplied in the hope that it may be useful.
  * @project_name : Secktor-Md By Suhail Tech
- * @author : SuhailTech <https://www.youtube.com/c/SuhailTechInfo>
- * @description : Secktor Bot ,A Multi-functional whatsapp bot.
+ * @author : SITHUWA-MD <https://www.youtube.com/channel/UCVwddJDhIDa4FaWM717xaAQ>
+ * @description : Sithuwa Bot ,A Multi-functional whatsapp bot.
  * @version 0.0.6
  **/
 const axios = require('axios');
@@ -45,7 +45,7 @@ cmd({
         if(text==='alls') 
         { 
          await plugindb.collection.drop() ; 
-         return citel.reply('Deleted all plugins from Secktor.') ;  
+         return citel.reply('Deleted all plugins from SITHUWA-MD.') ;  
         }
  try 
  {
