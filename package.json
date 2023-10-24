@@ -68,11 +68,11 @@
                     },
                  "repository": {
                  "type": "git",
-                 "url": "git+https://github.com/Sithuwa/BLADE-MD.git"
+                 "url": "git+https://github.com/Sithuwa/SITHUWA-MD.git"
                   },
                  "bugs": {
-                 "url": "https://github.com/Sithuwa/BLADE-MD/issues"
+                 "url": "https://github.com/Sithuwa/SITHUWA-MD/issues"
                   },
-                 "homepage": "https://github.com/Sithuwa/BLADE-MD#readme"
+                 "homepage": "https://github.com/Sithuwa/SITHUWA-MD#readme"
                   }
  
