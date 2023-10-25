@@ -137,8 +137,8 @@ cmd({
 *⭐ Total Stars:* ${data.stargazers_count} stars
 *🍽️ Forks:* ${data.forks_count} forks
 *🍁 Repo:* https://github.com/Sithuwa/SITHUWA-MD
-*Group:* https://chat.whatsapp.com/FgR3wIn7WktEPLlk2OiqIE
-*public grp:* https://chat.whatsapp.com/FgR3wIn7WktEPLlk2OiqIE
+*Group:* https://chat.whatsapp.com/IZpUGOxDi9vEogXXyY9Mpi
+*public grp:* https://chat.whatsapp.com/IZpUGOxDi9vEogXXyY9Mpi
 *scan Qr:* https://replit.com/@SithumKalhara/SITHUWA-MD
 *youtube tt:* https://www.youtube.com/channel/UCVwddJDhIDa4FaWM717xaAQ
 *Deploy Your Own:*-
