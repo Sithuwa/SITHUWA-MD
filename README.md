@@ -26,13 +26,10 @@
   
 # Developers
 
-| <a href="https://www.youtube.com/channel/UCVwddJDhIDa4FaWM717xaAQ"><img src="https://telegra.ph/file/e76957eb944d94553a0c5.jpg" width=80 height=80></a> |
+| <a href="https://github.com/Sithuwa"><img src="https://telegra.ph/file/e76957eb944d94553a0c5.jpg" width=100 height=100></a> |
 
-| **[SITHUM KALHARA](https://github.com/Sithuwa)**</br>Founder & Developer</br>*[Sithum Kalhara]* |
+| **[SITHUWA-MD](https://www.youtube.com/channel/UCVwddJDhIDa4FaWM717xaAQ)**</br>Founder & Developer</br>*[Sithum Kalhara]* |
   
-◉ @Sithum Kalhara
-
-◉ @Sathira Thamuditha
 
 ### Thanks To
   
