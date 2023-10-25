@@ -5,30 +5,20 @@
 //                                ＷＨＡＴＳＡＰＰ ＢＯＴ－ＭＤ ＢＥＴＡ                                   //
 //                                                                                                      // 
 //                                         Ｖ：１．０．１                                                // 
-//                                                                                                      // 
-//            ███████╗██╗   ██╗██╗  ██╗ █████╗ ██╗██╗         ███╗   ███╗██████╗                        //
-//            ██╔════╝██║   ██║██║  ██║██╔══██╗██║██║         ████╗ ████║██╔══██╗                       //
-//            ███████╗██║   ██║███████║███████║██║██║         ██╔████╔██║██║  ██║                       //
-//            ╚════██║██║   ██║██╔══██║██╔══██║██║██║         ██║╚██╔╝██║██║  ██║                       //
-//            ███████║╚██████╔╝██║  ██║██║  ██║██║███████╗    ██║ ╚═╝ ██║██████╔╝                       //
-//            ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚══════╝    ╚═╝     ╚═╝╚═════╝                        //
-//                                                                                                      //
-//                                                                                                      //
-//                                                                                                      //
-//══════════════════════════════════════════════════════════════════════════════════════════════════════//
+//                                                                                           ══════════════════════════════════════════════════════════════════════════════════════════════════════//
 
 CURRENTLY RUNNING ON BETA VERSION!!
 *
-   * @project_name : sᴜʜᴀɪʟ-ᴍᴅ
-   * @author : Suhail Tech Info
-   * @youtube : https://www.youtube.com/c/@SuhailTechInfo0
-   * @description : Suhail-Md ,A Multi-functional whatsapp user bot.
+   * @project_name : ꜱɪᴛʜᴜᴡᴀ-ᴍᴅ
+   * @author : Sithuwa Tech Info
+   * @youtube : https://www.youtube.com/c/@SITHUWA-MD
+   * @description : SITHUWA-Md ,A Multi-functional whatsapp user bot.
    * @version 1.0.1
 *
    * Licensed under the  GPL-3.0 License;
 * 
    * Created By Suhail Tech Info.
-   * © 2023 Suhail-Md.
+   * © 2023 Sithuwa-Md.
 * 
    * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
    * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -143,7 +133,6 @@ async(Void, citel, text) => {
     await Create_Url(Void, citel , 'wanted'); 
 })
 //=============================================================================
-
 
 
 
