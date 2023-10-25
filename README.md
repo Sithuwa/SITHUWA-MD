@@ -25,11 +25,11 @@
 <div align="left"><a href="https://dashboard.heroku.com/new?template=https://github.com/Sithuwa/SITHUWA-MD"><img src="https://www.herokucdn.com/deploy/button.svg" width="150" ></a></div>
   
 # Developers
----
-| <a href="https://github.com/Sithuwa"><img src="https://telegra.ph/file/e76957eb944d94553a0c5.jpg" width=100 height=100> </a> |
----
-| **[SITHUWA-MD](https://www.youtube.com/channel/UCVwddJDhIDa4FaWM717xaAQ)**</br>Founder & Developer</br>*[Sithum Kalhara]* |
----
+
+|<a href="https://github.com/Sithuwa"><img src="https://telegra.ph/file/e76957eb944d94553a0c5.jpg" width=100 height=100> </a>|
+
+|**[SITHUWA-MD](https://www.youtube.com/channel/UCVwddJDhIDa4FaWM717xaAQ)**</br>Founder & Developer</br>*[Sithum Kalhara]*|
+
   
 
 ### Thanks To
