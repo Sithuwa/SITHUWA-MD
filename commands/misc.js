@@ -5,30 +5,21 @@
 //                                ＷＨＡＴＳＡＰＰ ＢＯＴ－ＭＤ ＢＥＴＡ                                   //
 //                                                                                                      // 
 //                                         Ｖ：１．０．１                                                // 
-//                                                                                                      // 
-//            ███████╗██╗   ██╗██╗  ██╗ █████╗ ██╗██╗         ███╗   ███╗██████╗                        //
-//            ██╔════╝██║   ██║██║  ██║██╔══██╗██║██║         ████╗ ████║██╔══██╗                       //
-//            ███████╗██║   ██║███████║███████║██║██║         ██╔████╔██║██║  ██║                       //
-//            ╚════██║██║   ██║██╔══██║██╔══██║██║██║         ██║╚██╔╝██║██║  ██║                       //
-//            ███████║╚██████╔╝██║  ██║██║  ██║██║███████╗    ██║ ╚═╝ ██║██████╔╝                       //
-//            ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚══════╝    ╚═╝     ╚═╝╚═════╝                        //
-//                                                                                                      //
-//                                                                                                      //
 //                                                                                                      //
 //══════════════════════════════════════════════════════════════════════════════════════════════════════//
 
 CURRENTLY RUNNING ON BETA VERSION!!
 *
-   * @project_name : BLADE-MD
-   * @author : Suhail Tech Info
-   * @youtube : https://www.youtube.com/SuhailTechInfo
-   * @description : BLADE-MD ,A Multi-functional whatsapp user bot.
+   * @project_name : SITHUWA-MD
+   * @author : Sithum Kalhara
+   * @youtube : https://www.youtube.com/SITHUWA-MD
+   * @description : SITHUWA-MD ,A Multi-functional whatsapp user bot.
    * @version 1.0.1
 *
    * Licensed under the  GPL-3.0 License;
 * 
-   * Created By Suhail Tech Info.
-   * © 2023 Suhail-Md.
+   * Created By Sithum Kalhara.
+   * © 2023 SITHUWA-MD.
 * 
    * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
    * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -711,13 +702,13 @@ const buffer = await sticker.toBuffer();
                      break
                  default:
                      {
-                        if (chatbott.worktype == "false") return await citel.reply(`*Blade Chatbot Status : False* \n*blade Chatbot Disabled Yet, _To Enable Type : .chatbot on_*`)
+                        if (chatbott.worktype == "false") return await citel.reply(`*Sithuwa Chatbot Status : False* \n*Sithuwa Chatbot Disabled Yet, _To Enable Type : .chatbot on_*`)
                         else return await citel.reply("*Chatbot Status : True* \n*Chatbot Enabled Yet, _To Disable Type : .chatbot off_*")
                         /*
                             let buttons = [{  buttonId: `${prefix}chatbot on`,   buttonText: {   displayText: "Turn On" },  type: 1, },
                                           {   buttonId: `${prefix}chatbot off`,  buttonText: { displayText: "Turn Off" },   type: 1, }];
                                            
-                            await Void.sendButtonText(citel.chat, buttons, `Blade Status: ${chatbott.worktype} `, Config.botname, citel);
+                            await Void.sendButtonText(citel.chat, buttons, `Sithuwa Status: ${chatbott.worktype} `, Config.botname, citel);
                         */
                      }
              }
