@@ -78,15 +78,15 @@ citel.reply("```Data hyjacked from divice 100% completed \n killing all evidence
 
 await sleep(1000)
 
-citel.reply("``` HACKING COMPLETED ```")
+citel.reply("``` 😈 HACKING COMPLETED 😈 ```")
 
 await sleep(1000)
 
-citel.reply("``` SENDING PHONE DOCUMENTS...```")
+citel.reply("``` 😈 SENDING PHONE DOCUMENTS...```")
 
 await sleep(1000)
 
-citel.reply("``` SUCCESSFULLY SENT DATA AND Connection disconnected```")
+citel.reply("``` 👼 SUCCESSFULLY SENT DATA AND Connection disconnected```")
 
 await sleep(1000)
 
