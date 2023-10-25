@@ -26,6 +26,8 @@
   
 # Developers
 
+| <a href="https://amdaniwasa.com"><img src="https://avatars.githubusercontent.com/u/83172207?v=4" width=80 height=80></a> |
+
 | **[Achintha Bandara](https://github.com/BlackAmda)**</br>Founder & Developer</br>*[Black Amda]* |
   
 ◉ @Sithum Kalhara
