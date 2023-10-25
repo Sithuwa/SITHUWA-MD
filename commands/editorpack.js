@@ -10,14 +10,14 @@
 CURRENTLY RUNNING ON BETA VERSION!!
 *
    * @project_name : ꜱɪᴛʜᴜᴡᴀ-ᴍᴅ
-   * @author : Sithuwa Tech Info
+   * @author : Sithuwa
    * @youtube : https://www.youtube.com/c/@SITHUWA-MD
    * @description : SITHUWA-Md ,A Multi-functional whatsapp user bot.
    * @version 1.0.1
 *
    * Licensed under the  GPL-3.0 License;
 * 
-   * Created By Suhail Tech Info.
+   * Created By Sithum Kalhara.
    * © 2023 Sithuwa-Md.
 * 
    * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
