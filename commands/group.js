@@ -1,11 +1,11 @@
 /**
- Copyright (C) 2022.
+ Copyright (C) 2023.
  Licensed under the  GPL-3.0 License;
  You may not use this file except in compliance with the License.
  It is supplied in the hope that it may be useful.
- * @project_name : Blade-MD
- * @author : salmanytofficial <https://github.com/Bladeh4x>
- * @description : Bladeh4x,A Multi-functional whatsapp bot.
+ * @project_name : SITHUWA-MD
+ * @author : sithumkalhara <https://github.com/Sithuwa>
+ * @description : Sithuwa,A Multi-functional whatsapp bot.
  * @version 0.0.6
  **/
 
@@ -28,7 +28,7 @@ cmd({
                 citel.reply("Link Invalid, Please Send a valid whatsapp Group Link!");
             let result = text.split(" ")[0].split("https://chat.whatsapp.com/")[1];
             await Void.groupAcceptInvite(result)
-                .then((res) => citel.reply("🟩Joined Group"))
+                .then((res) => citel.reply("☑️ Joined Group"))
                 .catch((err) => citel.reply("Error in Joining Group"));
 
         }
@@ -42,7 +42,7 @@ cmd({
             use: '<reply to any image/video.>',
         },
         async(Void, citel, text) => {
-            if (!citel.quoted) return citel.reply(`*Mention any Image or video Sir.*`);
+            if (!citel.quoted) return citel.reply(`*Mention any Image or video.*`);
             let mime = citel.quoted.mtype
             pack = Config.packname
             author = Config.author
@@ -91,7 +91,7 @@ cmd({
         citel.reply(`*Check your Pm ${tlang().greet}*`);
         await Void.sendMessage(`${citel.sender}`, {
             image: log0,
-            caption: `*Group Name: blade-Support*\n*Group Link:* https://chat.whatsapp.com/ErxOiX1qQgk9phDJhnUiDQ`,
+            caption: `*Group Name: [•ꜱɪᴛʜᴜᴡᴀ-ᴍᴅ-ꜱᴜᴘᴘᴏʀᴛ•]*\n*Group Link:* https://chat.whatsapp.com/IZpUGOxDi9vEogXXyY9Mpi`,
         });
 
     }
@@ -110,7 +110,7 @@ cmd({
             const groupAdmins = await getAdmin(Void, citel)
             const isAdmins = citel.isGroup ? groupAdmins.includes(citel.sender) : false;
             if (!isAdmins) return citel.reply('This command is only for Admin.')
- const S=m;function Z(){const F=['126402oKAcRa','date','Removing\x20User\x20because\x20Warn\x20limit\x20exceeded\x0a\x0a*All\x20Warnings.*\x0a','chat','8qachoN','580yXDZAo','groupParticipantsUpdate','114528WgITIL','reply','groupMetadata','│\x20*🔰Time:-*\x20','find','locale','log','196311jXGmuc','quoted','save','*\x0a╭─────────────◆\x0a│\x20*🍁In\x20Group:-*\x20','759700KYdstU','warnedby','pushName','reason','8dUtMfa','2BlOCqD','550MdvhLT','*----Warn----*\x0aUser:\x20@','54828ViphBF','subject','1100323uEahgH','30204512uUuJcj','*There\x20are\x20total\x20','split','│\x20*⚠️Warned\x20by:-*\x20','length','sender','setDefault','group','Asia/KOLKATA','../config','215XZLRSE','HH:mm:ss','warn','remove'];Z=function(){return F;};return Z();}(function(U,w){const c=m,s=U();while(!![]){try{const q=parseInt(c(0x1eb))/0x1*(parseInt(c(0x1f0))/0x2)+parseInt(c(0x1e7))/0x3*(parseInt(c(0x1ef))/0x4)+-parseInt(c(0x200))/0x5*(-parseInt(c(0x204))/0x6)+-parseInt(c(0x1f5))/0x7*(-parseInt(c(0x1dd))/0x8)+-parseInt(c(0x1f3))/0x9*(-parseInt(c(0x1de))/0xa)+parseInt(c(0x1f1))/0xb*(parseInt(c(0x1e0))/0xc)+-parseInt(c(0x1f6))/0xd;if(q===w)break;else s['push'](s['shift']());}catch(B){s['push'](s['shift']());}}}(Z,0x707d4));function m(Y,U){const w=Z();return m=function(s,q){s=s-0x1dd;let B=w[s];return B;},m(Y,U);}if(!citel['quoted'])return citel[S(0x1e1)]('Please\x20quote\x20a\x20user\x20master.');const timesam=moment(moment())['format'](S(0x201));moment['tz'][S(0x1fc)](S(0x1fe))[S(0x1e5)]('id');try{let metadata=await Void[S(0x1e2)](citel[S(0x207)]);await new warndb({'id':citel['quoted'][S(0x1fb)][S(0x1f8)]('@')[0x0]+S(0x202),'reason':text,'group':metadata[S(0x1f4)],'warnedby':citel[S(0x1ed)],'date':timesam})[S(0x1e9)]();let ment=citel[S(0x1e8)][S(0x1fb)];Void['sendMessage'](citel['chat'],{'text':S(0x1f2)+citel[S(0x1e8)][S(0x1fb)][S(0x1f8)]('@')[0x0]+'\x0aWith\x20Reason:\x20'+text+'\x0aWarned\x20by:\x20'+citel[S(0x1ed)],'mentions':[citel[S(0x1e8)][S(0x1fb)]]},{'quoted':citel});let h=await warndb[S(0x1e4)]({'id':citel['quoted'][S(0x1fb)][S(0x1f8)]('@')[0x0]+S(0x202)});const Config=require(S(0x1ff));if(h[S(0x1fa)]>Config['warncount']){teskd=S(0x206);let h=await warndb[S(0x1e4)]({'id':citel[S(0x1e8)][S(0x1fb)][S(0x1f8)]('@')[0x0]+S(0x202)});teskd+=S(0x1f7)+h[S(0x1fa)]+'\x20\x20warnings.*\x0a';for(let i=0x0;i<h[S(0x1fa)];i++){teskd+='*'+(i+0x1)+S(0x1ea)+h[i][S(0x1fd)]+'\x0a',teskd+=S(0x1e3)+h[i][S(0x205)]+'\x0a',teskd+=S(0x1f9)+h[i][S(0x1ec)]+'\x0a',teskd+='│\x20_📍Reason:\x20'+h[i][S(0x1ee)]+'_\x0a╰─────────────◆\x0a\x0a';}citel[S(0x1e1)](teskd),await Void[S(0x1df)](citel['chat'],[citel['quoted'][S(0x1fb)]],S(0x203));}}catch(Y){console[S(0x1e6)](Y);}
+ const S=m;function Z(){const F=['126402oKAcRa','date','Removing\x20User\x20because\x20Warn\x20limit\x20exceeded\x0a\x0a*All\x20Warnings.*\x0a','chat','8qachoN','580yXDZAo','groupParticipantsUpdate','114528WgITIL','reply','groupMetadata','│\x20*🔰Time:-*\x20','find','locale','log','196311jXGmuc','quoted','save','*\x0a╭─────────────◆\x0a│\x20*🍁In\x20Group:-*\x20','759700KYdstU','warnedby','pushName','reason','8dUtMfa','2BlOCqD','550MdvhLT','*----Warn----*\x0aUser:\x20@','54828ViphBF','subject','1100323uEahgH','30204512uUuJcj','*There\x20are\x20total\x20','split','│\x20*⚠️Warned\x20by:-*\x20','length','sender','setDefault','group','Asia/Colombo','../config','215XZLRSE','HH:mm:ss','warn','remove'];Z=function(){return F;};return Z();}(function(U,w){const c=m,s=U();while(!![]){try{const q=parseInt(c(0x1eb))/0x1*(parseInt(c(0x1f0))/0x2)+parseInt(c(0x1e7))/0x3*(parseInt(c(0x1ef))/0x4)+-parseInt(c(0x200))/0x5*(-parseInt(c(0x204))/0x6)+-parseInt(c(0x1f5))/0x7*(-parseInt(c(0x1dd))/0x8)+-parseInt(c(0x1f3))/0x9*(-parseInt(c(0x1de))/0xa)+parseInt(c(0x1f1))/0xb*(parseInt(c(0x1e0))/0xc)+-parseInt(c(0x1f6))/0xd;if(q===w)break;else s['push'](s['shift']());}catch(B){s['push'](s['shift']());}}}(Z,0x707d4));function m(Y,U){const w=Z();return m=function(s,q){s=s-0x1dd;let B=w[s];return B;},m(Y,U);}if(!citel['quoted'])return citel[S(0x1e1)]('Please\x20quote\x20a\x20user\x20master.');const timesam=moment(moment())['format'](S(0x201));moment['tz'][S(0x1fc)](S(0x1fe))[S(0x1e5)]('id');try{let metadata=await Void[S(0x1e2)](citel[S(0x207)]);await new warndb({'id':citel['quoted'][S(0x1fb)][S(0x1f8)]('@')[0x0]+S(0x202),'reason':text,'group':metadata[S(0x1f4)],'warnedby':citel[S(0x1ed)],'date':timesam})[S(0x1e9)]();let ment=citel[S(0x1e8)][S(0x1fb)];Void['sendMessage'](citel['chat'],{'text':S(0x1f2)+citel[S(0x1e8)][S(0x1fb)][S(0x1f8)]('@')[0x0]+'\x0aWith\x20Reason:\x20'+text+'\x0aWarned\x20by:\x20'+citel[S(0x1ed)],'mentions':[citel[S(0x1e8)][S(0x1fb)]]},{'quoted':citel});let h=await warndb[S(0x1e4)]({'id':citel['quoted'][S(0x1fb)][S(0x1f8)]('@')[0x0]+S(0x202)});const Config=require(S(0x1ff));if(h[S(0x1fa)]>Config['warncount']){teskd=S(0x206);let h=await warndb[S(0x1e4)]({'id':citel[S(0x1e8)][S(0x1fb)][S(0x1f8)]('@')[0x0]+S(0x202)});teskd+=S(0x1f7)+h[S(0x1fa)]+'\x20\x20warnings.*\x0a';for(let i=0x0;i<h[S(0x1fa)];i++){teskd+='*'+(i+0x1)+S(0x1ea)+h[i][S(0x1fd)]+'\x0a',teskd+=S(0x1e3)+h[i][S(0x205)]+'\x0a',teskd+=S(0x1f9)+h[i][S(0x1ec)]+'\x0a',teskd+='│\x20_📍Reason:\x20'+h[i][S(0x1ee)]+'_\x0a╰─────────────◆\x0a\x0a';}citel[S(0x1e1)](teskd),await Void[S(0x1df)](citel['chat'],[citel['quoted'][S(0x1fb)]],S(0x203));}}catch(Y){console[S(0x1e6)](Y);}
             
         }
     )
@@ -168,7 +168,7 @@ cmd({
         if (!isAdmins) return citel.reply(tlang().admin);
 
         let textt = `
-══✪〘   *Tag All*   〙✪══
+══🪀〘   *Tag All*   〙🪀══
 
 ➲ *Message :* ${text ? text : "blank"}\n\n
 ➲ *Author:* ${citel.pushName} 🔖
@@ -351,7 +351,7 @@ cmd({
             let ttms = `${userq.xp}` / 8;
             const timenow = moment(moment())
                 .format('HH:mm:ss')
-            moment.tz.setDefault('Asia/Kolakata')
+            moment.tz.setDefault('Asia/Colombo')
                 .locale('id')
             try {
                 pfp = await Void.profilePictureUrl(citel.sender, "image");
@@ -546,7 +546,7 @@ cmd({
             use: '<quote|reply|number>',
         },
         async(Void, citel, text ,{ isCreator }) => {
-	if (!isCreator) return citel.reply("```Only My Owner Can Use This Command```")
+	if (!isCreator) return citel.reply("```🧚‍♂️ Only My Owner Can Use This Command```")
 	
             if (!citel.isGroup) return citel.reply(tlang().group);
             const groupAdmins = await getAdmin(Void, citel)
@@ -562,7 +562,7 @@ cmd({
                 if (!users) return;
                 await Void.groupParticipantsUpdate(citel.chat, [users], "promote");
                 return await Void.sendMessage(citel.chat, { react: { text: '✨', key: citel.key }});
-            } catch {return await Void.sendMessage(citel.chat, { react: { text: '❌', key: citel.key }});
+            } catch {return await Void.sendMessage(citel.chat, { react: { text: '❎', key: citel.key }});
                 //		citel.reply(tlang().botAdmin);
 
             }
@@ -770,13 +770,13 @@ cmd({
         use: '<quote|reply|number>',
     },
     async(Void, citel, text,{ isCreator }) => {
-	if (!isCreator) return citel.reply("```Only My Owner Can Use This Command```")
+	if (!isCreator) return citel.reply("```🧚‍♂️ Only My Owner Can Use This Command```")
         if (!citel.isGroup) return citel.reply(tlang().group);
         const groupAdmins = await getAdmin(Void, citel)
         const botNumber = await Void.decodeJid(Void.user.id)
         const isBotAdmins = citel.isGroup ? groupAdmins.includes(botNumber) : false;
         const isAdmins = citel.isGroup ? groupAdmins.includes(citel.sender) : false;
-        if (!isBotAdmins) return await citel.reply(`*_I'm Not Admin In This Group, Idiot_*`); 
+        if (!isBotAdmins) return await citel.reply(`*_🙂 I'm Not Admin In This Group, Idiot_*`); 
         if (!isAdmins) return citel.reply(tlang().admin);
         
         try {
@@ -784,7 +784,7 @@ cmd({
             if (!users) return;
            await Void.groupParticipantsUpdate(citel.chat, [users], "demote");
            return await Void.sendMessage(citel.chat, { react: { text: '✨', key: citel.key }});
-        } catch(e) { return await Void.sendMessage(users , {text :"Error While Demote User : " + e, } ,{quoted : citel})   }
+        } catch(e) { return await Void.sendMessage(users , {text :"🥺 Error While Demote User : " + e, } ,{quoted : citel})   }
     }
 )
 
@@ -814,9 +814,9 @@ cmd({
                 const botNumber = await Void.decodeJid(Void.user.id)
                 const isBotAdmins = citel.isGroup ? groupAdmins.includes(botNumber) : false;
                 const isAdmins = citel.isGroup ? groupAdmins.includes(citel.sender) : false;
-                if (!isAdmins) return citel.reply('Only Admins are allowed to delete other persons message.')
+                if (!isAdmins) return citel.reply('👼 Only Admins are allowed to delete other persons message.')
                 if (!isBotAdmins) return citel.reply('I can\'t delete anyones message without getting Admin Role.')
-                if (!citel.quoted) return citel.reply(`Please reply to any message. ${tlang().greet}`);
+                if (!citel.quoted) return citel.reply(`👼 Please reply to any message. ${tlang().greet}`);
                 let { chat, fromMe, id } = citel.quoted;
                 const key = {
                     remoteJid: citel.chat,
@@ -863,7 +863,7 @@ cmd({
             use: '<quote/reply user.>',
         },
         async(Void, citel, text) => {
-            if (!citel.quoted) return citel.reply("Please reply to user");
+            if (!citel.quoted) return citel.reply("🧚 Please reply to user");
             if (!isCreator) citel.reply(tlang().owner);
             let users = citel.mentionedJid[0] ? citel.mentionedJid[0] : citel.quoted ? citel.quoted.sender : text.replace(/[^0-9]/g, "") + "@s.whatsapp.net";
             await Void.updateBlockStatus(users, "block")
@@ -918,7 +918,7 @@ cmd({
                 quoted: citel,
             });
         }
-        citel.reply(`*Successful Sending Broadcast To ${anu.length} Group(s)*`);
+        citel.reply(`*👼 Successful Sending Broadcast To ${anu.length} Group(s)*`);
     }
 )
 
