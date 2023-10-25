@@ -11,7 +11,7 @@
 <a align="center"><img src="https://profile-counter.glitch.me/SITHUWA-MD/count.svg" /></a>
 
 <a href="https://m.facebook.com/100049977400815/"><img alt="FaceBook" src="https://img.shields.io/badge/-FaceBook%20-lightgrey?style=for-the-badge&logo=facebook&logoColor=blue"/></a>
-<a href="https://youtube.com/channel/UCEgTWUb2UBR1DCEopugA9Zg"><img alt="YouTube" src="https://img.shields.io/badge/-YouTube%20-lightgrey?style=for-the-badge&logo=YouTube&logoColor=red"/></a>
+<a href="https://www.youtube.com/channel/UCVwddJDhIDa4FaWM717xaAQ"><img alt="YouTube" src="https://img.shields.io/badge/-YouTube%20-lightgrey?style=for-the-badge&logo=YouTube&logoColor=red"/></a>
 
   
 ***
@@ -26,9 +26,9 @@
   
 # Developers
 
-| <a href="https://amdaniwasa.com"><img src="https://avatars.githubusercontent.com/u/83172207?v=4" width=80 height=80></a> |
+| <a href="https://www.youtube.com/channel/UCVwddJDhIDa4FaWM717xaAQ"><img src="https://telegra.ph/file/e76957eb944d94553a0c5.jpg" width=80 height=80></a> |
 
-| **[Achintha Bandara](https://github.com/BlackAmda)**</br>Founder & Developer</br>*[Black Amda]* |
+| **[SITHUM KALHARA](https://github.com/Sithuwa)**</br>Founder & Developer</br>*[Sithum Kalhara]* |
   
 ◉ @Sithum Kalhara
 
