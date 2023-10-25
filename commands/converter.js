@@ -1,11 +1,11 @@
 /**
- Copyright (C) 2022.
+ Copyright (C) 2023.
  Licensed under the  GPL-3.0 License;
  You may not use this file except in compliance with the License.
  It is supplied in the hope that it may be useful.
- * @project_name : XLICON-MD
- * @author : salmanytofficial <https://github.com/salmanytofficial/XLICON-MD>
- * @description : XLICON,A Multi-functional whatsapp bot.
+ * @project_name : SITHUWA-MD
+ * @author : sithuwaofficial <https://github.com/Sithuwa/SITHUWA-MD>
+ * @description : SITHUWA,A Multi-functional whatsapp bot.
  * @version 0.0.6
  **/
 
@@ -160,16 +160,16 @@ cmd({
             pattern: "fancy",
             desc: "Makes stylish/fancy given text",
             category: "converter",
-            use: '56 Secktor',
-            react: "✅",
+            use: '56 Sithuwa',
+            react: "☑️",
             filename: __filename
         },
         async(Void, citel, text) => {
             if (isNaN(text.split(" ")[0]) || !text) {
                 let text = tiny(
-                    "Fancy text generator\n\nExample: .fancy 32 Secktor\n\n"
+                    "Fancy text generator\n\nExample: .fancy 32 SITHUWA\n\n"
                 );
-                listall("Secktor Bot").forEach((txt, num) => {
+                listall("SIthuwa Bot").forEach((txt, num) => {
                     text += `${(num += 1)} ${txt}\n`;
                 });
                 return await citel.reply(text);
@@ -186,7 +186,7 @@ cmd({
             desc: "Makes url tiny.",
             category: "converter",
             use: '<url>',
-            react: "✅",
+            react: "☑️",
             filename: __filename
         },
         async(Void, citel, text) => {
@@ -194,7 +194,7 @@ cmd({
             try {
                 link = text.split(" ")[0];
                 anu = await axios.get(`https://tinyurl.com/api-create.php?url=${link}`);
-                citel.reply(`*🛡️Your Shortened URL*\n\n${anu.data}`);
+                citel.reply(`*🛡Your Shortened URL*\n\n${anu.data}`);
             } catch (e) {
                 console.log(e);
             }
@@ -210,7 +210,7 @@ filename: __filename,
         use: '<reply to any image/video.>'
     },
     async(Void, citel, text) => {
-        if (!citel.quoted) return citel.reply(`*Reply To any Image or video Sir.*`);
+        if (!citel.quoted) return citel.reply(`*🧚 Reply To any Image or video.*`);
       //console.log("Quoted Data here : ",citel.quoted);
         let mime = citel.quoted.mtype
         pack = Config.packname
@@ -228,7 +228,7 @@ filename: __filename,
             });
             const buffer = await sticker.toBuffer();
             return Void.sendMessage(citel.chat, {sticker: buffer}, {quoted: citel });
-        }else return citel.reply("*Uhh,Please reply to any image*");
+        }else return citel.reply("*🧚‍♀️ Uhh,Please reply to any image*");
 
     }
 )
@@ -242,7 +242,7 @@ filename: __filename,
         use: '<reply to any image/video.>'
     },
     async(Void, citel, text) => {
-        if (!citel.quoted) return citel.reply(`*Reply To any Image or video Sir.*`);
+        if (!citel.quoted) return citel.reply(`*🧚 Reply To any Image or video Sir.*`);
       //console.log("Quoted Data here : ",citel.quoted);
         let mime = citel.quoted.mtype
         pack = Config.packname
@@ -260,7 +260,7 @@ filename: __filename,
             });
             const buffer = await sticker.toBuffer();
             return Void.sendMessage(citel.chat, {sticker: buffer}, {quoted: citel });
-        }else return citel.reply("*Uhh,Please reply to any image*");
+        }else return citel.reply("*🧚‍♀️ Uhh,Please reply to any image*");
 
     }
 )
@@ -274,7 +274,7 @@ filename: __filename,
         use: '<reply to any image/video.>'
     },
     async(Void, citel, text) => {
-        if (!citel.quoted) return citel.reply(`*Reply To any Image or video Sir.*`);
+        if (!citel.quoted) return citel.reply(`*🧚 Reply To any Image or video Sir.*`);
       //console.log("Quoted Data here : ",citel.quoted);
         let mime = citel.quoted.mtype
         pack = Config.packname
@@ -292,7 +292,7 @@ filename: __filename,
             });
             const buffer = await sticker.toBuffer();
             return Void.sendMessage(citel.chat, {sticker: buffer}, {quoted: citel });
-        }else return citel.reply("*Uhh,Please reply to any image*");
+        }else return citel.reply("*🧚‍♀️ Uhh,Please reply to any image*");
 
     }
 )
@@ -305,7 +305,7 @@ cmd({
     filename: __filename
 },
 async(Void, citel, text) => {
-    if (!citel.quoted) return citel.reply(`_Reply to Any Video_`);
+    if (!citel.quoted) return citel.reply(`_🧚 Reply to Any Video_`);
     let mime = citel.quoted.mtype
 if (mime =="audioMessage" || mime =="videoMessage")
 {
@@ -322,6 +322,6 @@ else return console.log('File deleted successfully in TOAUDIO MP3 at : ' , media
 });
 
 }
-else return citel.reply ("```Uhh Please, Reply To A video Message```")
+else return citel.reply ("```🧚‍♀️ Uhh Please, Reply To A video Message```")
 }
 )
