@@ -1,11 +1,11 @@
 /**
- Copyright (C) 2022.
+ Copyright (C) 2023.
  Licensed under the  GPL-3.0 License;
  You may not use this file except in compliance with the License.
  It is supplied in the hope that it may be useful.
- * @project_name : BLADE-MD
- * @author : salmanytofficial <https://github.com/Bladeh4x>
- * @description : BLADE, A Multi-functional whatsapp bot.
+ * @project_name : SITHUWA-MD
+ * @author : sithumkalhara <https://github.com/Sithuwa>
+ * @description : SITHUWA, A Multi-functional whatsapp bot.
  * @version 0.0.6
  **/
 
@@ -25,7 +25,7 @@ cmd({
     },
     async(Void, citel) => {
         if(!citel.quoted) return citel.reply('Please quote any text to get link.')
-        let data = await pastebin.createPaste(citel.quoted.text, "Secktor-Pastebin")
+        let data = await pastebin.createPaste(citel.quoted.text, "Sithuwa-Pastebin")
         citel.reply('_Here is your link._\n'+data)
     }
 );
@@ -132,17 +132,17 @@ cmd({
         filename: __filename,
     },
     async(Void, citel) => {
-        let { data } = await axios.get('https://api.github.com/repos/Bladeh4x/BLADE-MD')
+        let { data } = await axios.get('https://api.github.com/repos/Sithuwa/SITHUWA-MD')
         let cap = `Hey ${citel.pushName}\n
 *⭐ Total Stars:* ${data.stargazers_count} stars
 *🍽️ Forks:* ${data.forks_count} forks
-*🍁 Repo:* https://github.com/Bladeh4x/BLADE-MD
-*Group:* https://chat.whatsapp.com/ErxOiX1qQgk9phDJhnUiDQ
-*public grp:* https://chat.whatsapp.com/FLHNgJ19pZG48S7l6ucSn8
-*scan Qr:* https://replit.com/@Bladeh4x/BLADE-MD-V2-1?v=1
-*youtube tt:* https://youtu.be/YLG9OYERa5I?si=1e5cbrtKVc8aL5BI
+*🍁 Repo:* https://github.com/Sithuwa/SITHUWA-MD
+*Group:* https://chat.whatsapp.com/FgR3wIn7WktEPLlk2OiqIE
+*public grp:* https://chat.whatsapp.com/FgR3wIn7WktEPLlk2OiqIE
+*scan Qr:* https://replit.com/@SithumKalhara/SITHUWA-MD
+*youtube tt:* https://www.youtube.com/channel/UCVwddJDhIDa4FaWM717xaAQ
 *Deploy Your Own:*-
-https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FBladeh4x%2FBLADE-MD&template=https%3A%2F%2Fgithub.com%2FBladeh4x%2FBLADE-MD`
+https://dashboard.heroku.com/new?button-url=https://github.com/Sithuwa/SITHUWA-MD`
         let buttonMessaged = {
             image: { url: await botpic() },
             caption: cap,
@@ -150,7 +150,7 @@ https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FBladeh4x%
             headerType: 4,
             contextInfo: {
                 externalAdReply: {
-                    title: "Blade-Repo",
+                    title: "Sithuwa-Repo",
                     body: "Easy to Use",
                     thumbnail: log0,
                     mediaType: 4,
@@ -221,8 +221,8 @@ cmd({
 async(Void, citel,text,{isCreator}) => {
 
 if(!isCreator) return citel.reply(tlang().owner);
-let str="*All available themes in ʙʟᴀᴅᴇ-ᴍᴅ*"
-str+=`  \n1. GOJO\n2. SONIC-MD\n3. AYANOKOJI\n4. DEKU\n5. RENGOKU\n6. GENOS\n7. GABIMARU\n8. GOKU\n9. ERENJAEGER\n10. LUFFY\n11. NARUTO\n12. NEZUKO\n13. PARKER\n14. blade-md\n15. MAKIMA\n16. THOMAS\n17. PATRICK\n\n these are the themes of ʙʟᴀᴅᴇ-ᴍᴅ Userbot.\_Reply ${prefix}setvar THEME:ZEROTWO`
+let str="*All available themes in ꜱɪᴛʜᴜᴡᴀ-ᴍᴅ*"
+str+=`  \n1. blade-md\n15. PATRICK\n\n these are the themes of ꜱɪᴛʜᴜᴡᴀ-ᴍᴅ Userbot.\_Reply ${prefix}setvar THEME:sithuwa-md`
 return citel.reply(str)
     
 }
