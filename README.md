@@ -26,9 +26,7 @@
   
 # Developers
 
-|<a href="https://github.com/Sithuwa"><img src="https://telegra.ph/file/e76957eb944d94553a0c5.jpg" width=100 height=100> </a>||<a href="https://github.com/Sithuwa"><img src="https://telegra.ph/file/e76957eb944d94553a0c5.jpg" width=100 height=100> </a>|
-
-|**[SITHUWA-MD](https://www.youtube.com/channel/UCVwddJDhIDa4FaWM717xaAQ)**</br>Founder & Developer</br>*[Sithum Kalhara]* | **[SITHUWA-MD](https://www.youtube.com/channel/UCVwddJDhIDa4FaWM717xaAQ)**</br>Founder & Developer</br>*[Sithum Kalhara]* |
+|<a href="https://github.com/Sithuwa"><img src="https://telegra.ph/file/e76957eb944d94553a0c5.jpg" width=100 height=100> </a>|**[SITHUWA-MD](https://www.youtube.com/channel/UCVwddJDhIDa4FaWM717xaAQ)**</br>Founder & Developer</br>*[Sithum Kalhara]* |
 
   
 
