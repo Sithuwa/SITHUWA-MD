@@ -25,6 +25,8 @@
 <div align="left"><a href="https://dashboard.heroku.com/new?template=https://github.com/Sithuwa/SITHUWA-MD"><img src="https://www.herokucdn.com/deploy/button.svg" width="150" ></a></div>
   
 # Developers
+
+| **[Achintha Bandara](https://github.com/BlackAmda)**</br>Founder & Developer</br>*[Black Amda]* |
   
 ◉ @Sithum Kalhara
 
