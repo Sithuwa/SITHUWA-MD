@@ -26,9 +26,9 @@ y<div align="center"><h1>🧚‍♂️ 𝐒𝐈𝐓𝐇𝐔𝐖𝐀-𝐌𝐃 �
   
 # Developers
 
-|<a href="https://github.com/Sithuwa"><img src="https://telegra.ph/file/e76957eb944d94553a0c5.jpg" width=100 height=100> </a>||<a href="https://youtube.com/@GrapiX_studio_official?si=iYw7gfiFcKv0Eq3Q"><img src="https://telegra.ph/file/84b722a826f60dcf515df.jpg" width=100 height=100> </a>|
-|---||---|
-|*[SITHUWA-MD](https://www.youtube.com/channel/UCVwddJDhIDa4FaWM717xaAQ)*</br>Founder & Developer</br>*[Sithum Kalhara]*|*[GrapiX_studio_official](https://youtube.com/@GrapiX_studio_official?si=iYw7gfiFcKv0Eq3Q)*</br>Founder & Developer</br>*[Malidu Theekshana]*|
+| <a href="https://www.facebook.com/sithum.kalhara.7315?mibextid=ZbWKwL"><img src="https://telegra.ph/file/e76957eb944d94553a0c5.jpg" width=80 height=80></a> | <a href="https://youtube.com/@GrapiX_studio_official?si=iYw7gfiFcKv0Eq3Q"><img src="https://telegra.ph/file/84b722a826f60dcf515df.jpg" width=80 height=80></a> |
+|---|---|
+| **[Sithum Kalhara](https://github.com/Sithuwa)**</br>Founder & Developer</br>*[Sithum Kalhara]* | **[GrapiX_studio_official](https://youtube.com/@GrapiX_studio_official?si=iYw7gfiFcKv0Eq3Q)**</br>[Malidu Theekhana] |
 
   
 
