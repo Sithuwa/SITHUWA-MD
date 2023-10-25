@@ -22,7 +22,7 @@ async function convertAudioToBlackScreenVideo(audioPath, outputPath) {
     await exec(generateVideoCmd);
     const mergeCmd = `ffmpeg -i ./blackScreen.mp4 -i ${audioPath} -c:v copy -c:a aac -map 0:v:0 -map 1:a:0 ${outputPath}`;
     await exec(mergeCmd);
-    console.log('Audio converted to black screen video successfully!');
+    console.log('🧚‍♂️ Audio converted to black screen video successfully!');
     return {result : true}
   } catch (error) {  console.error('An error occurred:', error); return {result : false }}
 }
@@ -34,7 +34,7 @@ cmd({
         filename: __filename,
     },
 async(Void,citel,text)=>{
-if(!text) return await citel.reply("*Give Me Song Name to Delete From BGM*")
+if(!text) return await citel.reply("*🧚‍♀️ Give Me Song Name to Delete From BGM*")
  let bgmm= await bgms.findOne({ id:"3" }) || await new bgms({ id:"3"}).save();
 //text = text.split(' ')[0];
 if (bgmm.bgmArray.has(text)) {
