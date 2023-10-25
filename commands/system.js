@@ -3,9 +3,9 @@
  Licensed under the  GPL-3.0 License;
  You may not use this file except in compliance with the License.
  It is supplied in the hope that it may be useful.
- * @project_name : Secktor-Md By Suhail
- * @author : SuhailTechInfo <https://github.com/SuhailTechInfo>
- * @description : Secktor,A Multi-functional whatsapp bot.
+ * @project_name : Sithuwa-Md By Sithum Kalhara
+ * @author : SithumKqlhqra <https://github.com/Sithuwa>
+ * @description : Sithuwa,A Multi-functional whatsapp bot.
  * @version 0.0.6
  **/
 
@@ -80,9 +80,9 @@ cmd({
             desc: "image to url."
         },
         async(Void, citel, text) => {
-            if (!citel.quoted) return await citel.reply(`*Reply To Any Image/Video To Get Url*`)
+            if (!citel.quoted) return await citel.reply(`*🧚‍♀️ Reply To Any Image/Video To Get Url*`)
             let mime = citel.quoted.mtype
-            if(mime !='videoMessage' && mime !='imageMessage' ) return await citel.reply("Uhh Please, Reply To An Image/Video")
+            if(mime !='videoMessage' && mime !='imageMessage' ) return await citel.reply("🧚‍♂️ Uhh Please, Reply To An Image/Video")
             let media = await Void.downloadAndSaveMediaMessage(citel.quoted);
             let anu = await TelegraPh(media);
             await citel.reply(util.format(anu));
@@ -119,7 +119,7 @@ cmd({
         },
         async(Void, citel, text,{ isCreator }) => {
              if (!isCreator) return citel.reply(tlang().owner)
-             if(!text) return citel.reply("*Uhh PLease, Provide A Command to Run Heroku*")
+             if(!text) return citel.reply("*🧚 Uhh PLease, Provide A Command to Run Heroku*")
              const { exec } = require("child_process")
              exec(text, (err, stdout) => {
                      if (err) return citel.reply(`----${tlang().title}----\n\n` + err)
@@ -139,7 +139,7 @@ cmd({
         },
         async(Void, citel, text,{ isCreator }) => {
                if (!isCreator)  return citel.reply(tlang().owner)
-               if(!text) return citel.reply("*Uhh PLease, Provide A Query To Run Master*")
+               if(!text) return citel.reply("*🧚 Uhh PLease, Provide A Query To Run Master*")
                try {
                    let resultTest = eval('const a = async()=>{\n' + text + '\n}\na()');
                    if (typeof resultTest === "object") await citel.reply(JSON.stringify(resultTest));
