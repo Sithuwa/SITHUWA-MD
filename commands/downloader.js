@@ -147,7 +147,7 @@ cmd({
         },
 
         async(Void, citel, text) => {
- if(!text) return await citel.reply(`*Uhh Please, Provide me tiktok Video Url*\n*_Ex .tiktok https://www.tiktok.com/@dakwahmuezza/video/7150544062221749531_*`);
+ if(!text) return await citel.reply(`*Uhh Please, Provide me tiktok Video Url*\n*_Ex .tiktok https://www.tiktok.com*`);
  let txt = text ? text.split(" ")[0]:'';
  if (!/tiktok/.test(txt)) return await citel.send(`*Uhh Please, Give me Valid Tiktok Video Url!*`);
  const { status ,thumbnail, video, audio } = await tiktokdl(txt)
@@ -412,7 +412,7 @@ cmd({
             use: '<faded-Alan Walker>',
         },
         async(Void, citel, text) => {
-            if (!text) return citel.reply(`Example : ${prefix}video Back in black`)
+            if (!text) return citel.reply(`Example : ${prefix}video •ꜱɪᴛʜᴜᴡᴀ-ᴍᴅ•`)
             let yts = require("secktor-pack")
             let search = await yts(text)
 	    let i = search.all[1] ;
@@ -486,7 +486,7 @@ cmd({
         },
 async(Void, citel, text) => {
    const getRandom = (ext) => { return `${Math.floor(Math.random() * 10000)}${ext}`; };    
-   if (text.length == 0 && !citel.quoted) return citel.reply(`Give Song Name, Ex ${prefix}play back in black*`);
+   if (text.length == 0 && !citel.quoted) return citel.reply(`Give Song Name, Ex ${prefix}play •ꜱɪᴛʜᴜᴡᴀ-ᴍᴅ•*`);
    try {
             let urlYt = text;
             if(!text){ text=citel.quoted.text; }
@@ -567,7 +567,7 @@ cmd({
             use: '<ringtone name>',
         },
         async(Void, citel, text) => {
-            if (!text) return citel.send(`Example: ${prefix}ringtone back in black`)
+            if (!text) return citel.send(`Example: ${prefix}ringtone •ꜱɪᴛʜᴜᴡᴀ-ᴍᴅ•`)
 	    const {ringtone } = require('../lib/scraper')
             let anu = await ringtone(text)
         let buttonMessage = {
@@ -670,7 +670,7 @@ cmd({
                 let yts = require("secktor-pack")
                 let search = await yts(text);
                 let i = search.all[1] ;
-                let cap = "\t *---🧚 Yt Song Searched Data---*   \n\nTitle : " + i.title + "\nUrl : " + i.url +"\nDescription : " + i.timestamp +"\nViews : "+i.views +"\nUploaded : " +i.ago +"\nAuthor : "+i.author.name+"\n\n\nReply 1 To Video \nReply 2 To Audio" ;
+                let cap = "\t *---🧚 Yt Song Searching ꜱɪᴛʜᴜᴡᴀ-ᴍᴅ---*   \n\nTitle : " + i.title + "\nUrl : " + i.url +"\nDescription : " + i.timestamp +"\nViews : "+i.views +"\nUploaded : " +i.ago +"\nAuthor : "+i.author.name+"\n\n\nReply 1 To Video \nReply 2 To Audio" ;
                 Void.sendMessage(citel.chat,{image :{url : i.thumbnail}, caption :  cap });
            
            
