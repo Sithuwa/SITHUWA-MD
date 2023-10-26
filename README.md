@@ -37,8 +37,3 @@
 |---|---|
 | **[Sithum Kalhara](https://github.com/Sithuwa)**</br>Founder & Developer</br>*[Sithum Kalhara]* | **[GrapiX_studio_official](https://youtube.com/@GrapiX_studio_official?si=iYw7gfiFcKv0Eq3Q)**</br>[Malidu Theekhana] |
 
-### Thanks To
-  
-- [Yusuf Usta](https://github.com/Quiec) for [WhatsAsena](https://github.com/yusufusta/WhatsAsena)
-- [@adiwajshing](https://github.com/adiwajshing) for [Baileys](https://github.com/adiwajshing/Baileys)
-
