@@ -1,5 +1,9 @@
 <div align="center"><h1>🧚‍♂️ 𝐒𝐈𝐓𝐇𝐔𝐖𝐀-𝐌𝐃 🧚‍♂️</h1><a href="https://github.com/Sithuwa/SITHUWA-BOT-MD"><img src="https://telegra.ph/file/8f29a27dd91a19c21ae69.jpg" width="650" height="450"></a></div>
 
+<p align="center">
+  <a href="#"><img src="http://readme-typing-svg.herokuapp.com?color=d1fa02&center=true&vCenter=true&multiline=false&lines=SITHUWA+MD+WHATSAPP+BOT" alt="">
+</p>
+
 ***
 
 <a href="https://github.com/Sithuwa/SITHUWA-MD"><img title="Followers" src="https://img.shields.io/github/followers/Sithuwa?e=flat-square">
@@ -30,7 +34,11 @@
 |---|---|
 | **[Sithum Kalhara](https://github.com/Sithuwa)**</br>Founder & Developer</br>*[Sithum Kalhara]* | **[GrapiX_studio_official](https://youtube.com/@GrapiX_studio_official?si=iYw7gfiFcKv0Eq3Q)**</br>[Malidu Theekhana] |
 
-  
+***
+
+# 🧚‍♂️ SITHUWA-MD WHATSAPP BOT SUPPORT GROUP 🧚‍♂️
+
+🧚 [•ꜱɪᴛʜᴜᴡᴀ-ᴍᴅ-ꜱᴜᴘᴘᴏʀᴛ•](https://chat.whatsapp.com/IZpUGOxDi9vEogXXyY9Mpi)
 
 ### Thanks To
   
