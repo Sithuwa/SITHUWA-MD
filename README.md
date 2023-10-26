@@ -24,6 +24,8 @@
 
 <div align="left"><a href="https://replit.com/@SithuwaHack/SITHUWA-BOT-MD-V1?v=1"><img src="https://repl.it/badge/github/quiec/whatsasena" width="150" ></a></div>
 
+⚠️ if there any error please infrom it support group.  | මෙහිදී යම් ගැටලුවක් ඇති උවහොත් සහය සමූහය වෙත සම්බන්ධ වන්න.
+
 ## Deploy කිරීමට පහත බටන් එක ක්ලික් කරන්න.
   
 <div align="left"><a href="https://dashboard.heroku.com/new?template=https://github.com/Sithuwa/SITHUWA-MD"><img src="https://www.herokucdn.com/deploy/button.svg" width="150" ></a></div>
@@ -35,8 +37,6 @@
 | **[Sithum Kalhara](https://github.com/Sithuwa)**</br>Founder & Developer</br>*[Sithum Kalhara]* | **[GrapiX_studio_official](https://youtube.com/@GrapiX_studio_official?si=iYw7gfiFcKv0Eq3Q)**</br>[Malidu Theekhana] |
 
 ***
-
-#### 🧚‍♂️ SITHUWA-MD WHATSAPP BOT SUPPORT GROUP 🧚‍♂️
 
 🧚 [•ꜱɪᴛʜᴜᴡᴀ-ᴍᴅ-ꜱᴜᴘᴘᴏʀᴛ•](https://chat.whatsapp.com/IZpUGOxDi9vEogXXyY9Mpi)
 
