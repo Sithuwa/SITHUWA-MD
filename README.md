@@ -16,15 +16,18 @@
 
 <a href="https://m.facebook.com/100049977400815/"><img alt="FaceBook" src="https://img.shields.io/badge/-FaceBook%20-lightgrey?style=for-the-badge&logo=facebook&logoColor=blue"/></a>
 <a href="https://www.youtube.com/channel/UCVwddJDhIDa4FaWM717xaAQ"><img alt="YouTube" src="https://img.shields.io/badge/-YouTube%20-lightgrey?style=for-the-badge&logo=YouTube&logoColor=red"/></a>
+<a href="https://chat.whatsapp.com/IZpUGOxDi9vEogXXyY9Mpi"><img alt="Whatsapp" src="https://img.shields.io/badge/-Whatsapp%20-lightgrey?style=for-the-badge&logo=Whatsapp&logoColor=red"/></a>
 
   
 ***
 
-## QR කේතය ලබාගැනීමට පහත බටන් එක ක්ලික් කරන්න.
+## Click the button below to get the QR code.
+### QR කේතය ලබාගැනීමට පහත බටන් එක ක්ලික් කරන්න.
 
 <div align="left"><a href="https://replit.com/@SithuwaHack/SITHUWA-BOT-MD-V1?v=1"><img src="https://repl.it/badge/github/quiec/whatsasena" width="150" ></a></div>
 
-⚠️ if there any error please infrom it support group.  | මෙහිදී යම් ගැටලුවක් ඇති උවහොත් සහය සමූහය වෙත සම්බන්ධ වන්න.
+⚠️ if there any error please infrom it support group. 
+⚠️ මෙහිදී යම් ගැටලුවක් ඇති උවහොත් සහය සමූහය වෙත සම්බන්ධ වන්න.
 
 ## Deploy කිරීමට පහත බටන් එක ක්ලික් කරන්න.
   
