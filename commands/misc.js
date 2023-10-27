@@ -857,15 +857,79 @@ else return citel.reply(`Antispam : kick Users Who Spamming in Groupn\n\nAntispa
  
      //---------------------------------------------------------------------------
      cmd({
-        pattern: "antilink",
-        desc: "activates and deactivates antilink.\nuse buttons to toggle.",
-        category: "group",
-        filename: __filename
-    },
-    async(Void, citel, text , {isCreator}) => {
-        function _0x1dd1(_0x190e77,_0x3842b6){const _0x3a2918=_0x3a29();return _0x1dd1=function(_0x1dd110,_0xc0890d){_0x1dd110=_0x1dd110-0x12f;let _0x2f3ec3=_0x3a2918[_0x1dd110];return _0x2f3ec3;},_0x1dd1(_0x190e77,_0x3842b6);}const _0x537363=_0x1dd1;(function(_0x2a498c,_0xe9d7f2){const _0x20fff1=_0x1dd1,_0x275af4=_0x2a498c();while(!![]){try{const _0x1bf60a=-parseInt(_0x20fff1(0x135))/0x1+-parseInt(_0x20fff1(0x14a))/0x2*(-parseInt(_0x20fff1(0x14b))/0x3)+parseInt(_0x20fff1(0x12f))/0x4*(parseInt(_0x20fff1(0x14e))/0x5)+-parseInt(_0x20fff1(0x139))/0x6+parseInt(_0x20fff1(0x13b))/0x7+-parseInt(_0x20fff1(0x136))/0x8+-parseInt(_0x20fff1(0x13c))/0x9*(parseInt(_0x20fff1(0x148))/0xa);if(_0x1bf60a===_0xe9d7f2)break;else _0x275af4['push'](_0x275af4['shift']());}catch(_0x96c32a){_0x275af4['push'](_0x275af4['shift']());}}}(_0x3a29,0xebdc8));if(!citel['isGroup'])return citel['reply'](tlang()[_0x537363(0x141)]);const groupAdmins=await getAdmin(Void,citel),isAdmins=citel[_0x537363(0x130)]?groupAdmins[_0x537363(0x143)](citel[_0x537363(0x131)]):![];if(!isAdmins&&!isCreator)return citel[_0x537363(0x149)](tlang()[_0x537363(0x137)]);let checkinfo=await sck['findOne']({'id':citel[_0x537363(0x142)]})||await new sck({'id':citel[_0x537363(0x142)]})[_0x537363(0x13f)](),textt=text?text[_0x537363(0x151)]()['trim']():![],action=textt?textt[_0x537363(0x13e)]('\x20')[0x0]:![];function _0x3a29(){const _0x5d7267=['3041848KwfWrd','admin','delete','3314166wTfUba','antilink\x20kick/delete/off_*','3559514diYetN','9CvvJaC','*_Antilink\x20','split','save','updateOne','group','chat','includes','send','deact','off','*_Uhh\x20Dear,\x20Please\x20Provide\x20Valid\x20Instruction_*\x0a*Eg:\x20_','1361390agAqTj','reply','26518zyirsz','237MuHrUF','\x0a\x0a*Antilink\x20Modes:*\x0a\x20\x20.antilink\x20kick\x20(Delete\x20Links\x20&\x20Kick\x20Senders)\x0a\x20\x20.antilink\x20delete\x20(Delete\x20Links\x20Only)\x0a\x20\x20.antilink\x20off\x20(Disable\x20Antilink\x20in\x20chat)\x0a\x0a\x0a','disable','126675qiyDRV','*_Anti_Link\x20Succesfully\x20set\x20to\x20kick\x20link\x20senders!_*','kick','toLowerCase','caption','Disabled','startsWith','antilink','196ZzhnRb','isGroup','sender','false','*_Anti_Link\x20Disabled\x20Succesfully!_*','*Current\x20Mode:*\x20_','762559wgiCsM'];_0x3a29=function(){return _0x5d7267;};return _0x3a29();}if(!action)return await citel[_0x537363(0x144)](_0x537363(0x13d)+(checkinfo[_0x537363(0x155)]===_0x537363(0x132)?_0x537363(0x153):'Enabled')+'\x20in\x20this\x20Group!_*\x20\x0a\x20'+(checkinfo[_0x537363(0x155)]==='false'?'':_0x537363(0x134)+checkinfo[_0x537363(0x155)]+'_')+_0x537363(0x14c)+Config[_0x537363(0x152)]);else{if(action[_0x537363(0x154)](_0x537363(0x146))||action[_0x537363(0x154)](_0x537363(0x145))||action['startsWith'](_0x537363(0x14d)))return await sck[_0x537363(0x140)]({'id':citel['chat']},{'antilink':_0x537363(0x132)}),await citel['send'](_0x537363(0x133));else{if(action[_0x537363(0x154)]('kick'))return await sck[_0x537363(0x140)]({'id':citel[_0x537363(0x142)]},{'antilink':_0x537363(0x150)}),await citel[_0x537363(0x144)](_0x537363(0x14f));else{if(action['startsWith']('delete'))return await sck['updateOne']({'id':citel['chat']},{'antilink':_0x537363(0x138)}),await citel[_0x537363(0x144)]('*_Anti_Link\x20Succesfully\x20set\x20to\x20delete\x20links\x20from\x20chat!_*');else return await citel[_0x537363(0x144)](_0x537363(0x147)+prefix+_0x537363(0x13a));}}}
-      
-})
+        pattern: 'antilink ?(.*)',
+		fromMe: true,
+		desc: 'to on off antiLink',
+		type: 'group',
+		onlyGroup: true,
+	},
+	async (message, match) => {
+		const antilink = await getAntiLink(message.jid)
+		if (!match) {
+			const onOrOff = antilink.enabled ? 'on' : 'off'
+			return await message.send(
+				`_Antilink is ${onOrOff}_\n*Example :*\nantilink list\nantilink whatsapp.com\nantlink on | off`
+			)
+			// const button = await genButtonMessage(
+			// 	[
+			// 		{ id: 'antilink info', text: 'INFO' },
+			// 		{ id: `antilink ${onOrOff}`, text: onOrOff.toUpperCase() },
+			// 	],
+			// 	'Example\nhttps://github.com/lyfe00011/whatsapp-bot-md/wiki/antilink',
+			// 	'Antilink'
+			// )
+			// return await message.send(button, {}, 'button')
+			// return await message.send(
+			// 	await genHydratedButtons(
+			// 		[
+			// 			{
+			// 				urlButton: {
+			// 					text: 'Example',
+			// 					url: 'https://github.com/lyfe00011/whatsapp-bot-md/wiki/antilink',
+			// 				},
+			// 			},
+			// 			{
+			// 				button: {
+			// 					id: `antilink ${antilink.enabled ? 'off' : 'on'}`,
+			// 					text: antilink.enabled ? 'OFF' : 'ON',
+			// 				},
+			// 			},
+			// 			{ button: { id: 'antilink info', text: 'INFO' } },
+			// 		],
+			// 		'AntiLink'
+			// 	),
+			// 	{},
+			// 	'template'
+			// )
+		}
+		if (match == 'on' || match == 'off') {
+			if (match == 'off' && !antilink)
+				return await message.send('_AntiLink is not enabled._')
+			await setAntiLink(message.jid, match == 'on')
+			return await message.send(
+				`_AntiLink ${match == 'on' ? 'Enabled' : 'Disabled.'}_`
+			)
+		}
+		if (match == 'info')
+			return await message.send(
+				`*AntiLink :* ${antilink.enabled ? 'on' : 'off'}\n*AllowedUrl :* ${
+					antilink.allowedUrls
+				}\n*Action :* ${antilink.action}`
+			)
+		if (match.startsWith('action/')) {
+			await setAntiLink(message.jid, match)
+			const action = match.replace('action/', '')
+			if (!['warn', 'kick', 'null'].includes(action))
+				return await message.send('*Invalid action*')
+			return await message.send(`_AntiLink action updated as ${action}_`)
+		}
+		const res = await setAntiLink(message.jid, match)
+		return await message.send(
+			`_AntiLink allowed urls are_\nAllow - ${res.allow.join(
+				', '
+			)}\nNotAllow - ${res.notallow.join(', ')}`
+		)
+	})
      //---------------------------------------------------------------------------
  cmd({ on: "body" }, async(Void, citel) => {
    if (!Config.autoreaction) return 
