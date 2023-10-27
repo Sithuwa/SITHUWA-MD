@@ -821,7 +821,7 @@ async(Void, citel, text,{isCreator}) => {
 })   
 } // if Statements
      //---------------------------------------------------------------------------
- 
+ /*
  cmd({
              pattern: "antispam",
              desc: "Kick Spamers From Group.\nuse buttons to toggle.",
@@ -855,7 +855,7 @@ if (checkgroup.antispam == "true") return citel.reply(`Antispam : kick Users Who
 else return citel.reply(`Antispam : kick Users Who Spamming in Groupn\n\nAntispam is Disabled in this Group \n *_For Enablling Antispam : ${prefix}antispam on_*`);
          
  })
-
+ */
      //---------------------------------------------------------------------------
      cmd({
         pattern: "antilink",
