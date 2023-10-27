@@ -629,27 +629,66 @@ cmd({
             category: "group",
             filename: __filename,
         },
-        async(Void, citel, text) => {
-            if (!citel.isGroup) return citel.reply(tlang().group);
-            const groupAdmins = await getAdmin(Void, citel)
-            const botNumber = await Void.decodeJid(Void.user.id)
-            const isBotAdmins = citel.isGroup ? groupAdmins.includes(botNumber) : false;
-            const isAdmins = citel.isGroup ? groupAdmins.includes(citel.sender) : false;
-            if (!citel.isGroup) return citel.reply(tlang().group);
-            if (!isBotAdmins) return citel.reply(tlang().botAdmin);
-            if (!isAdmins) return citel.reply(tlang().admin);
-            if (text.split(" ")[0] === "close") {
-                await Void.groupSettingUpdate(citel.chat, "announcement")
-                    .then((res) => reply(`Group Chat Muted :)`))
-                    .catch((err) => console.log(err));
-            } else if (text.split(" ")[0] === "open") {
-                await Void.groupSettingUpdate(citel.chat, "not_announcement")
-                    .then((res) => reply(`Group Chat Unmuted :)`))
-                    .catch((err) => console.log(err));
-            } else {
+        async(Suhail, msg, text) => {
+            if (!msg.isGroup) return msg.reply(tlang().group);
+            const groupAdmins = await getAdmin(Suhail.bot, msg)
+            const botNumber = await Suhail.bot.decodeJid(Suhail.bot.user.id)
+            const isBotAdmins =  groupAdmins.includes(botNumber) || false;
+            const isAdmins =  groupAdmins.includes(msg.sender) ||  false;
+            if (!isBotAdmins) return msg.reply(tlang().botAdmin);
+            if (!isAdmins ) return msg.reply(tlang().admin);
+            let action = text.toLowerCase();
 
-                return citel.reply(`Group Mode:\n${prefix}group open- to open\n${prefix}group close- to close`);
+            if (action.startsWith("close") || action.startsWith("mute") ) {
+                await Suhail.bot.groupSettingUpdate(msg.chat, "announcement").then((res) => msg.reply(`*_Group Chat Muted!!!_*`)).catch((err) => msg.error(err));
+            } else if (text.toLowerCase().startsWith("open")||text.toLowerCase().startsWith("unmute") ){
+                await Suhail.bot.groupSettingUpdate(msg.chat, "not_announcement").then((res) => msg.reply(`*_Group Chat Unmuted!!!_*`)).catch((err) => msg.error(err));
             }
+else if( action.startsWith("detail") || action.startsWith("info") ){
+try{
+    const pp = await Suhail.bot.profilePictureUrl(msg.chat, 'image').catch(_ => THUMB_IMAGE) || THUMB_IMAGE;
+      
+    //groupAdmins = participants.filter(p => p.admin)
+    const listAdmin = groupAdmins.map((v, i) => `  ${i + 1}. wa.me/${v.split('@')[0]}`).join('\n')
+            console.log("listAdmin , " ,listAdmin )
+    const gcowner =  groupMetadata.owner || groupAdmins.find(p => p.admin === 'superadmin')?.id || msg.chat.split`-`[0] + '@s.whatsapp.net'
+
+    let ginfos = `
+      *「 INFO GROUP 」*
+*▢ ID :*
+   • ${groupMetadata.id}
+*▢ NAME :* 
+   • ${groupMetadata.subject}
+*▢ Members :*
+   • ${participants.length}
+*▢ Group Owner :*
+   • wa.me/${gcowner.split('@')[0]}
+*▢ Admins :*
+${listAdmin}
+*▢ Description :*
+   • ${groupMetadata.desc?.toString() || 'unknown'}
+   `
+   let Group = isMongodb ?  await sck.findOne({ id: msg.chat }) :false;
+if(Group){
+   ginfos += `*▢ 🪢 Extra Group Configuration :*";
+  • Group Nsfw :    ${Group.nsfw=='true'? '✅' : '❎'} 
+  • Antilink        :    ${Group.antilink=='true'? '✅' : '❎'}
+  • Economy      :    ${Group.economy=='true'? '✅' : '❎'}
+  • Events         :     ${Group.events=='true'? '✅' : '❎'}
+`.trim()
+    if(Group.events=='true'){
+        ginfos +="\n*▢ Wellcome Message :* \n  • "+Group.welcome;
+        ginfos +="\n\n*▢ Goodbye Message :* \n  • "+Group.goodbye; 
+    }
+}
+ try{ await Suhail.bot.sendMessage(msg.chat,{image:{url : pp ? pp : THUMB_IMAGE } , caption: ginfos } , {quoted:msg }) }catch(e){ return await msg.send(ginfos,{},"",msg),console.log("error in group info,\n"  , e)   }
+
+}catch(e){return await msg.error(`${e}\ncmdName: Group info`),console.log("error in group info,\n"  , e) }
+  
+}else return await msg.send(`*_Uhh Dear Give me Query From Bellow Options_*\n_1:- .group Mute_\n_2:- .group Unmute_\n_3:- .group Info_`)
+    //  let buttons = [{ buttonId: `${prefix}group open`, buttonText: { displayText: "📍Unmute",},type: 1,},{buttonId: `${prefix}group close`,buttonText: {displayText: "📍Mute",},type: 1, },];     await Suhail.bot.sendButtonText(msg.chat,buttons,`Group Mode`, Suhail.bot.user.name, msg);
+           
+
         }
     )
     //---------------------------------------------------------------------------
