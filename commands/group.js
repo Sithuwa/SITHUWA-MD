@@ -640,54 +640,9 @@ cmd({
             let action = text.toLowerCase();
 
             if (action.startsWith("close") || action.startsWith("mute") ) {
-                await Suhail.bot.groupSettingUpdate(msg.chat, "announcement").then((res) => msg.reply(`*_Group Chat Muted!!!_*`)).catch((err) => msg.error(err));
+                await Suhail.bot.groupSettingUpdate(msg.chat, "announcement").then((res) => msg.reply(`*_☑️Group Chat Muted!!!_*`)).catch((err) => msg.error(err));
             } else if (text.toLowerCase().startsWith("open")||text.toLowerCase().startsWith("unmute") ){
-                await Suhail.bot.groupSettingUpdate(msg.chat, "not_announcement").then((res) => msg.reply(`*_Group Chat Unmuted!!!_*`)).catch((err) => msg.error(err));
-            }
-else if( action.startsWith("detail") || action.startsWith("info") ){
-try{
-    const pp = await Suhail.bot.profilePictureUrl(msg.chat, 'image').catch(_ => THUMB_IMAGE) || THUMB_IMAGE;
-      
-    //groupAdmins = participants.filter(p => p.admin)
-    const listAdmin = groupAdmins.map((v, i) => `  ${i + 1}. wa.me/${v.split('@')[0]}`).join('\n')
-            console.log("listAdmin , " ,listAdmin )
-    const gcowner =  groupMetadata.owner || groupAdmins.find(p => p.admin === 'superadmin')?.id || msg.chat.split`-`[0] + '@s.whatsapp.net'
-
-    let ginfos = `
-      *「 INFO GROUP 」*
-*▢ ID :*
-   • ${groupMetadata.id}
-*▢ NAME :* 
-   • ${groupMetadata.subject}
-*▢ Members :*
-   • ${participants.length}
-*▢ Group Owner :*
-   • wa.me/${gcowner.split('@')[0]}
-*▢ Admins :*
-${listAdmin}
-*▢ Description :*
-   • ${groupMetadata.desc?.toString() || 'unknown'}
-   `
-   let Group = isMongodb ?  await sck.findOne({ id: msg.chat }) :false;
-if(Group){
-   ginfos += `*▢ 🪢 Extra Group Configuration :*";
-  • Group Nsfw :    ${Group.nsfw=='true'? '✅' : '❎'} 
-  • Antilink        :    ${Group.antilink=='true'? '✅' : '❎'}
-  • Economy      :    ${Group.economy=='true'? '✅' : '❎'}
-  • Events         :     ${Group.events=='true'? '✅' : '❎'}
-`.trim()
-    if(Group.events=='true'){
-        ginfos +="\n*▢ Wellcome Message :* \n  • "+Group.welcome;
-        ginfos +="\n\n*▢ Goodbye Message :* \n  • "+Group.goodbye; 
-    }
-}
- try{ await Suhail.bot.sendMessage(msg.chat,{image:{url : pp ? pp : THUMB_IMAGE } , caption: ginfos } , {quoted:msg }) }catch(e){ return await msg.send(ginfos,{},"",msg),console.log("error in group info,\n"  , e)   }
-
-}catch(e){return await msg.error(`${e}\ncmdName: Group info`),console.log("error in group info,\n"  , e) }
-  
-}else return await msg.send(`*_Uhh Dear Give me Query From Bellow Options_*\n_1:- .group Mute_\n_2:- .group Unmute_\n_3:- .group Info_`)
-    //  let buttons = [{ buttonId: `${prefix}group open`, buttonText: { displayText: "📍Unmute",},type: 1,},{buttonId: `${prefix}group close`,buttonText: {displayText: "📍Mute",},type: 1, },];     await Suhail.bot.sendButtonText(msg.chat,buttons,`Group Mode`, Suhail.bot.user.name, msg);
-           
+                await Suhail.bot.groupSettingUpdate(msg.chat, "not_announcement").then((res) => msg.reply(`*_☑️Group Chat Unmuted!!!_*`)).catch((err) => msg.error(err));
 
         }
     )
