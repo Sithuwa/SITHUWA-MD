@@ -680,7 +680,7 @@ cmd({
            
             
            
-           /*
+        
     
     
             let search = await yts(text)
@@ -712,7 +712,7 @@ cmd({
             return Void.sendMessage(citel.chat, listMessage, {
                 quoted: citel
             })
-            */
+            
     })
 
     //---------------------------------------------------------------------------
@@ -947,8 +947,8 @@ cmd({
 
 
 // By @•ꜱɪᴛʜᴜᴡᴀ-ᴍᴜʟᴛɪᴅᴇᴠɪᴄᴇ•
-// https://wa.me/2348059540212
-// https://www.youtube.com/@suhailtechinfo0
+// https://wa.me/94759333625
+// https://www.youtube.com/@SITHUWA-MD
 
 
 
