@@ -678,7 +678,7 @@ cmd({
            
            
            
-            
+      /*      
            
         
     
@@ -716,7 +716,7 @@ cmd({
     })
 
     //---------------------------------------------------------------------------
-/*cmd({
+cmd({
             pattern: "yts",
             alias: ["ytsearch","getyt"],
             desc: "Gives descriptive info of query from youtube..",
