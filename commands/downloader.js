@@ -655,7 +655,7 @@ let result4 = ` *Mᴇᴅɪᴀғɪʀᴇ Dᴏᴡɴʟᴏᴀᴅᴇʀ Sɪᴛʜᴜᴡ�
         }
     )
     //---------------------------------------------------------------------------
-/*
+
 cmd({
             pattern: "song",
             alias: ["audio"],
@@ -666,18 +666,18 @@ cmd({
         },
         async(Void, citel, text) => {
   
-                if (!text) return await citel.reply(`*_🧚‍♂️ Ohh PLease, Give Me Song Name_*`);
+                if (!text) return await citel.reply(`*_👼 PLease, Give Me Song Name_*`);
                 let yts = require("secktor-pack")
                 let search = await yts(text);
                 let i = search.all[1] ;
-                let cap = "\t *---🧚 Yt Song Searching ꜱɪᴛʜᴜᴡᴀ-ᴍᴅ---*   \n\nTitle : " + i.title + "\nUrl : " + i.url +"\nDescription : " + i.timestamp +"\nViews : "+i.views +"\nUploaded : " +i.ago +"\nAuthor : "+i.author.name+"\n\n\nReply 1 To Video \nReply 2 To Audio" ;
+                let cap = "\t *---🧚 YT SONG SEARCHING SITHUWA-MD 🧚---*   \n\nTitle : " + i.title + "\nUrl : " + i.url +"\nDescription : " + i.timestamp +"\nViews : "+i.views +"\nUploaded : " +i.ago +"\nAuthor : "+i.author.name+"\n\n\nReply 1 To Video \nReply 2 To Audio" ;
                 Void.sendMessage(citel.chat,{image :{url : i.thumbnail}, caption :  cap });
            
            
            
            
            
-           
+           /*
             
            
         
@@ -712,9 +712,9 @@ cmd({
             return Void.sendMessage(citel.chat, listMessage, {
                 quoted: citel
             })
-            
+            */
     })
-    */
+    
     //---------------------------------------------------------------------------
 cmd({
             pattern: "yts",
@@ -950,7 +950,7 @@ cmd({
 // https://wa.me/94759333625
 // https://www.youtube.com/@SITHUWA-MD
 
-
+/*
 
 cmd({
     pattern: "song",
@@ -967,7 +967,7 @@ let cap = "\t *---🧚‍♂️ YT SONG SEARCHING SITHUWA-MD 🧚‍♂️---*  
 Void.sendMessage(citel.chat,{image :{url : i.thumbnail}, caption :  cap })
 })
 
-
+*/
 //-----------------------------------------------------------------
 
 cmd({ on: "text" }, async(Void, citel ,text , {isCreator} ) => {
