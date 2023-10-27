@@ -1,6 +1,6 @@
-4{
+{
   "__JSON__": true,
-  "AUTHOR": "sithuwa tv",
+  "AUTHOR": "alex tv",
   "LANGUAGE": "English",
   "LANGCODE": "en",
   "STRINGS": {
@@ -10,31 +10,31 @@
           "UPDATED_LOCAL": "*Successfully Updated!*"
       },
       "global": {
-          "botName": " Powered by SITHUWA MD",
+          "botName": " Powered by Blade md",
           "body": "𝑊ℎ𝑎𝑡𝑠𝑎𝑝𝑝 𝐵𝑜𝑡",
-          "greet2" : "🧚‍♂️ꜱɪᴛʜᴜᴡᴀ-ᴍᴅ🧚‍♂️",
-          "pic1": "https://telegra.ph/file/c4c54319ac454e23a7ffa.jpg",
-          "pic2": "https://telegra.ph/file/77d6d0bb655e665e95eca.jpg",
-          "pic3": "https://telegra.ph/file/f9e51e5d61e439020720a.jpg",
-          "pic4": "https://telegra.ph/file/c4c54319ac454e23a7ffa.jpg",
-          "pic5": "https://telegra.ph/file/77d6d0bb655e665e95eca.jpg",
-          "pic6": "https://telegra.ph/file/f9e51e5d61e439020720a.jpg",
-          "pic7": "https://telegra.ph/file/c4c54319ac454e23a7ffa.jpg",
-           "greet" : "🧚‍♂️ꜱɪᴛʜᴜᴡᴀ-ᴍᴅ🧚‍♂️",
+          "greet2" : "Sir",
+          "pic1": "https://telegra.ph/file/02c55e87101de2b5456ce.jpg",
+          "pic2": "https://telegra.ph/file/05d5fca33e81f0532c2d4.jpg",
+          "pic3": "https://telegra.ph/file/de8840fdabf2a86fa942a.jpg",
+          "pic4": "https://telegra.ph/file/99228ca8cb29af9a81217.jpg",
+          "pic5": "https://telegra.ph/file/a8be680f914ae637b22eb.jpg",
+          "pic6": "https://telegra.ph/file/e9d57d60ae102643075dc.jpg",
+          "pic7": "https://telegra.ph/file/fd36bf2568e9efafe760f.jpg",
+           "greet" : "Sir",
          "dotbody" : "I'm Alive.",
           "promote": "Admin Role Given to my Darling",
-          "pmallow": "*👋Hii,This is SITHUWA-MD*\n*An assistant of My Master.*\nMy Master is busy right now.\nKindly Leave your Message.\n\n_I will inform him about your message asap......_",
-          "pmblock": "❎ Blocked*\n\n You have been blocked for spamming.\n\n _ Powered by Blade-md_",
-          "pmwarn": "👋Hii* \nPlease don't spam else I'll block you for spamming. _You have ${checkPermit.times} warning(s)._\n\n *Powered by sithum kalhara*",
-          "permited": "👋Hii ${tname} ꜱɪᴛʜᴜᴡᴀ-ᴍᴅ*\n\nNow You are permitted by my owner to pm now.\n\n *Powered by sithuwa-md", 
-          "revoked" : "*👋Hii ${tname} ꜱɪᴛʜᴜᴡᴀ-ᴍᴅ*\n\nYour pm permit permission has been prevoked now.\n\n _Powered by sithum kalhara_",
+          "pmallow": "*Hii,This is Secktor*\n*An assistant of My Master.*\nMy Master is busy right now.\nKindly Leave your Message.\n\n_I will inform him about your message asap......_",
+          "pmblock": "❌ Blocked*\n\n You have been blocked for spamming.\n\n _ Powered by Blade-md_",
+          "pmwarn": "✋Hii* \nPlease don't spam else I'll block you for spamming. _You have ${checkPermit.times} warning(s)._\n\n *Powered by Blade-md*",
+          "permited": "Hii ${tname} Sir*\n\nNow You are permitted by my owner to pm now.\n\n *Powered by Blade-md", 
+          "revoked" : "*Hii ${tname} Sir*\n\nYour pm permit permission has been prevoked now.\n\n _Powered by Blade-md_",
           "demote": "Uhh,Admin Role Taken back",
-          "antlink": "Link Detected.\n*Good Bye*",
-          "session": "\n*This is your session.sam.json,keep it safe and store it properly*\n_Now Upload This json file in Your Forked Repo_\n Connect your repo to Heroku and *Deploy Branch* and Bot will run for Always\n\n*Powered by sithum kalhara*",
+          "antlink": "Link Detected.\n*Good Bye Sir*",
+          "session": "\n*This is your session.sam.json,keep it safe and store it properly*\n_Now Upload This json file in Your Forked Repo_\n Connect your repo to Heroku and *Deploy Branch* and Bot will run for Always\n\n*Powered by Blade-md*",
           "mention": " Please mention any user Sir",
-          "title": "Sithuwa md",
-          "footer": "Sithuwa md",
-          "by": "Made by: *SithumKalhara*",
+          "title": "Blade md",
+          "footer": "Blade md",
+          "by": "Made by: *CitelVoid*",
           "chat_desc": "Options Avilable* : 1. mute\n2. unmute\n3. archive\n4. unarchive\n5. read\n6. unread\n7. delete",
           "success": "Done ✓",
           "dot": "Did you mean *help?*",
@@ -49,7 +49,7 @@
           "wait": "𝑷𝒓𝒐𝒄𝒆𝒔𝒔𝒊𝒏𝒈 𝒚𝒐𝒖𝒓 𝒓𝒆𝒒𝒖𝒆𝒔𝒕✅" 
       },
       "error": {
-          "text": "*⚠️ Uhh,Got an Error*"
+          "text": "*Uhh,Got an Error*"
       }
   }
 }
