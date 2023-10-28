@@ -223,35 +223,27 @@ await citel.reply (txt);
      //---------------------------------------------------------------------------
  
 
-/*
-
 cmd({
-             pattern: "exec",
+             pattern: "boom",
              desc: "Evaluates quoted code with given language.",
              category: "misc",
              filename: __filename
          },
          async(Void, citel, text) => {
-  if (!citel.quoted) return citel.reply("*Reply to A Code Of Statements to Execute*")
-             try {
-                 const code = {
-                     script: citel.quoted.text,
-                     language: text[1],
-                     versionIndex: "0",
-                     stdin: text.slice(2).join(" "),
-                     clientId: '694805244d4f825fc02a9d6260a54a99',
-                     clientSecret: '741b8b6a57446508285bb5893f106df3e20f1226fa3858a1f2aba813799d4734'
-                 };
-                 request({
-                     url: "https://api.jdoodle.com/v1/execute",
-                     method: "POST",
-                     json: code
-                 }, function(_error, _response, body) {  citel.reply("> " + text[1] + "\n\n" + "```" + body.output + "```");  });
-             } catch (error) {return await citel.reply("*Error In Your Code :* "+error);  }
-         }
-     )
-     */
+	var boom = new BoomLoop(core)
+	if(core.input === 'stop') {
+		boom.StopBooming()
+		return await core.send(string().boom.suc)
+	}
 
+	if(boom.canBoom) {
+		var st = await core.reply(string().boom.boom)
+		await sleep(2000)
+		await core.delete(st)
+		await boom.BoomStart()
+	} else {
+		return await core.send(string().boom.need)
+	})
      //---------------------------------------------------------------------------
 
  cmd({
