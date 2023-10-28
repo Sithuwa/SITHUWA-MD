@@ -853,7 +853,8 @@ else return citel.reply(`Antispam : kick Users Who Spamming in Groupn\n\nAntispa
                  },
              ];
              await Void.sendButtonText(citel.chat, buttons, `Activate antilink:Deletes Link + kick`, Void.user.name, citel);
-         })
+         }
+     )
      //---------------------------------------------------------------------------
  cmd({ on: "body" }, async(Void, citel) => {
    if (!Config.autoreaction) return 
