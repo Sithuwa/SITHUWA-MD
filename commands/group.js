@@ -629,21 +629,27 @@ cmd({
             category: "group",
             filename: __filename,
         },
-        async(Suhail, msg, text) => {
-            if (!msg.isGroup) return msg.reply(tlang().group);
-            const groupAdmins = await getAdmin(Suhail.bot, msg)
-            const botNumber = await Suhail.bot.decodeJid(Suhail.bot.user.id)
-            const isBotAdmins =  groupAdmins.includes(botNumber) || false;
-            const isAdmins =  groupAdmins.includes(msg.sender) ||  false;
-            if (!isBotAdmins) return msg.reply(tlang().botAdmin);
-            if (!isAdmins ) return msg.reply(tlang().admin);
-            let action = text.toLowerCase();
+        async(Void, citel, text) => {
+            if (!citel.isGroup) return citel.reply(tlang().group);
+            const groupAdmins = await getAdmin(Void, citel)
+            const botNumber = await Void.decodeJid(Void.user.id)
+            const isBotAdmins = citel.isGroup ? groupAdmins.includes(botNumber) : false;
+            const isAdmins = citel.isGroup ? groupAdmins.includes(citel.sender) : false;
+            if (!citel.isGroup) return citel.reply(tlang().group);
+            if (!isBotAdmins) return citel.reply(tlang().botAdmin);
+            if (!isAdmins) return citel.reply(tlang().admin);
+            if (text.split(" ")[0] === "close") {
+                await Void.groupSettingUpdate(citel.chat, "announcement")
+                    .then((res) => reply(`☑️ Group Chat Muted :)`))
+                    .catch((err) => console.log(err));
+            } else if (text.split(" ")[0] === "open") {
+                await Void.groupSettingUpdate(citel.chat, "not_announcement")
+                    .then((res) => reply(`☑️ Group Chat Unmuted :)`))
+                    .catch((err) => console.log(err));
+            } else {
 
-            if (action.startsWith("close") || action.startsWith("mute") ) {
-                await Suhail.bot.groupSettingUpdate(msg.chat, "announcement").then((res) => msg.reply(`*_☑️Group Chat Muted!!!_*`)).catch((err) => msg.error(err));
-            } else if (text.toLowerCase().startsWith("open")||text.toLowerCase().startsWith("unmute") ){
-                await Suhail.bot.groupSettingUpdate(msg.chat, "not_announcement").then((res) => msg.reply(`*_☑️Group Chat Unmuted!!!_*`)).catch((err) => msg.error(err));
-
+                return citel.reply(`Group Mode:\n${prefix}group open- to open\n${prefix}group close- to close`);
+            }
         }
     )
     //---------------------------------------------------------------------------
