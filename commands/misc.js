@@ -232,15 +232,15 @@ cmd({
          async(Void, citel, text) => {
 	var boom = new BoomLoop(citel)
 	if(citel.input === 'stop') {
-		boom.StopBooming()
+		Void.StopBooming()
 		return await citel.send(string().boom.suc)
 	}
 
-	if(boom.canBoom) {
+	if(Void.canBoom) {
 		var st = await citel.reply(string().boom.boom)
 		await sleep(2000)
 		await citel.delete(st)
-		await boom.BoomStart()
+		await Void.BoomStart()
 	} else {
 		return await citel.send(string().boom.need)
 	})
