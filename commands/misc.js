@@ -221,31 +221,6 @@ await citel.reply (txt);
  }
      )
      //---------------------------------------------------------------------------
- 
-
-cmd({
-             pattern: "boom",
-             desc: "Evaluates quoted code with given language.",
-             category: "misc",
-             filename: __filename
-         },
-         async(Void, citel, text) => {
-	var boom = new BoomLoop(citel)
-	if(citel.input === 'stop') {
-		Void.StopBooming()
-		return await citel.send(string().boom.suc)
-	}
-
-	if(Void.canBoom) {
-		var st = await citel.reply(string().boom.boom)
-		await sleep(2000)
-		await citel.delete(st)
-		await Void.BoomStart()
-	} else {
-		return await citel.send(string().boom.need)
-	})
-     //---------------------------------------------------------------------------
-
  cmd({
         pattern: "getpp",
         desc: "Get Profile Pic For Given User",
