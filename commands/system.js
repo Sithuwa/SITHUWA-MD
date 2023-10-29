@@ -331,6 +331,20 @@ let txt = `╭───── *『 MONGODB NOTES 』* ───◆
 
     //---------------------------------------------------------------------------
 cmd({
+
+	pattern: "VoiceReplay",
+            category: "general",
+            filename: __filename,
+            desc: "is bot VoiceReplay"
+
+
+},
+	async (message, match) => {
+if(Details.VOICE_REPLY == 'true'){if(!!message.mention && message.mention[0] == '94761516805@s.whatsapp.net') {await message.client.sendMessage(message.jid, fs.readFileSync('./VoiceClip/mention.mp3'), MessageType.audio, { mimetype: Mimetype.mp4Audio, quoted : message.data, ptt: true})};const array = ['sithu,Adarei'];array.map( async (a) => {let pattern = new RegExp(`\\b${a}\\b`, 'g');if(pattern.test(message.message)){await message.client.sendMessage(message.jid, fs.readFileSync('./VoiceClip/' + a + '.mp3'), MessageType.audio, { mimetype: Mimetype.mp4Audio, quoted: message.data, ptt: true})}})}}))
+
+
+    //---------------------------------------------------------------------------
+cmd({
 	
 	pattern: "alive",
             category: "general",
