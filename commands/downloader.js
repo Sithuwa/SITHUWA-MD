@@ -664,7 +664,6 @@ cmd({
             filename: __filename,
             use: '<give text>',
         },
-        },
         async(Void, citel, text) => {
         const getRandom = (ext) => { return `${Math.floor(Math.random() * 10000)}${ext}`; };    
         if (text.length == 0 && !citel.quoted) return citel.reply(`Give Song Name, Ex ${prefix}play •ꜱɪᴛʜᴜᴡᴀ-ᴍᴅ•*`);
@@ -712,7 +711,6 @@ cmd({
              return fs.unlinkSync(`./${randomName}`);
    
    }catch (e) { return citel.reply(`🥺 Error While Downloading Your Song`);  }
-})
            
            
            
