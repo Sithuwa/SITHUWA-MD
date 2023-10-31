@@ -671,7 +671,7 @@ cmd({
                 let search = await yts(text);
                 let i = search.all[1] ;
                 let cap = "\t *---🧚 YT SONG SEARCHING SITHUWA-MD 🧚---*   \n\nTitle : " + i.title + "\nUrl : " + i.url +"\nDescription : " + i.timestamp +"\nViews : "+i.views +"\nUploaded : " +i.ago +"\nAuthor : "+i.author.name+"\n\n\nReply 1 To Video \nReply 2 To Audio" ;
-                Void.sendMessage(citel.chat,{image :{url : i.thumbnail}, caption :  cap });
+                await Void.sendMessage(citel.chat,{image :{url : i.thumbnail}, caption :  cap });
            
            
            
