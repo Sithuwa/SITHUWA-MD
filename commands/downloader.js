@@ -664,6 +664,8 @@ cmd({
             filename: __filename,
             use: '<give text>',
         },
+    async(bot, citel, tax) => {
+        let yts = require("secktor-pack");
         if (!tax) return citel.send(`Example: ${prefix}song Pita Kaware`);
         let search = await yts(tax);
         let anu = search.videos[0];
