@@ -663,55 +663,49 @@ cmd({
             filename: __filename,
             use: '<faded-Alan walker.>',
         },
-        async(Void, citel, text) => {
-   const getRandom = (ext) => { return `${Math.floor(Math.random() * 10000)}${ext}`; };    
-   if (text.length == 0 && !citel.quoted) return citel.reply(`Give Song Name, Ex ${prefix}play Pita Kaware*`);
-   try {
-            let urlYt = text;
-            if(!text){ text=citel.quoted.text; }
-
-            if (!urlYt.startsWith("http")) 
-            {
-                let yts = require("secktor-pack");
-                let search = await yts(text);
-                let anu = search.videos[0];
-                urlYt = anu.url; 
-            }
-            let infoYt = await ytdl.getInfo(urlYt);
-            if (infoYt.videoDetails.lengthSeconds >= 1200) return citel.reply(`*song not Found, Try Differ Name*`);
-            let titleYt = infoYt.videoDetails.title;   
-	    citel.reply("\nUrl : " + i.url +"\nDescription : " + i.timestamp +");
-	   citel.reply(`_🧚‍♂️ Uploading ${infoYt.videoDetails.title}?_`);
-            let randomName = getRandom(".mp3");
-            const stream = ytdl(urlYt, {
-                 filter: (info) => info.audioBitrate == 160 || info.audioBitrate == 128, })
-                 .pipe(fs.createWriteStream(`./${randomName}`));
-                
-	   await new Promise((resolve, reject) => { stream.on("error", reject);  stream.on("finish", resolve);  });
-            
-            let stats = fs.statSync(`./${randomName}`);
-            let fileSizeInBytes = stats.size;
-            let fileSizeInMegabytes = fileSizeInBytes / (1024 * 1024);
-            if (fileSizeInMegabytes <= dlsize) 
-            {
-                let yts = require("secktor-pack");
-                let search = await yts(text);
-                let buttonMessage = 
-				{
-				    audio: fs.readFileSync(`./${randomName}`),
-				    mimetype: 'audio/mpeg',
-				    fileName: titleYt + ".mp3",
-				    headerType: 4,
-				 }
-                 
-                await Void.sendMessage(citel.chat, buttonMessage, { quoted: citel })
-                return fs.unlinkSync(`./${randomName}`);
-            } 
-            else {   citel.reply(`❎ File size bigger than 100mb.`);    }
-             return fs.unlinkSync(`./${randomName}`);
-   
-   }catch (e) { return citel.reply(`🥺 Error While Downloading Your Song`);  }
-})
+        async (message, match, client) => {
+	match = match || message.reply_message.text
+	if (!match) return message.reply(Lang.NEED_TEXT_SONG)
+	if (isUrl(match) && match.includes('youtu')) {
+		let ytId = ytIdRegex.exec(match)
+		try {
+		const media = await downloadYouTubeAudio()
+		if (media.content_length >= 10485760) return await send(message, await fs.readFileSync(media.file), ytId[1])
+		const thumb = await getBuffer(await getYoutubeThumbnail(ytId[1]))
+		const writer = await addAudioMetaData(await toAudio(await fs.readFileSync(media.file)), thumb, media.title, `${config.BOT_INFO.split(";")[0]}`, 'Hermit Official')
+		return await send(message, writer, ytId[1])
+		} catch {
+			  const response = await getJson('https://api.adithyan.xyz/ytaudio?id=' + ytId[1]);
+			  if (!response.status) return await message.send('*Failed to download*');
+			  if (response.content_length >= 10485760) return await client.sendMessage(message.jid, { audio: {url: response.result }, mimetype: 'audio/mpeg', ptt: false }, { quoted: message.data });
+			  const buffer = await getBuffer(response.result);
+			  await fs.writeFileSync('./' + response.file, buffer);
+			  const writer = await addAudioMetaData(await toAudio(await fs.readFileSync('./' + response.file), 'mp4'), response.thumb, response.title, `hermit-md`, 'Hermit Official');
+			  return await send(message, writer, ytId[1])
+	   }
+	}
+	const search = await yts(match)
+	if (search.all.length < 1) return await message.reply(Lang.NO_RESULT);
+	let no = 1;
+	let listText = `${t}Search results for ${match}:${t}\n\n*Format: audio*\n_To download, please reply with the desired title number._\n\n`;
+	for (let i of search.all) {
+	if (i.type == 'video') {
+    listText += `${no++}. *${i.title}*\nhttps://youtu.be/${i.url.match(/(?<=\?v=)[^&]+/)[0]}\n\n`;
+    }
+    }
+    await message.send(listText);
+    /* 
+	const listbutton = [];
+	let no = 1;
+	for (var z of search.videos) {
+		let button = { title: 'Result - ' + no++ + ' ', rows: [{title: z.title, rowId: prefix + 'song ' + z.url}]
+	};
+	listbutton.push(button)
+	};
+	const listMessage = { title: search.videos[0].title, buttonText: 'Select song', sections: listbutton }
+	await message.send(`And ${listbutton.length} More Results...`, 'text', { quoted: message.data, ...listMessage })
+	 */
+});
     
 
     
