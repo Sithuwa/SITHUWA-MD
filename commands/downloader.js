@@ -658,7 +658,6 @@ let result4 = ` *Mᴇᴅɪᴀғɪʀᴇ Dᴏᴡɴʟᴏᴀᴅᴇʀ Sɪᴛʜᴜᴡ�
 
 cmd({
             pattern: "song",
-            alias:pattern: "play",
             desc: "Sends info about the query(of youtube video/audio).",
             category: "downloader",
             filename: __filename,
