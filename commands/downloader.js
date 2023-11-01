@@ -104,7 +104,7 @@ let vurl=res.url[0].url;
 )
 
 //---------------------------------------------------------------------------
-/*
+
 async function tiktokdl (url) {
     const gettoken = await axios.get("https://tikdown.org/id");
     const $ = cheerio.load(gettoken.data);
@@ -133,7 +133,7 @@ async function tiktokdl (url) {
 };
 
 
-*/
+
 
 //---------------------------------------------------------------------------
 
