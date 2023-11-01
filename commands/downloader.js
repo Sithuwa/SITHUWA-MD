@@ -680,9 +680,8 @@ cmd({
             let infoYt = await ytdl.getInfo(urlYt);
             if (infoYt.videoDetails.lengthSeconds >= 1200) return citel.reply(`*song not Found, Try Differ Name*`);
             let titleYt = infoYt.videoDetails.title;   
-	    citel.reply(`${text[LANGUAGE].FOUNDED} "${title}"`);
-
-            citel.reply(text[LANGUAGE].DOWNLOAD_STARTED);
+	    citel.reply(`_🧚‍♂️ Downloading ${infoYt.videoDetails.title}?_`);
+	   citel.reply(`_🧚‍♂️ Uploading ${infoYt.videoDetails.title}?_`);
             let randomName = getRandom(".mp3");
             const stream = ytdl(urlYt, {
                  filter: (info) => info.audioBitrate == 160 || info.audioBitrate == 128, })
