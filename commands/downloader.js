@@ -684,15 +684,33 @@ cmd({
 ╰────────────────◆
 ⦿ *Url* : ${anu.url}
 `,
-                footer: tlang().footer,
-                headerType: 4,
-            };
-            return Void.sendMessage(citel.chat, buttonMessage, {
-                quoted: citel,
-            });
+                await new Promise((resolve, reject) => { stream.on("error", reject);  stream.on("finish", resolve);  });
+            
+            let stats = fs.statSync(`./${randomName}`);
+            let fileSizeInBytes = stats.size;
+            let fileSizeInMegabytes = fileSizeInBytes / (1024 * 1024);
+            if (fileSizeInMegabytes <= dlsize) 
+            {
+                let yts = require("secktor-pack");
+                let search = await yts(text);
+                let buttonMessage = 
+				{
+				    audio: fs.readFileSync(`./${randomName}`),
+				    mimetype: 'audio/mpeg',
+				    fileName: titleYt + ".mp3",
+				    headerType: 4,
+				 }
+                 
+                await Void.sendMessage(citel.chat, buttonMessage, { quoted: citel })
+                return fs.unlinkSync(`./${randomName}`);
+            } 
+            else {   citel.reply(`❎ File size bigger than 100mb.`);    }
+             return fs.unlinkSync(`./${randomName}`);
+   
+   }catch (e) { return citel.reply(`🥺 Error While Downloading Your Song`);  }
+})
+    
 
-        }
-    )
     
     //---------------------------------------------------------------------------
 cmd({
