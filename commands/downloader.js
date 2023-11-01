@@ -656,52 +656,65 @@ let result4 = ` *Mᴇᴅɪᴀғɪʀᴇ Dᴏᴡɴʟᴏᴀᴅᴇʀ Sɪᴛʜᴜᴡ�
     )
     //---------------------------------------------------------------------------
 
+
 cmd({
             pattern: "song",
-            desc: "Sends info about the query(of youtube video/audio).",
+            alias: ["audio"],
+            desc: "Downloads audio from youtube.",
             category: "downloader",
             filename: __filename,
-            use: '<faded-Alan walker.>',
+            use: '<give text>',
         },
-        (async (message, match) => {
-  if (!match[1] && !message.reply_message?.text) return message.sendReply(Lang.NEED_TEXT_SONG)
-  var link = (match[1] || message.reply_message?.text).match(/\bhttps?:\/\/\S+/gi)
-  if (link !== null && getID.test(link[0])) {
-  let v_id = link[0].match(getID)[1]
-  const title = await ytTitle(v_id);
-  await message.sendReply(`*Downloading:* _${title}_`)
-  let sdl = await dlSong(v_id);
-  ffmpeg(sdl)
-  .save('./temp/song.mp3')
-  .on('end', async () => { 
-  var song = await addInfo('./temp/song.mp3',title,BOT_INFO.split(";")[0],"Raganork audio downloader",await skbuffer(`https://i3.ytimg.com/vi/${link[0].match(getID)[1]}/hqdefault.jpg`))
-  return await message.client.sendMessage(message.jid, {
-      audio:song,
-      mimetype: 'audio/mp4'
-  }, {
-      quoted: message.data
-  });
- }); 
-} else {
-  var myid = message.client.user.id.split("@")[0].split(":")[0]
-  var sr = await searchYT(match[1]);
-  sr = sr.videos.splice(0,20);
-  if (sr.length < 1) return await message.sendReply(Lang.NO_RESULT);
-  var list = `_*Results matching "${match[1]}":*_\n\n` // format using Lang.MATCHING_SONGS
-  var _i = 0;
-  for (var i in sr){
-    const title = sr[i].title?.text
-    const dur = sr[i].thumbnail_overlays[0]?.text
-    if (title && dur){
-      _i++
-      list+=`${_i}. *_${title} (${dur})_*\n`
-  }
-  }
-  list+=`\n_Send number as reply to download_`
-  return await message.sendReply(list)
-}
+        async(Void, citel, text) => {
+  
+                if (!text) return await citel.reply(`*_Ohh PLease, Give Me Song Name_*`);
+                let yts = require("secktor-pack")
+                let search = await yts(text);
+                let i = search.all[1] ;
+                let cap = "\t *---Yt Song Searched Data---*   \n\nTitle : " + i.title + "\nUrl : " + i.url +"\nDescription : " + i.timestamp +"\nViews : "+i.views +"\nUploaded : " +i.ago +"\nAuthor : "+i.author.name+"\n\n\nReply 1 To Video \nReply 2 To Audio" ;
+                Void.sendMessage(citel.chat,{image :{url : i.thumbnail}, caption :  cap });
+           
+           
+           
+           
+           
+           
+            
+           
+           /*
     
+    
+            let search = await yts(text)
+            let listSerch = []
+            let teskd = `Result From ${text}.\n_+ ${search.all.length} more results._`
+            for (let i of search.all) {
+                listSerch.push({
+                    title: i.title,
+                    rowId: `${prefix}ytmp3 ${i.url}`,
+                    description: `*Suhail-MD* / ${i.timestamp}`
+                })
+            }
+            const sections = [
 
+                {
+                    title: "Total Search🔍" + search.all.length,
+                    rows: listSerch
+                }
+
+            ]
+            const listMessage = {
+                text: teskd,
+                footer: tlang().footer,
+                title: ``,
+                buttonText: "Songs",
+                mentions: await Void.parseMention(teskd),
+                sections
+            }
+            return Void.sendMessage(citel.chat, listMessage, {
+                quoted: citel
+            })
+            */
+    })
     
     //---------------------------------------------------------------------------
 cmd({
