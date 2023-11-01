@@ -664,39 +664,44 @@ cmd({
             filename: __filename,
             use: '<give text>',
         },
-    async(bot, citel, tax) => {
-        let yts = require("secktor-pack");
-        if (!tax) return citel.send(`Example: ${prefix}song Pita Kaware`);
-        let search = await yts(text)
-        let listSerch = []
-        let teskd = `Result From ${text}.\n_+ ${search.all.length} more results._`
-        for (let i of search.all) {
-                listSerch.push({
-                    title: i.title,
-                    rowId: `${prefix}ytmp3 ${i.url}`,
-                    description: `*Sithuwa-MD* / ${i.timestamp}`
-                })
-            }
-            const sections = [
-
-                {
-                    title: "Total Search🔍" + search.all.length,
-                    rows: listSerch
-                }
-
-            ]
-            const listMessage = {
-                text: teskd,
-                footer: tlang().footer,
-                title: ``,
-                buttonText: "Songs",
-                mentions: await Void.parseMention(teskd),
-                sections
-            }
-            return Void.sendMessage(citel.chat, listMessage, {
-                quoted: citel
-            });
-    })
+        async (message, match) => {
+    match = match || message.reply_message.text
+    if (!match) return await message.send('*Example : song indila love story/ yt link*')
+    const vid = ytIdRegex.exec(match)
+    if (vid) {
+      const _song = await song(vid[1])
+      const [result] = await yts(vid[1], true)
+      const { author, title, thumbnail } = result
+      const meta = title ? await addAudioMetaData(_song, title, author, '', thumbnail.url) : _song
+      return await message.send(meta, { quoted: message.data, mimetype: 'audio/mpeg' }, 'audio')
+    }
+    const result = await yts(match, 0, 1)
+    if (!result.length) return await message.send(`_Not result for_ *${match}*`)
+    const msg = generateList(
+      result.map(({ title, id, duration, author, album }) => ({
+        text: `🆔&id\n🎵${title}\n🕒${duration}\n👤${author}\n📀${album}\n\n`,
+        id: `song https://www.youtube.com/watch?v=${id}`,
+      })),
+      `Searched ${match} and Found ${result.length} results\nsend 🆔 to download song.\n`,
+      message.jid,
+      message.participant
+    )
+    return await message.send('```' + msg + '```')
+    // return await message.send(
+    // 	genListMessage(
+    // 		result.map(({ title, id, duration }) => ({
+    // 			text: title,
+    // 			id: `song https://www.youtube.com/watch?v=${id}`,
+    // 			desc: duration,
+    // 		})),
+    // 		`Searched ${match}\nFound ${result.length} results`,
+    // 		'DOWNLOAD'
+    // 	),
+    // 	{},
+    // 	'list'
+    // )
+  }
+)
     
     //---------------------------------------------------------------------------
 cmd({
