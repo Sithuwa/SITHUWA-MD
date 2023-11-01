@@ -104,7 +104,7 @@ let vurl=res.url[0].url;
 )
 
 //---------------------------------------------------------------------------
-
+/*
 async function tiktokdl (url) {
     const gettoken = await axios.get("https://tikdown.org/id");
     const $ = cheerio.load(gettoken.data);
@@ -133,7 +133,7 @@ async function tiktokdl (url) {
 };
 
 
-
+*/
 
 //---------------------------------------------------------------------------
 
@@ -658,50 +658,42 @@ let result4 = ` *Mᴇᴅɪᴀғɪʀᴇ Dᴏᴡɴʟᴏᴀᴅᴇʀ Sɪᴛʜᴜᴡ�
 
 cmd({
             pattern: "song",
-            alias: ["audio"],
-            desc: "Downloads audio from youtube.",
+            alias:pattern: "play",
+            desc: "Sends info about the query(of youtube video/audio).",
             category: "downloader",
             filename: __filename,
-            use: '<give text>',
+            use: '<faded-Alan walker.>',
         },
-        async (message, match) => {
-    match = match || message.reply_message.text
-    if (!match) return await message.send('*Example : song indila love story/ yt link*')
-    const vid = ytIdRegex.exec(match)
-    if (vid) {
-      const _song = await song(vid[1])
-      const [result] = await yts(vid[1], true)
-      const { author, title, thumbnail } = result
-      const meta = title ? await addAudioMetaData(_song, title, author, '', thumbnail.url) : _song
-      return await message.send(meta, { quoted: message.data, mimetype: 'audio/mpeg' }, 'audio')
-    }
-    const result = await yts(match, 0, 1)
-    if (!result.length) return await message.send(`_Not result for_ *${match}*`)
-    const msg = generateList(
-      result.map(({ title, id, duration, author, album }) => ({
-        text: `🆔&id\n🎵${title}\n🕒${duration}\n👤${author}\n📀${album}\n\n`,
-        id: `song https://www.youtube.com/watch?v=${id}`,
-      })),
-      `Searched ${match} and Found ${result.length} results\nsend 🆔 to download song.\n`,
-      message.jid,
-      message.participant
+        async(Void, citel, text) => {
+            if (!text) return citel.reply(`Use ${command} Back in Black`);
+            let yts = require("secktor-pack");
+            let search = await yts(text);
+            let anu = search.videos[0];
+            let buttonMessage = {
+                image: {
+                    url: anu.thumbnail,
+                },
+                caption: `
+╭───────────────◆
+│⿻ ${tlang().title} 
+│  *Youtube Player* ✨
+│⿻ *Title:* ${anu.title}
+│⿻ *Duration:* ${anu.timestamp}
+│⿻ *Viewers:* ${anu.views}
+│⿻ *Uploaded:* ${anu.ago}
+│⿻ *Author:* ${anu.author.name}
+╰────────────────◆
+⦿ *Url* : ${anu.url}
+`,
+                footer: tlang().footer,
+                headerType: 4,
+            };
+            return Void.sendMessage(citel.chat, buttonMessage, {
+                quoted: citel,
+            });
+
+        }
     )
-    return await message.send('```' + msg + '```')
-    // return await message.send(
-    // 	genListMessage(
-    // 		result.map(({ title, id, duration }) => ({
-    // 			text: title,
-    // 			id: `song https://www.youtube.com/watch?v=${id}`,
-    // 			desc: duration,
-    // 		})),
-    // 		`Searched ${match}\nFound ${result.length} results`,
-    // 		'DOWNLOAD'
-    // 	),
-    // 	{},
-    // 	'list'
-    // )
-  }
-)
     
     //---------------------------------------------------------------------------
 cmd({
