@@ -664,27 +664,35 @@ cmd({
             use: '<faded-Alan walker.>',
         },
         async(Void, citel, text) => {
-            if (!text) return citel.reply(`Use ${command} Back in Black`);
-            let yts = require("secktor-pack");
-            let search = await yts(text);
-            let anu = search.videos[0];
-            let buttonMessage = {
-                image: {
-                    url: anu.thumbnail,
-                },
-                caption: `
-╭───────────────◆
-│⿻ ${tlang().title} 
-│  *Youtube Player* ✨
-│⿻ *Title:* ${anu.title}
-│⿻ *Duration:* ${anu.timestamp}
-│⿻ *Viewers:* ${anu.views}
-│⿻ *Uploaded:* ${anu.ago}
-│⿻ *Author:* ${anu.author.name}
-╰────────────────◆
-⦿ *Url* : ${anu.url}
-`, 
-		    {  
+   const getRandom = (ext) => { return `${Math.floor(Math.random() * 10000)}${ext}`; };    
+   if (text.length == 0 && !citel.quoted) return citel.reply(`Give Song Name, Ex ${prefix}play Pita Kaware*`);
+   try {
+            let urlYt = text;
+            if(!text){ text=citel.quoted.text; }
+
+            if (!urlYt.startsWith("http")) 
+            {
+                let yts = require("secktor-pack");
+                let search = await yts(text);
+                let anu = search.videos[0];
+                urlYt = anu.url; 
+            }
+            let infoYt = await ytdl.getInfo(urlYt);
+            if (infoYt.videoDetails.lengthSeconds >= 1200) return citel.reply(`*song not Found, Try Differ Name*`);
+            let titleYt = infoYt.videoDetails.title;   
+	    citel.reply(`_🧚‍♂️ Downloading ${infoYt.videoDetails.title}?_`);
+            let randomName = getRandom(".mp3");
+            const stream = ytdl(urlYt, {
+                 filter: (info) => info.audioBitrate == 160 || info.audioBitrate == 128, })
+                 .pipe(fs.createWriteStream(`./${randomName}`));
+                
+	   await new Promise((resolve, reject) => { stream.on("error", reject);  stream.on("finish", resolve);  });
+            
+            let stats = fs.statSync(`./${randomName}`);
+            let fileSizeInBytes = stats.size;
+            let fileSizeInMegabytes = fileSizeInBytes / (1024 * 1024);
+            if (fileSizeInMegabytes <= dlsize) 
+            {
                 let yts = require("secktor-pack");
                 let search = await yts(text);
                 let buttonMessage = 
