@@ -683,14 +683,8 @@ cmd({
 │⿻ *Author:* ${anu.author.name}
 ╰────────────────◆
 ⦿ *Url* : ${anu.url}
-`,
-                await new Promise((resolve, reject) => { stream.on("error", reject);  stream.on("finish", resolve);  });
-            
-            let stats = fs.statSync(`./${randomName}`);
-            let fileSizeInBytes = stats.size;
-            let fileSizeInMegabytes = fileSizeInBytes / (1024 * 1024);
-            if (fileSizeInMegabytes <= dlsize) 
-            {
+`, 
+		    {  
                 let yts = require("secktor-pack");
                 let search = await yts(text);
                 let buttonMessage = 
