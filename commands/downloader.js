@@ -682,8 +682,7 @@ cmd({
             let titleYt = infoYt.videoDetails.title;   
 	    citel.reply(`*🧚‍♂️ Downloading...*
                 _${infoYt.videoDetails.title}_
-                _${infoYt.url}_
-		_${anu.ago}_`);
+                _${infoYt.url}_`);
             let randomName = getRandom(".mp3");
             const stream = ytdl(urlYt, {
                  filter: (info) => info.audioBitrate == 160 || info.audioBitrate == 128, })
