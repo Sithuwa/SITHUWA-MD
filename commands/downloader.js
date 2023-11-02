@@ -662,11 +662,11 @@ cmd({
         },
         async(Void, citel, text) => {
   
-                if (!text) return await citel.reply(`*_Ohh PLease, Give Me Song Name_*`);
+                if (!text) return await citel.reply(`*_👼 PLease, Give Me Song Name_*`);
                 let yts = require("secktor-pack")
                 let search = await yts(text);
                 let i = search.all[1] ;
-                let cap = "\t *---🧚‍♂️ YT SONG SEARCHING SITHUWA-MD 🧚‍♂️---*   \n\n*⛯ Title :* " + i.title + "\n*⛯ Url :* " + i.url +"\n*⛯ Description :* " + i.timestamp +"\n*⛯ Views :* "+i.views +"\n*⛯ Uploaded :* " +i.ago +"\n*⛯ Author :* "+i.author.name+"\n\n\n*Reply 1 To Video* \n*Reply 2 To Audio* \n*•ꜱɪᴛʜᴜᴡᴀ-ᴍᴜʟᴛɪᴅᴇᴠɪᴄᴇ•*" ;
+                let cap = "\t *---🧚‍♂️YT SONG SEARCHING SITHUWA MD🧚‍♂️---*   \n\n*⛯ Title :* " + i.title + "\n*⛯ Url :* " + i.url +"\n*⛯ Description :* " + i.timestamp +"\n*⛯ Views :* "+i.views +"\n*⛯ Uploaded :* " +i.ago +"\n*⛯ Author :* "+i.author.name+"\n\n\n*Reply 1 To Video* \n*Reply 2 To Audio*" ;
                 Void.sendMessage(citel.chat,{image :{url : i.thumbnail}, caption :  cap });
            
            
