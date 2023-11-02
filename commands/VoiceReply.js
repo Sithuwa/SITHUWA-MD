@@ -1,5 +1,5 @@
 async function sendVoiceReply(to, audioUrl) {
-  const response = await fetch('Hi', {
+  const response = await fetch('https://api.whatsapp.com/send/message', {
     method: 'POST',
     headers: {
       'Authorization': ' ',
@@ -7,7 +7,7 @@ async function sendVoiceReply(to, audioUrl) {
     body: JSON.stringify({
       to,
       audio: {
-        url: audioUrl,
+        url: Evillaugh.ogg,
       },
     }),
   });
