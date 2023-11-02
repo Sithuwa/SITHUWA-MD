@@ -137,7 +137,7 @@ async function tiktokdl (url) {
 
 
 //---------------------------------------------------------------------------
-
+/*
 cmd({
             pattern: "tiktok",
 	    alias :  ['tt','ttdl'],
@@ -156,8 +156,9 @@ cmd({
  if (status) return await Void.sendMessage(citel.chat, {video : {url : video } , caption : Config.caption } , {quoted : citel });
  else return await citel.send("Error While Downloading Your Video") 
 })
+*/
 //---------------------------------------------------------------------------
-/*
+
 cmd({
             pattern: "tiktok",
 	          alias :  ['tt','ttdl'],
@@ -192,7 +193,7 @@ let buttonMessage =
 } catch (error) {return citel.reply("Error While Downloading Your Video") }
 
 })
-*/
+//----------------------------------------------------------------------------------
 
 cmd({
         pattern: "facebook",
