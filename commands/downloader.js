@@ -241,6 +241,8 @@ let vurl=info.video.url_video;
 
 //---------------------------------------------------------------------------
 
+cmd({ 
+	   patern: "apk",
             desc: "Downloads apks  .",
             category: "downloader",
             filename: __filename,
