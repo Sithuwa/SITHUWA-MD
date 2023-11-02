@@ -666,7 +666,7 @@ cmd({
                 let yts = require("secktor-pack")
                 let search = await yts(text);
                 let i = search.all[1] ;
-                let cap = "\t *---Yt Song Searched Data---*   \n\n⛯ 𝗧𝗶𝘁𝗹𝗲 : " + i.title + "\n⛯ 𝗨𝗿𝗹 : " + i.url +"\n⛯ 𝗗𝗲𝘀𝗰𝗿𝗶𝗽𝘁𝗶𝗼𝗻 : " + i.timestamp +"\n⛯ 𝗩𝗶𝗲𝘄𝘀 : "+i.views +"\n⛯ 𝗨𝗽𝗹𝗼𝗮𝗱𝗲𝗱 : " +i.ago +"\n⛯ 𝗔𝘂𝘁𝗵𝗼𝗿 : "+i.author.name+"\n\n\nReply 1 To Video \nReply 2 To Audio" ;
+                let cap = "\t *---Yt Song Searched Data---*   \n\n*Title :* " + i.title + "\n*Url :* " + i.url +"\n*Description :* " + i.timestamp +"\n*Views :* "+i.views +"\n*Uploaded :* " +i.ago +"\n*Author :* "+i.author.name+"\n\n\nReply 1 To Video \nReply 2 To Audio" ;
                 Void.sendMessage(citel.chat,{image :{url : i.thumbnail}, caption :  cap });
            
            
