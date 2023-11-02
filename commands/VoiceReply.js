@@ -1,17 +1,18 @@
-
-client.on('message', (message) => {
-  // Send a voice reply to every message
-  client.sendMessage(message.from, {
-    audio: {
-      url: 'https://example.com/audio.mp3',
+async function sendVoiceReply(to, audioUrl) {
+  const response = await fetch('https://api.whatsapp.com/send/message', {
+    method: 'POST',
+    headers: {
+      'Authorization': ' ',
     },
+    body: JSON.stringify({
+      to,
+      audio: {
+        url: audioUrl,
+      },
+    }),
   });
-});
 
-// Schedule a task to send the voice reply every minute
-new Cron.CronJob('0 * * * *', () => {
-  // Send the voice reply
-}, null, true);
-
-client.connect();
-
+  if (!response.ok) {
+    throw new Error('Failed to send voice reply');
+  }
+}
