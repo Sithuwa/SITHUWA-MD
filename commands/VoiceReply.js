@@ -1,18 +1,13 @@
-async function sendVoiceReply(to, audioUrl) {
-  const response = await fetch('https://api.whatsapp.com/send/message', {
-    method: 'POST',
-    headers: {
-      'Authorization': ' ',
-    },
-    body: JSON.stringify({
-      to,
-      audio: {
-        url: Evillaugh.ogg,
-      },
-    }),
-  });
+let util = require('util')
+let path = require('path')
 
-  if (!response.ok) {
-    throw new Error('Failed to send voice reply');
-  }
+let handler = async (m, { conn }) => {
+let vn = './VoiceClip/Banate.mp3'
+conn.sendFile(m.chat, vn, 'Banate.mp3', null, m, true, {
+type: 'audioMessage', 
+ptt: true
+})
 }
+handler.customPrefix = /bañate|Bañate/ 
+handler.command = new RegExp
+module.exports = handler
