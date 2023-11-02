@@ -8,6 +8,6 @@ type: 'audioMessage',
 ptt: true
 })
 }
-handler.customPrefix = /Adarei|Adarei/ 
+handler.customPrefix = /VoiceReply|VoiceReply/ 
 handler.command = new RegExp
 module.exports = handler
