@@ -8,7 +8,7 @@ type: 'audioMessage',
 ptt: true 
 })
 }
-handler.customPrefix = /bot|Bot|enojado|Molesto|Enojada|ENOJADA|enojada|Molesta/i 
+handler.customPrefix = /bot|Bot/i 
 handler.command = new RegExp
 handler.fail = null
 handler.exp = 100
