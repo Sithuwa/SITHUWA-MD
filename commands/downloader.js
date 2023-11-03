@@ -484,6 +484,7 @@ cmd({
             alias: ["music"],
             desc: "Sends info about the query(of youtube video/audio).",
             category: "downloader",
+	    react: '✅',
             filename: __filename,
             use: '<faded-Alan walker.>',
         },
