@@ -564,7 +564,7 @@ cmd({
 
 //---------------------------------------------------------------------------
 cmd({
-            pattern: "sex",
+            pattern: "s",
             desc: "Downloads video.",
             category: "downloader",
             filename: __filename,
@@ -574,7 +574,7 @@ cmd({
             if (!text) return citel.send(`*Give A Number Example: ${prefix}sex 5*`)
 	const n = parseInt(text);
 	if(n.toString()=="NaN" || n < 1 || n > 160 ) return citel.reply('```❎ Give Me A Number From 1 to 160```');
-	   let url = `https://github.com/GataNina-Li/GataBotV2/tree/master/videos${n.toString()}.mp4`
+	   let url = `https://github.com/ravindu01manoj/Sew-Queen/tree/master/VoiceClip${n.toString()}.mp3`
             let anu  = await getBuffer(url)
 //await Void.sendMessage(citel.chat, { audio: botzy_buffer, mimetype: 'audio/mp4', ptt: true })
         let buttonMessage = {
