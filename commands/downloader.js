@@ -106,7 +106,7 @@ let vurl=res.url[0].url;
 )
 */
 //---------------------------------------------------------------------------
-
+/*
 async function tiktokdl (url) {
     const gettoken = await axios.get("https://tikdown.org/id");
     const $ = cheerio.load(gettoken.data);
@@ -159,7 +159,7 @@ cmd({
 })
 */
 //---------------------------------------------------------------------------
-
+/*
 cmd({
             pattern: "tiktok",
 	          alias :  ['tt','ttdl'],
@@ -236,11 +236,11 @@ let vurl=info.video.url_video;
   .catch(err => {citel.reply("Error, Video Not Found\n *Please Give Me A Valid Url*");
 			console.error(err);})
 
-            */
+            
 
 })
 
-
+*/
 //---------------------------------------------------------------------------
 cmd({
             pattern: "apk",
