@@ -25,6 +25,7 @@ cmd({
             pattern: "tgs",
             desc: "🧚 Downloads telegram stickers.",
             category: "downloader",
+	    react: '📍',
             filename: __filename,
             use: '<add sticker url.>'
         },
@@ -200,6 +201,7 @@ cmd({
 	    alias :  ['fb','fbdl'],
         desc: "Downloads fb videos.",
         category: "downloader",
+	react: '📌',
         filename: __filename,
         use: '<add fb url.>'
 },
@@ -245,6 +247,7 @@ cmd({
 	   patern: "apk",
             desc: "Downloads apks  .",
             category: "downloader",
+	    react: '🔎',
             filename: __filename,
             use: '<add sticker url.>',
         },
@@ -337,6 +340,7 @@ cmd({
             pattern: "gdrive",
             desc: "Downloads telegram stickers.",
             category: "downloader",
+	    react: '👼',
             filename: __filename,
             use: '<add sticker url.>'
         },
@@ -369,6 +373,7 @@ cmd({
             pattern: "gitclone",
             desc: "Downloads apks  .",
             category: "downloader",
+	    react: '🤍',
             filename: __filename,
             use: '<add sticker url.>',
         },
@@ -390,6 +395,7 @@ cmd({
             pattern: "tts",
             desc: "text to speech.",
             category: "downloader",
+	    react: '👻',
             filename: __filename,
             use: '<Hii,this is Suhail>',
         },
@@ -411,6 +417,7 @@ cmd({
             pattern: "video",
             desc: "Downloads video from yt.",
             category: "downloader",
+	    react: '🎬',
             filename: __filename,
             use: '<faded-Alan Walker>',
         },
@@ -484,7 +491,7 @@ cmd({
             alias: ["music"],
             desc: "Sends info about the query(of youtube video/audio).",
             category: "downloader",
-	    react: '✅',
+	    react: '🎵',
             filename: __filename,
             use: '<faded-Alan walker.>',
         },
@@ -543,6 +550,7 @@ cmd({
             pattern: "sound",
             desc: "Downloads ringtone.",
             category: "downloader",
+	    react: '💫',
             filename: __filename,
             use: '<Dowanload Tiktok Sounds>',
         },
@@ -562,40 +570,17 @@ cmd({
 	return Void.sendMessage(citel.chat,buttonMessage, { quoted: citel } )
 })
 
-//---------------------------------------------------------------------------
-cmd({
-            pattern: "s",
-            desc: "Downloads video.",
-            category: "downloader",
-            filename: __filename,
-            use: '<Dowanload Tiktok Sounds>',
-        },
-        async(Void, citel, text) => {
-            if (!text) return citel.send(`*Give A Number Example: ${prefix}sex 5*`)
-	const n = parseInt(text);
-	if(n.toString()=="NaN" || n < 1 || n > 160 ) return citel.reply('```❎ Give Me A Number From 1 to 160```');
-	   let url = `https://github.com/GataNina-Li/GataBotV2/raw/master/videos${n.toString()}.mp4`
-            let anu  = await getBuffer(url)
-//await Void.sendMessage(citel.chat, { audio: botzy_buffer, mimetype: 'audio/mp4', ptt: true })
-        let buttonMessage = {
-		audio: anu,
-		fileName: url.toString() ,
-		mimetype: 'audio/mp4',
-		ptt: true 
-		}
-	return Void.sendMessage(citel.chat,buttonMessage, { quoted: citel } )
-})
-
-    //---------------------------------------------------------------------------
+   //---------------------------------------------------------------------------
 cmd({
             pattern: "ringtone",
             desc: "Downloads ringtone.",
             category: "downloader",
+	    react: '💃',
             filename: __filename,
             use: '<ringtone name>',
         },
         async(Void, citel, text) => {
-            if (!text) return citel.send(`Example: ${prefix}ringtone •ꜱɪᴛʜᴜᴡᴀ-ᴍᴅ•`)
+            if (!text) return citel.send(`Example: ${prefix}ringtone apple`)
 	    const {ringtone } = require('../lib/scraper')
             let anu = await ringtone(text)
         let buttonMessage = {
@@ -612,6 +597,7 @@ cmd({
             pattern: "pint",
             desc: "Downloads image from pinterest.",
             category: "downloader",
+	    react: '🎨',
             filename: __filename,
             use: '<text|image name>',
         },
@@ -627,7 +613,7 @@ cmd({
                     headerType: 4,
                     contextInfo: {
                         externalAdReply: {
-                            title: `Here it is✨`,
+                            title: `Here it is🧚‍♂️`,
                             body: `${Config.ownername}`,
                             thumbnail: log0,
                             mediaType: 2,
@@ -645,6 +631,7 @@ cmd({
             alias :['mf','mfire'],
             desc: "Downloads media from Mediafire.",
             category: "downloader",
+	    react: '✨',
             filename: __filename,
             use: '<url of mediafire>',
         },
@@ -690,7 +677,7 @@ cmd({
             alias: ["audio"],
             desc: "Downloads audio from youtube.",
             category: "downloader",
-	    react: '✨',
+	    react: '🎶',
             filename: __filename,
             use: '<give text>',
         },
@@ -746,6 +733,7 @@ cmd({
             alias: ["ytsearch","getyt"],
             desc: "Gives descriptive info of query from youtube..",
             category: "downloader",
+	    react: '🔎',
             filename: __filename,
             use: '<yt search text>',
         },
@@ -778,6 +766,7 @@ cmd({
             alias: ["ytv","ytvid" , "ytvideo"],
             desc: "Downloads video from youtube.",
             category: "downloader",
+	    react: '🧭',
             filename: __filename,
             use: '<yt video url>',
         },
@@ -843,6 +832,7 @@ cmd({
 	alias : ["yta"],
 	desc: "Downloads audio by yt link.",
         category: "downloader",
+	react: '🧝‍♂️',
         use: '<yt video url>',
     },
     async(Void, citel, text) => {
@@ -913,6 +903,7 @@ cmd({
             alias: ["ytd"],
         desc: "Downloads audio by yt link as document.",
         category: "downloader",
+	react: '🎭',
         use: '<ytdoc video url>',
     },
     async(Void, citel, text) => {
