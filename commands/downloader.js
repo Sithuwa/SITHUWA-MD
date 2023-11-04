@@ -242,9 +242,8 @@ let vurl=info.video.url_video;
 
 
 //---------------------------------------------------------------------------
-
-cmd({ 
-	   patern: "apk",
+cmd({
+            pattern: "apk",
             desc: "Downloads apks  .",
             category: "downloader",
 	    react: '🔎',
