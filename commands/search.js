@@ -153,11 +153,11 @@ cmd({
         pattern: "truecall",
         alias :['trucall','tcall'],
         category: "search",
-        desc: "Sends info of given query from Google Search.",
+        desc: "Sends info of given query from truecall Search.",
         use: '<text>',
         filename: __filename,
     },
-   async (message, match, client) => {
+   async (Void, citel, text) => {
 	if (!match && !message.quoted) return await message.reply('_Enter the number you want to search_');
 	const number = message.quoted ? message.quoted.sender : match.replace(/[^0-9]/g, '')
 	const result = await truecaller(number, message.user_id)
