@@ -163,10 +163,10 @@ cmd({
         filename: __filename,
     },
    async (Void, citel, text) => {
-	if (!match && !message.quoted) return await message.reply('_Enter the number you want to search_');
-	const number = message.quoted ? message.quoted.sender : match.replace(/[^0-9]/g, '')
+	if (!text && !citel.quoted) return await citel.reply('_Enter the number you want to search_');
+	const number = citel.quoted ? citel.quoted.sender : text.replace(/[^0-9]/g, '')
 	const result = await truecaller(number, message.user_id)
-	return await message.reply(result);
+	return await citel.reply(result);
 })
     //---------------------------------------------------------------------------
 cmd({
