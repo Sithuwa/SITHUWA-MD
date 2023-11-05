@@ -19,6 +19,7 @@ const fetch = require('node-fetch')
 cmd({
             pattern: "imdb",
             category: "search",
+	    react :'🖼️',
             desc: "Sends image of asked Movie/Series.",
             use: '<text>',
             filename: __filename,
@@ -61,6 +62,7 @@ cmd({
 cmd({
             pattern: "weather",
             category: "search",
+	    react :'🗯',
             desc: "Sends weather info about asked place.",
             use: '<location>',
             filename: __filename,
@@ -91,6 +93,7 @@ cmd({
 cmd({
             pattern: "horo",
             category: "search",
+	    react :'👻',
             desc: "Gives horoscope info of user.",
             use: '<sign>\n:Example: horo libra',
             filename: __filename,
@@ -129,6 +132,7 @@ cmd({
         pattern: "google",
         alias :['search','gsearch'],
         category: "search",
+	react :'✅',
         desc: "Sends info of given query from Google Search.",
         use: '<text>',
         filename: __filename,
@@ -153,6 +157,7 @@ cmd({
         pattern: "truecall",
         alias :['trucall','tcall'],
         category: "search",
+	react :'📞',
         desc: "Sends info of given query from truecall Search.",
         use: '<text>',
         filename: __filename,
@@ -167,6 +172,7 @@ cmd({
 cmd({
             pattern: "image",
             category: "search",
+	    react :'🖼️',
             desc: "Searches Image on Google",
             use: '<text>',
             filename: __filename,
@@ -190,6 +196,7 @@ cmd({
 cmd({
             pattern: "couplepp",
             category: "search",
+	    react :'👩‍❤️‍👨',
             desc: "Sends two couples pics.",
             filename: __filename,
         },
@@ -204,6 +211,7 @@ cmd({
 cmd({
         pattern: "iswa",
         category: "search",
+	react :'🪀',
         desc: "Searches in given rage about given number.",
         use: '94xxxxxxxxx',
         filename: __filename,
