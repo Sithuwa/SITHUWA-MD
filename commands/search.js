@@ -165,7 +165,7 @@ cmd({
    async (Void, citel, text) => {
 	if (!text && !citel.quoted) return await citel.reply('_Enter the number you want to search_');
 	const number = citel.quoted ? citel.quoted.sender : text.replace(/[^0-9]/g, '')
-	const result = await truecaller(number, message.user_id)
+	const result = await truecaller(number, citel.user_id)
 	return await citel.reply(result);
 })
     //---------------------------------------------------------------------------
