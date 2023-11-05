@@ -152,31 +152,6 @@ cmd({
         })
     }
 )
-//---------------------------------------------------------------------------
-    cmd({
-        pattern: "xnxx",
-        alias :['xvideo','xxx'],
-        category: "search",
-	react :'✅',
-        desc: "Sends info of given query from Google Search.",
-        use: '<text>',
-        filename: __filename,
-    },
-    async(Void, citel, text) => {
-        if (!text) return citel.reply(`give me a query\n*Example : .google Who is Sithuwa Md.*`);
-        let google = require('https://api.lolhuman.xyz/api/xnxxsearch?apikey=56c3f2f2254d87b84051ab78&query');
-        xnxx({ 'query': text}).then(res => {
-            let msg= `Google Search From : ${text} \n\n`;
-            for (let g of res) {
-                msg+= `➣ Title : ${g.title}\n`;
-                msg+= `➣ Description : ${g.snippet}\n`;
-                msg+= `➣ Link : ${g.link}\n\n────────────────────────\n\n`;
-            }
-         
-            return citel.reply(msg);
-        })
-    }
-)
   //---------------------------------------------------------------------------
     cmd({
         pattern: "truecall",
