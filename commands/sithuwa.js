@@ -9,6 +9,7 @@ cmd({
 
             pattern: "gm",
             desc: "chat bot voice.",
+            category: "voice chat",
             react: "🥳",
             filename: __filename,
             use: '<faded-Alan walker.>',
@@ -24,7 +25,8 @@ cmd({
 
             pattern: "gn",
             desc: "chat bot voice.",
-            react: "🥳",
+            category: "voice chat",
+            react: "👻",
             filename: __filename,
             use: '<faded-Alan walker.>',
         },
@@ -39,7 +41,8 @@ cmd({
 
             pattern: "bye",
             desc: "chat bot voice.",
-            react: "🥳",
+            category: "voice chat",
+            react: "👋",
             filename: __filename,
             use: '<faded-Alan walker.>',
         },
@@ -54,7 +57,8 @@ cmd({
 
             pattern: "Hmm",
             desc: "chat bot voice.",
-            react: "🥳",
+            category: "voice chat",
+            react: "😒",
             filename: __filename,
             use: '<faded-Alan walker.>',
         },
@@ -69,7 +73,8 @@ cmd({
 
             pattern: "Hi",
             desc: "chat bot voice.",
-            react: "🥳",
+            category: "voice chat",
+            react: "😃",
             filename: __filename,
             use: '<faded-Alan walker.>',
         },
