@@ -339,7 +339,7 @@ cmd({
         },
         async(Void, citel, text, isAdmins) => {
 	    await Void.sendPresenceUpdate('recording', citel.chat);
-            await Void.sendMessage(citel.chat, { audio: {url : 'https://github.com/DGXeon/Tiktokmusic-API/blob/master/tiktokmusic/sound100.mp3',}, mimetype: 'audio/mpeg', ptt: true }, { quoted: citel, });
+            await Void.sendMessage(citel.chat, { audio: {url : 'https://github.com/Sithuwa/SITHUWA-MD/raw/main/media/Alive.mp3',}, mimetype: 'audio/mpeg', ptt: true }, { quoted: citel, });
             let alivemessage = Config.ALIVE_MESSAGE || `*ᴀ ʙᴏᴛ ᴅᴇᴠᴇʟᴏᴘᴇᴅ ʙʏ ꜱɪᴛʜᴜᴍ ᴋᴀʟʜᴀʀᴀ.*`
             const alivtxt = `
 *Hello, ${citel.pushName},*
