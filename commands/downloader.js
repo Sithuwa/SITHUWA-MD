@@ -266,6 +266,7 @@ try {
     return false;
   };
 };
+})
 	
 /*fbInfoVideo.getInfo(text)
   .then(info =>{
