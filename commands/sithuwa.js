@@ -8,6 +8,7 @@ const speed = require('performance-now')
 cmd({
 
             pattern: "gm",
+            alias:['goodmorning','ගුඩ්මෝනිම්'],
             desc: "chat bot voice.",
             category: "voice chat",
             react: "🥳",
@@ -24,6 +25,7 @@ cmd({
 cmd({
 
             pattern: "gn",
+            alias:['goodnight','ගුඩ්නයිට්'],
             desc: "chat bot voice.",
             category: "voice chat",
             react: "👻",
@@ -40,6 +42,7 @@ cmd({
 cmd({
 
             pattern: "bye",
+            alias:['by','බායි'],
             desc: "chat bot voice.",
             category: "voice chat",
             react: "👋",
@@ -55,7 +58,8 @@ cmd({
 
 cmd({
 
-            pattern: "Hmm",
+            pattern: "hmm",
+            alias:['hum','හ්ම්ම්','හුම්ම්'],
             desc: "chat bot voice.",
             category: "voice chat",
             react: "😒",
@@ -71,7 +75,8 @@ cmd({
 
 cmd({
 
-            pattern: "Hi",
+            pattern: "hi",
+            alias:['හායි','hello'],
             desc: "chat bot voice.",
             category: "voice chat",
             react: "😃",
