@@ -644,7 +644,7 @@ const buffer = await sticker.toBuffer();
              pattern: "chatbot",
              alias : ["chatbot"],
              desc: "activates and deactivates chatbot.\nuse buttons to toggle.",
-             category: "misc",
+             category: "voice chat",
              filename: __filename
          },
          async(Void, citel, text,{ isCreator }) => {
