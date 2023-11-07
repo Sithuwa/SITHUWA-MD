@@ -202,7 +202,7 @@ cmd({
         use: '<add fb url.>'
 },
 async(Void, citel, text) => {
-           text = getUrl(text || citel.reply_citel.text)
+           text = getUrl(text || citel.reply_message.text)
 	if (!text) return await citel.reply('_*Need link!*_')
 	const response = await getJson(apiUrl + 'api/convert?url=' + text)
 	if (!response.status) return await citel.reply("*No media found!*")
