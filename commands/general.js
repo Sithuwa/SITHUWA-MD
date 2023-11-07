@@ -132,6 +132,8 @@ cmd({
         filename: __filename,
     },
     async(Void, citel) => {
+	await Void.sendPresenceUpdate('recording', citel.chat);
+        await Void.sendMessage(citel.chat, { audio: {url : 'https://github.com/Sithuwa/SITHUWA-MD/raw/main/media/Alive.mp3',}, mimetype: 'audio/mpeg', ptt: true }, { quoted: citel, });
         let { data } = await axios.get('https://api.github.com/repos/Sithuwa/SITHUWA-MD')
         let cap = `Hey ${citel.pushName}\n
 *⭐ Total Stars:* ${data.stargazers_count} stars
