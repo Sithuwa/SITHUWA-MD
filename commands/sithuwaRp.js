@@ -7,7 +7,7 @@ const speed = require('performance-now')
 
 cmd({
 
-            command: "gm",
+            case: "gm",
             desc: "Bot Chat Voice.",
             react: "👩‍💻",
             filename: __filename,
