@@ -17,4 +17,6 @@ cmd({
         async(Void, citel, text) => {
               await Void.sendPresenceUpdate('recording', citel.chat);
             await Void.sendMessage(citel.chat, { audio: {url : 'https://github.com/Sithuwa/SITHUWA-MD/raw/main/media/Gm.mp3',}, mimetype: 'audio/mpeg', ptt: true }, { quoted: citel, });
+        }
+    )
 //---------------------------------------------------------------------------
