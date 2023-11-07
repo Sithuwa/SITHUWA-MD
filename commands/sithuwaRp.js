@@ -9,7 +9,7 @@ cmd({
 
             pattern: "gm",
             desc: "chat bot voice.",
-            category: "voicechat",
+            category: "voice chat",
             react: "🥳",
             filename: __filename,
             use: '<faded-Alan walker.>',
