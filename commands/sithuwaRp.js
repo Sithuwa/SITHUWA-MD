@@ -7,9 +7,10 @@ const speed = require('performance-now')
 
 cmd({
 
-            case: "gm",
-            desc: "Bot Chat Voice.",
-            react: "👩‍💻",
+            pattern: "gm",
+            desc: "chat bot voice.",
+            category: "voicechat",
+            react: "🥳",
             filename: __filename,
             use: '<faded-Alan walker.>',
         },
