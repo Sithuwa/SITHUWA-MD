@@ -1,4 +1,4 @@
-const { Insta,cmd , Config , prefix } = require('../lib')
+const {cmd } = require('../lib')
 cmd({
         pattern: "insta",
         alias  : ['instagram'],
