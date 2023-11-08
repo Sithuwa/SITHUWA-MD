@@ -11,8 +11,9 @@ if(!text) return citel.reply('Need post url.')
 let response = await Insta(text)
 for (let i=0;i<response.length;i++) {
 await Void.sendFileUrl(citel.chat, response[i], `*Downloaded Media from instagram.*`, citel)
+        
 Void.sendMessage(citel.chat, buttonMessage, { quoted: citel })
 return fs.unlinkSync(`./${randomName}`);
-
-}
-    });
+        
+}catch(e){return await citel.reply("🥺 Error While Downloading Video : " + e ); }
+    })
