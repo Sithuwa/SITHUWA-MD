@@ -110,7 +110,7 @@ cmd({
 cmd({
 
             pattern: "sithu",
-            alias:['bot','සිතූ'],
+            alias:['menu','සිතූ'],
             desc: "chat bot voice.",
             category: "voice chat",
             react: "💛",
