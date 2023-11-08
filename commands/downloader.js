@@ -193,7 +193,7 @@ let buttonMessage =
 
 })
 //----------------------------------------------------------------------------------
-cmd({
+/*cmd({
         pattern: "facebook",
 	    alias :  ['fb','fbdl'],
         desc: "Downloads fb videos.",
@@ -242,7 +242,7 @@ let vurl=info.video.url_video;
 
 
 //---------------------------------------------------------------------------
-cmd({
+/*cmd({
             pattern: "apk",
             desc: "Downloads apks  .",
             category: "downloader",
