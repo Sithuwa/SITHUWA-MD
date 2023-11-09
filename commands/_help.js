@@ -29,7 +29,7 @@ Secktor.cmd({
         },
         async(Void, citel, text) => {
            await Void.sendPresenceUpdate('recording', citel.chat);
-            await Void.sendMessage(citel.chat, { audio: {url : 'https://github.com/Sithuwa/SITHUWA-MD/raw/main/media/Alive.mp3',}, mimetype: 'audio/mpeg', ptt: true }, { quoted: citel, });
+            await Void.sendMessage(citel.chat, { audio: {url : 'https://github.com/Kalhara254/VOICE/raw/main/media/Menu.mp3',}, mimetype: 'audio/mpeg', ptt: true }, { quoted: citel, });
             const { commands } = require('../lib');
             if (text.split(" ")[0]) {
                 let arr = [];
@@ -51,9 +51,9 @@ Secktor.cmd({
                 })
                 const time = moment(moment())
                     .format('HH:mm:ss')
-                moment.tz.setDefault('Asia/colombo')
+                moment.tz.setDefault('Asia/Colombo')
                     .locale('id')
-                const date = moment.tz('Asia/colombo').format('DD/MM/YYYY')
+                const date = moment.tz('Asia/Colombo').format('DD/MM/YYYY')
                 let total = await sck1.countDocuments()
                 let str = `╭────《 ` + fancytext(Config.ownername.split(' ')[0], 58) + ` 》─────⊷\n`
                 str +=
