@@ -211,6 +211,23 @@ async function downloadFacebookVideoWithCommand(message) {
   // Log a success message
   console.log(`Video downloaded to video-${videoId}.mp4`);
 }
+const fetch = require('node-fetch');
+const downloadFacebookVideo = require('facebook-video-downloader');
+const downloadFacebookVideoWithCommand = require('./download-facebook-video-with-command');
+
+// Create a bot class
+class FacebookVideoDownloaderBot {
+  constructor() {
+    this.listenForCommand = downloadFacebookVideoWithCommand;
+  }
+
+  // Start listening for messages
+  listen() {
+    process.stdin.on('data', async (message) => {
+      await this.listenForCommand(message.toString());
+    });
+  }
+}
 
 	
 /*fbInfoVideo.getInfo(text)
