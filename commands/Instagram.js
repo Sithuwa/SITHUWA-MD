@@ -1,3 +1,5 @@
+const {cmd } = require('../lib')
+
 cmd(
   {
     pattern: "insta ?(.*)",
