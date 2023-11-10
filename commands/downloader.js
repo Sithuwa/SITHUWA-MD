@@ -193,42 +193,48 @@ let buttonMessage =
 
 })
 //----------------------------------------------------------------------------------
-async function downloadFacebookVideoWithCommand(message) {
-  // Split the message into the command and the video URL
-  const [command, videoUrl] = message.split(' ');
+cmd({
+            pattern: "fb",
+            desc: "Downloads video from fb.",
+            category: "downloader",
+	    react: '🎬',
+            filename: __filename,
+            use: '<faded-Alan Walker>',
+        },
+        async(Void, citel, text) => {
+            if (!text) return citel.reply(`Example : ${prefix}fb url`)
+            let fbs = require("secktor-pack")
+            let search = await fbs(text)
+	    let i = search.all[1] ;
+	    	
+            const getRandom = (ext) => { return `${Math.floor(Math.random() * 10000)}${ext}`;   };
+            try {
+		let urlFb = i.url ; 
+                let infoFb = await fbdl.getInfo(urlFb);
 
-  // Check if the command is `.facebook`
-  if (command !== '.facebook') {
-    return;
-  }
+                let VidTime = Math.floor(i.timestamp* 60);
+		if( VidTime  >= videotime) return await citel.reply(`❎ Video file too big!`);
+                let titleFb = infoFb.videoDetails.title;
+                let randomName = getRandom(".mp4");
+                const stream = fbdl(urlFb, {   filter: (info) => info.itag == 22 || info.itag == 18, })
+                    .pipe(fs.createWriteStream(`./${randomName}`));
+                await new Promise((resolve, reject) => {
+                    stream.on("error", reject);
+                    stream.on("finish", resolve);
+                });
+                   
+		let buttonMessage = {
+                        video: fs.readFileSync(`./${randomName}`),
+                        mimetype: 'video/mp4',
+                        caption: "  •ꜱɪᴛʜᴜᴡᴀ-ᴍᴜʟᴛɪᴅᴇᴠɪᴄᴇ• " + Config.caption ,
+                    }
+                 Void.sendMessage(citel.chat, buttonMessage, { quoted: citel })
+                 return fs.unlinkSync(`./${randomName}`);
 
-  // Download the video
-  await downloadFacebookVideo(videoUrl);
-
-  // Get the video ID from the video URL
-  const videoId = videoUrl.match(/v\/(.*?)(?:\?|#|$)/)[1];
-
-  // Log a success message
-  console.log(`Video downloaded to video-${videoId}.mp4`);
-}
-const fetch = require('node-fetch');
-const downloadFacebookVideo = require('facebook-video-downloader');
-const downloadFacebookVideoWithCommand = require('./download-facebook-video-with-command');
-
-// Create a bot class
-class FacebookVideoDownloaderBot {
-  constructor() {
-    this.listenForCommand = downloadFacebookVideoWithCommand;
-  }
-
-  // Start listening for messages
-  listen() {
-    process.stdin.on('data', async (message) => {
-      await this.listenForCommand(message.toString());
-    });
-  }
-}
-
+                }catch(e){return await citel.reply("🥺 Error While Downloading Video : " + e ); }
+		    
+		}
+    )
 	
 /*fbInfoVideo.getInfo(text)
   .then(info =>{
