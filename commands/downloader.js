@@ -197,24 +197,11 @@ let buttonMessage =
 cmd({
     pattern: "fb ?(.*)",
     desc: Lang.FB_DESC,
+    category: "downloader",
+    react :'🥳',
   },
-  async (citel, text) => {
-    text = !citel.reply_message ? text : citel.reply_message.text
-    if (text === "") return await citel.sendMessage(Lang.NEED_REPLY)
-    await citel.sendMessage(Lang.DOWNLOADING)
-    let links = await downVideo(text)
-    if (links.length == 0) return await citel.sendMessage(Lang.NOT_FOUND)
-    let { buffer, size } = await getBuffer(links[0])
-    if (size > 100)
-      return await citel.sendMessage(
-        Lang.SIZE.format(size, links[0], links[1])
-      )
-    return await citel.sendMessage(
-      buffer,
-      { quoted: citel.quoted, caption: Lang.CAPTION.format(links[1] || "") },
-      MessageType.video
-    )
-  })
+    async(Void, citel, text) => {
+ if (!text) return citel.send('Uhh Please, Give me  facebook Url') 
 	
 /*fbInfoVideo.getInfo(text)
   .then(info =>{
