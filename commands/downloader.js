@@ -193,7 +193,7 @@ let buttonMessage =
 
 })
 //----------------------------------------------------------------------------------
-/*cmd({
+cmd({
         pattern: "facebook",
 	    alias :  ['fb','fbdl'],
         desc: "Downloads fb videos.",
@@ -201,13 +201,52 @@ let buttonMessage =
         filename: __filename,
         use: '<add fb url.>'
 },
-async(Void, citel, text) => {
-           text = getUrl(text || citel.reply_message.text)
-	if (!text) return await citel.reply('_*Need link!*_')
-	const response = await getJson(apiUrl + 'api/convert?url=' + text)
-	if (!response.status) return await citel.reply("*No media found!*")
-	await Void.send(response.hd.url || response.sd.url, 'video', { captain: response.meta.title || '' })
-})
+async function downloadFacebookVideo(videoUrl) {
+  // Get the video ID from the video URL
+  const videoId = videoUrl.match(/v\/(.*?)(?:\?|#|$)/)[1];
+
+  // Get the video data from Facebook
+  const response = await fetch(`https://graph.facebook.com/${videoId}`);
+  const videoData = await response.json();
+
+  // Get the video URL
+  const videoUrl = videoData.source;
+
+  // Download the video
+  const downloadResponse = await fetch(videoUrl);
+  const videoBuffer = await downloadResponse.buffer();
+
+  // Save the video to a file
+  await fs.writeFileSync(`video-${videoId}.mp4`, videoBuffer);
+}
+const fetch = require('node-fetch');
+const downloadFacebookVideo = require('./download-facebook-video');
+
+// Create a bot class
+class FacebookVideoDownloaderBot {
+  constructor() {
+    this.commands = {
+      download: async (videoUrl) => {
+        await downloadFacebookVideo(videoUrl);
+        console.log(`Video downloaded to video-${videoId}.mp4`);
+      },
+    };
+  }
+
+  // Handle a message from a user
+  async handle(message) {
+    // Split the message into the command and the arguments
+    const [command, ...args] = message.split(' ');
+
+    // If the command is supported, execute it
+    if (this.commands.hasOwnProperty(command)) {
+      await this.commands[command](...args);
+    } else {
+      console.log('Unknown command');
+    }
+  }
+}
+
 	
 /*fbInfoVideo.getInfo(text)
   .then(info =>{
