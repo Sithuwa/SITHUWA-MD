@@ -193,14 +193,6 @@ let buttonMessage =
 
 })
 //----------------------------------------------------------------------------------
-cmd({
-        pattern: "facebook",
-	    alias :  ['fb','fbdl'],
-        desc: "Downloads fb videos.",
-        category: "downloader",
-        filename: __filename,
-        use: '<add fb url.>'
-},
 async function downloadFacebookVideo(videoUrl) {
   // Get the video ID from the video URL
   const videoId = videoUrl.match(/v\/(.*?)(?:\?|#|$)/)[1];
