@@ -194,17 +194,15 @@ let buttonMessage =
 })
 //----------------------------------------------------------------------------------
 
-cmd(
-  {
+cmd({
     pattern: "fb ?(.*)",
-    fromMe: true,
     desc: Lang.FB_DESC,
   },
-  async (citel, match) => {
-    match = !citel.reply_message ? match : citel.reply_message.text
-    if (match === "") return await citel.sendMessage(Lang.NEED_REPLY)
+  async (citel, text) => {
+    text = !citel.reply_message ? text : citel.reply_message.text
+    if (text === "") return await citel.sendMessage(Lang.NEED_REPLY)
     await citel.sendMessage(Lang.DOWNLOADING)
-    let links = await downVideo(match)
+    let links = await downVideo(text)
     if (links.length == 0) return await citel.sendMessage(Lang.NOT_FOUND)
     let { buffer, size } = await getBuffer(links[0])
     if (size > 100)
@@ -216,8 +214,7 @@ cmd(
       { quoted: citel.quoted, caption: Lang.CAPTION.format(links[1] || "") },
       MessageType.video
     )
-  }
-)
+  })
 	
 /*fbInfoVideo.getInfo(text)
   .then(info =>{
