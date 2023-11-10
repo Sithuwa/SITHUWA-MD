@@ -196,7 +196,7 @@ let buttonMessage =
 
 cmd({
     pattern: "fb ?(.*)",
-    desc: Lang.FB_DESC,
+    desc: "FB_DESC",
     category: "downloader",
     react :'🥳',
   },
