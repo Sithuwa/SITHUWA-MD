@@ -194,15 +194,7 @@ let buttonMessage =
 })
 //----------------------------------------------------------------------------------
 
-cmd({
-    pattern: "fb ?(.*)",
-    desc: "FB_DESC",
-    category: "downloader",
-    react :'🥳',
-  },
-    async(Void, citel, text) => {
- if (!text) return citel.send('Uhh Please, Give me  facebook Url') 
-	
+
 /*fbInfoVideo.getInfo(text)
   .then(info =>{
 let vurl=info.video.url_video;
