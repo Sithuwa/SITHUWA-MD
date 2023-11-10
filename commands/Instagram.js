@@ -1,10 +1,4 @@
-const Asena = require("../Utilis/events")
-const { MessageType, Mimetype } = require("@adiwajshing/baileys")
-const { getBuffer, igStory, downVideo } = require("../Utilis/download")
-const { instagram } = require("../Utilis/Misc")
-const Language = require("../language")
-const Lang = Language.getString("insta")
-Asena.addCommand(
+cmd(
   {
     pattern: "insta ?(.*)",
     fromMe: true,
@@ -36,7 +30,7 @@ Asena.addCommand(
   }
 )
 
-Asena.addCommand(
+cmd(
   { pattern: "story ?(.*)", fromMe: true, desc: Lang.STORY_DESC },
   async (message, match) => {
     match = !message.reply_message ? match : message.reply_message.text
@@ -71,7 +65,7 @@ Asena.addCommand(
   }
 )
 
-Asena.addCommand(
+cmd(
   {
     pattern: "fb ?(.*)",
     fromMe: true,
