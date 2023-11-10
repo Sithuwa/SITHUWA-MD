@@ -305,7 +305,7 @@ cmd({
     filename: __filename
 },
 async(Void, citel, text) => {
-    if (!citel.quoted) return citel.reply(`_🧚 Reply to Any Video_`);
+    if (!citel.quoted) return citel.reply(`_Reply to Any Video_`);
     let mime = citel.quoted.mtype
 if (mime =="audioMessage" || mime =="videoMessage")
 {
@@ -322,6 +322,6 @@ else return console.log('File deleted successfully in TOAUDIO MP3 at : ' , media
 });
 
 }
-else return citel.reply ("```🧚‍♀️ Uhh Please, Reply To A video Message```")
+else return citel.reply ("```Uhh Please, Reply To A video Message```")
 }
 )
