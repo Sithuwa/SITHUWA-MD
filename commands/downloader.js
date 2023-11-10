@@ -193,7 +193,7 @@ let buttonMessage =
 
 })
 //----------------------------------------------------------------------------------
-cmd({
+/* cmd({
         pattern: "facebook",
 	    alias :  ['fb','fbdl'],
         desc: "Downloads fb videos.",
