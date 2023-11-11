@@ -1,26 +1,33 @@
+//══════════════════════════════════════════════════════════════════════════════════════════════════════// 
+//                                                                                                      //
+//                                   MULTI-DEVICE WHATSAPP BOT                                          //
+//                                                                                                      //
+//                                            𝚅.𝟷.𝟸.𝟽                                                   // 
+//                          //
+//                                          BY:SITHUM-KALHARA                                             //
+//                                                                                                      //
+//                                                                                                      //
+//══════════════════════════════════════════════════════════════════════════════════════════════════════//
+
 /**
- Copyright (C) 2022.
- Licensed under the  GPL-3.0 License;
- You may not use this file except in compliance with the License.
- It is supplied in the hope that it may be useful.
- * @project_name : SITHUWA-MD
- * @author : Sithuwa <https://github.com/Sithuwa>
- * @description : Sithuwa,A Multi-functional whatsapp bot.
- * @version 0.0.6
+
  
  cmd({
-            pattern: "reaction-pack",
-            category: "reaction",
+            pattern: "reactions-pack",
+            category: "reactions",
             use: '<quote|reply|tag>',
         },
  **/
+
+
+
 
         const axios = require('axios')
         const { fetchJson,cmd, GIFBufferToVideoBuffer} = require('../lib')
             //---------------------------------------------------------------------------
         cmd({
                     pattern: "bite",
-                    category: "reaction",
+                    category: "reactions",
                     use: '<quote|reply|tag>',
                 },
                 async(Void, citel) => {
@@ -41,9 +48,101 @@
                 }
             )
             //---------------------------------------------------------------------------
+            cmd({
+                pattern: "poke",
+                category: "reactions",
+                use: '<quote|reply|tag>',
+            },
+            async(Void, citel) => {
+                var bite = await fetchJson(`https://api.waifu.pics/sfw/poke`);
+                const response = await axios.get(bite.url, {
+                    responseType: "arraybuffer",
+                });
+                const buffer = Buffer.from(response.data, "utf-8");
+                let users = citel.mentionedJid ? citel.mentionedJid[0] : citel.msg.contextInfo.participant || false;
+                let gif = await GIFBufferToVideoBuffer(buffer);
+                if (users) {
+                    let cap = `@${citel.sender.split("@")[0]} poked to @${users.split("@")[0]} `;
+                    Void.sendMessage(citel.chat, { video: gif, gifPlayback: true, mentions: [users, citel.sender], caption: cap }, { quoted: citel });
+                } else {
+                    let cap = `@${citel.sender.split("@")[0]} poked to everyone. `;
+                    Void.sendMessage(citel.chat, { video: gif, gifPlayback: true, mentions: [citel.sender], caption: cap }, { quoted: citel });
+                }
+            }
+        )
+    //-----------------------------------------------------------------------
+    cmd({
+                pattern: "hug",
+                category: "reactions",
+                use: '<quote|reply|tag>',
+            },
+            async(Void, citel) => {
+                var bite = await fetchJson(`https://api.waifu.pics/sfw/hug`);
+                const response = await axios.get(bite.url, {
+                    responseType: "arraybuffer",
+                });
+                const buffer = Buffer.from(response.data, "utf-8");
+                let users = citel.mentionedJid ? citel.mentionedJid[0] : citel.msg.contextInfo.participant || false;
+                let gif = await GIFBufferToVideoBuffer(buffer);
+                if (users) {
+                    let cap = `@${citel.sender.split("@")[0]} hug to @${users.split("@")[0]} `;
+                    Void.sendMessage(citel.chat, { video: gif, gifPlayback: true, mentions: [users, citel.sender], caption: cap }, { quoted: citel });
+                } else {
+                    let cap = `@${citel.sender.split("@")[0]} huged to everyone. `;
+                    Void.sendMessage(citel.chat, { video: gif, gifPlayback: true, mentions: [citel.sender], caption: cap }, { quoted: citel });
+                }
+            }
+        )
+    //-----------------------------------------------------------------------
+    cmd({
+                pattern: "hold",
+                category: "reactions",
+                use: '<quote|reply|tag>',
+            },
+            async(Void, citel) => {
+                var bite = await fetchJson(`https://api.waifu.pics/sfw/handhold`);
+                const response = await axios.get(bite.url, {
+                    responseType: "arraybuffer",
+                });
+                const buffer = Buffer.from(response.data, "utf-8");
+                let users = citel.mentionedJid ? citel.mentionedJid[0] : citel.msg.contextInfo.participant || false;
+                let gif = await GIFBufferToVideoBuffer(buffer);
+                if (users) {
+                    let cap = `@${citel.sender.split("@")[0]} hold hand of @${users.split("@")[0]} `;
+                    Void.sendMessage(citel.chat, { video: gif, gifPlayback: true, mentions: [users, citel.sender], caption: cap }, { quoted: citel });
+                } else {
+                    let cap = `@${citel.sender.split("@")[0]} holed to everyone. `;
+                    Void.sendMessage(citel.chat, { video: gif, gifPlayback: true, mentions: [citel.sender], caption: cap }, { quoted: citel });
+                }
+            }
+        ) 
+    //-----------------------------------------------------------------------
+    cmd({
+                pattern: "hifi",
+                category: "reactions",
+                use: '<quote|reply|tag>',
+            },
+            async(Void, citel) => {
+                var bite = await fetchJson(`https://api.waifu.pics/sfw/highfive`);
+                const response = await axios.get(bite.url, {
+                    responseType: "arraybuffer",
+                });
+                const buffer = Buffer.from(response.data, "utf-8");
+                let users = citel.mentionedJid ? citel.mentionedJid[0] : citel.msg.contextInfo.participant || false;
+                let gif = await GIFBufferToVideoBuffer(buffer);
+                if (users) {
+                    let cap = `@${citel.sender.split("@")[0]} highfive with @${users.split("@")[0]} `;
+                    Void.sendMessage(citel.chat, { video: gif, gifPlayback: true, mentions: [users, citel.sender], caption: cap }, { quoted: citel });
+                } else {
+                    let cap = `@${citel.sender.split("@")[0]} highfived with everyone. `;
+                    Void.sendMessage(citel.chat, { video: gif, gifPlayback: true, mentions: [citel.sender], caption: cap }, { quoted: citel });
+                }
+            }
+        )
+            //------------------------------------------------------------------------------
         cmd({
                     pattern: "blush",
-                    category: "reaction",
+                    category: "reactions",
                     use: '<quote|reply|tag>',
                 },
                 async(Void, citel) => {
@@ -67,7 +166,7 @@
             //---------------------------------------------------------------------------
         cmd({
                     pattern: "punch",
-                    category: "reaction",
+                    category: "reactions",
                     use: '<quote|reply|tag>',
                 },
                 async(Void, citel) => {
@@ -91,7 +190,7 @@
             //---------------------------------------------------------------------------
         cmd({
                     pattern: "pat",
-                    category: "reaction",
+                    category: "reactions",
                     use: '<quote|reply|tag>',
                 },
                 async(Void, citel) => {
@@ -115,7 +214,7 @@
             //---------------------------------------------------------------------------
         cmd({
                     pattern: "kiss",
-                    category: "reaction",
+                    category: "reactions",
                     use: '<quote|reply|tag>',
                 },
                 async(Void, citel) => {
@@ -139,7 +238,7 @@
             //---------------------------------------------------------------------------
         cmd({
                     pattern: "kill",
-                    category: "reaction",
+                    category: "reactions",
                     use: '<quote|reply|tag>',
                 },
                 async(Void, citel) => {
@@ -162,7 +261,7 @@
             //---------------------------------------------------------------------------
         cmd({
                     pattern: "happy",
-                    category: "reaction",
+                    category: "reactions",
                     use: '<quote|reply|tag>',
                 },
                 async(Void, citel) => {
@@ -185,7 +284,7 @@
             //---------------------------------------------------------------------------
         cmd({
                     pattern: "dance",
-                    category: "reaction",
+                    category: "reactions",
                     use: '<quote|reply|tag>',
                 },
                 async(Void, citel) => {
@@ -209,7 +308,7 @@
             //---------------------------------------------------------------------------
         cmd({
                     pattern: "yeet",
-                    category: "reaction",
+                    category: "reactions",
                     use: '<quote|reply|tag>',
                 },
                 async(Void, citel) => {
@@ -233,7 +332,7 @@
             //---------------------------------------------------------------------------
         cmd({
                     pattern: "wink",
-                    category: "reaction",
+                    category: "reactions",
                     use: '<quote|reply|tag>',
                 },
                 async(Void, citel) => {
@@ -257,7 +356,7 @@
             //---------------------------------------------------------------------------
         cmd({
                     pattern: "slap",
-                    category: "reaction",
+                    category: "reactions",
                     use: '<quote|reply|tag>',
                 },
                 async(Void, citel) => {
@@ -281,7 +380,7 @@
             //---------------------------------------------------------------------------
         cmd({
                     pattern: "bonk",
-                    category: "reaction",
+                    category: "reactions",
                     use: '<quote|reply|tag>',
                 },
                 async(Void, citel) => {
@@ -304,7 +403,7 @@
             //---------------------------------------------------------------------------
         cmd({
                     pattern: "bully",
-                    category: "reaction",
+                    category: "reactions",
                     use: '<quote|reply|tag>',
                 },
                 async(Void, citel) => {
@@ -328,7 +427,7 @@
             //---------------------------------------------------------------------------
         cmd({
                     pattern: "cringe",
-                    category: "reaction",
+                    category: "reactions",
                     use: '<quote|reply|tag>',
                 },
                 async(Void, citel) => {
@@ -352,7 +451,7 @@
             //---------------------------------------------------------------------------
         cmd({
                 pattern: "cuddle",
-                category: "reaction",
+                category: "reactions",
                 use: '<quote|reply|tag>',
             },
             async(Void, citel) => {
