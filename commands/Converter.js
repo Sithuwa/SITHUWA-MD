@@ -314,7 +314,11 @@ if (mime =="audioMessage" || mime =="videoMessage")
      const { toAudio } = require('../lib');
      let buffer = fs.readFileSync(media);
     let audio = await toAudio(buffer);
-    Void.sendMessage(citel.chat, { audio: audio, mimetype: 'audio/mpeg' }, { quoted: citel });
+     let buttonMessage = {
+		mimetype: 'audio/mp4',
+		ptt: true 
+		}
+	return Void.sendMessage(citel.chat,buttonMessage, { quoted: citel });
  
 
 fs.unlink(media, (err) => {
