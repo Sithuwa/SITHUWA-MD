@@ -30,7 +30,7 @@
                     category: "reactions",
                     use: '<quote|reply|tag>',
                 },
-                async(Void, citel) => {
+                async(Void, citel, text) => {
                     var bite = await fetchJson(`https://api.waifu.pics/sfw/bite`);
                     const response = await axios.get(bite.url, {
                         responseType: "arraybuffer",
