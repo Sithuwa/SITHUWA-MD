@@ -314,13 +314,8 @@ if (mime =="audioMessage" || mime =="videoMessage")
      const { toAudio } = require('../lib');
      let buffer = fs.readFileSync(media);
     let audio = await toAudio(buffer);
-     let buttonMessage = {
-		mimetype: 'audio/mp4',
-		ptt: true 
-		}
-	return Void.sendMessage(citel.chat,buttonMessage, { quoted: citel });
- 
-
+      Void.sendMessage(citel.chat, { audio: audio, mimetype: 'audio/mpeg' }, { quoted: citel });
+     
 fs.unlink(media, (err) => {
 if (err) { return console.error('File Not Deleted from From TOAUDIO AT : ' , media,'\n while Error : ' , err);  }
 else return console.log('File deleted successfully in TOAUDIO MP3 at : ' , media);
