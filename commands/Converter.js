@@ -17,7 +17,7 @@
 //══════════════════════════════════════════════════════════════════════════════════════════════════════//
 
 const axios = require('axios')
-const { sck1, tiny, fancytext,getBuffer, listall,Module_Exports , TelegraPh , name,prefix} = require('../lib')
+const { sck1, tiny, fancytext,getBuffer, listall,cmd , TelegraPh , name,prefix} = require('../lib')
 const fs = require('fs-extra');
 const util = require('util');
 const { exec } = require('child_process')
@@ -26,12 +26,12 @@ pastebin = new PastebinAPI("EMWTMkQAVfJa9kM-MRUrxd5Oku1U7pgL");
 const { Sticker, createSticker, StickerTypes } = require("wa-sticker-formatter");
 
     //---------------------------------------------------------------------------
-Module_Exports({
-            kingcmd: "photo",
-            infocmd: "Makes photo of replied sticker.",
-            kingclass: "converter",
+cmd({
+            pattern: "photo",
+            desc: "Makes photo of replied sticker.",
+            category: "converter",
             use: 'reply to any gif/sticker',
-            kingpath: __filename
+            filename: __filename
         },
         async(sigma, citel, text) => {
             const getRandom = (ext) => {
@@ -59,13 +59,13 @@ Module_Exports({
     )
 //---------------------------------------------------------------------------
     
- Module_Exports({
-             kingcmd: "vv",
+ cmd({
+             pattern: "vv",
              shortcut : ['viewonce','retrive'],
-             infocmd: "Send VV MEssage in current message",
-             kingclass: "converter",
+             desc: "Send VV MEssage in current message",
+             category: "converter",
              use: '',
-             kingpath: __filename
+             filename: __filename
          },
          async(sigma, citel, text) => {
 try {
@@ -115,12 +115,12 @@ else return citel.reply("```This is Not A ViewOnce Message```")
 })
  //---------------------------------------------------------------------------
  //---------------------------------------------------------------------------
-Module_Exports({
-            kingcmd: "attp",
+cmd({
+            pattern: "attp",
 
-            infocmd: "Makes sticker of replied image/video.",
-            kingclass: "sticker",
-kingpath: __filename,
+            desc: "Makes sticker of replied image/video.",
+            category: "sticker",
+filename: __filename,
             use: ''
         },
         async(sigma, citel, text) => {
@@ -144,12 +144,12 @@ let media  = await getBuffer(url)
     )
     //---------------------------------------------------------------------------
  //---------------------------------------------------------------------------
-Module_Exports({
-            kingcmd: "stiker",
+cmd({
+            pattern: "stiker",
             shortcut: ["s"],
-            infocmd: "Makes sticker of replied image/video.",
-            kingclass: "sticker",
-kingpath: __filename,
+            desc: "Makes sticker of replied image/video.",
+            category: "sticker",
+filename: __filename,
             use: 'reply to any image/video'
         },
         async(sigma, citel, text) => {
@@ -181,7 +181,7 @@ if(mime =="videoMessage")
                     pack: pack, // The pack name
                     author: author, // The author name
                     type: StickerTypes.FULL ,
-                    categories: ["🤩", "🎉"], // The sticker kingclass
+                    categories: ["🤩", "🎉"], // The sticker category
                     id: "12345", // The sticker id
                     quality: 100, // The quality of the output file
                     background: "transparent",
@@ -192,12 +192,12 @@ if(mime =="videoMessage")
         }
     )
  //---------------------------------------------------------------------------
-Module_Exports({
-            kingcmd: "circle",
+cmd({
+            pattern: "circle",
             shortcut: ["circlestic","circlesticker","cs"],
-            infocmd: "Makes sticker of replied image/video.",
-            kingclass: "sticker",
-kingpath: __filename,
+            desc: "Makes sticker of replied image/video.",
+            category: "sticker",
+filename: __filename,
             use: 'reply to any image/video.'
         },
         async(sigma, citel, text) => {
@@ -213,7 +213,7 @@ kingpath: __filename,
                     pack: pack, // The pack name
                     author: author, // The author name
                     type: StickerTypes.CIRCLE ,
-                    categories: ["🤩", "🎉"], // The sticker kingclass
+                    categories: ["🤩", "🎉"], // The sticker category
                     id: "12345", // The sticker id
                     quality: 75, // The quality of the output file
                 });
@@ -224,12 +224,12 @@ kingpath: __filename,
         }
     )
     //---------------------------------------------------------------------------
-Module_Exports({
-            kingcmd: "crop",
+cmd({
+            pattern: "crop",
             shortcut: ["cropstic","csticker","cropsticker","cr"],
-            infocmd: "Makes sticker of replied image/video.",
-            kingclass: "sticker",
-kingpath: __filename,
+            desc: "Makes sticker of replied image/video.",
+            category: "sticker",
+filename: __filename,
             use: 'reply to any image/video.'
         },
         async(sigma, citel, text) => {
@@ -245,7 +245,7 @@ kingpath: __filename,
                     pack: pack, // The pack name
                     author: author, // The author name
                     type: StickerTypes.CROPPED,
-                    categories: ["🤩", "🎉"], // The sticker kingclass
+                    categories: ["🤩", "🎉"], // The sticker category
                     id: "12345", // The sticker id
                     quality: 75, // The quality of the output file
                 });
@@ -256,12 +256,12 @@ kingpath: __filename,
         }
     )
    //---------------------------------------------------------------------------
-Module_Exports({
-            kingcmd: "round",
+cmd({
+            pattern: "round",
             shortcut: ["roundstic","roundsticker","rd"],
-            infocmd: "Makes sticker of replied image/video.",
-            kingclass: "sticker",
-kingpath: __filename,
+            desc: "Makes sticker of replied image/video.",
+            category: "sticker",
+filename: __filename,
             use: 'reply to any image/video'
         },
         async(sigma, citel, text) => {
@@ -277,7 +277,7 @@ kingpath: __filename,
                     pack: pack, // The pack name
                     author: author, // The author name
                     type: StickerTypes.ROUNDED ,
-                    categories: ["🤩", "🎉"], // The sticker kingclass
+                    categories: ["🤩", "🎉"], // The sticker category
                     id: "12345", // The sticker id
                     quality: 75, // The quality of the output file
                 });
@@ -289,11 +289,11 @@ kingpath: __filename,
     )
 //---------------------------------------------------------------------------
 
-Module_Exports({
-            kingcmd: "memegen",
-            infocmd: "Write text on quoted image.",
-            kingclass: "sticker",
-            kingpath: __filename,
+cmd({
+            pattern: "memegen",
+            desc: "Write text on quoted image.",
+            category: "sticker",
+            filename: __filename,
             use: '',
         },
         async(sigma, citel, text) => {
@@ -332,13 +332,13 @@ Module_Exports({
 
  //---------------------------------------------------------------------------
  //---------------------------------------------------------------------------
-Module_Exports({
-            kingcmd: "quotely",
-            infocmd: "Makes Sticker of quoted text.",
+cmd({
+            pattern: "quotely",
+            desc: "Makes Sticker of quoted text.",
             shortcut: ["q"],
-            kingclass: "sticker",
+            category: "sticker",
             use: 'reply to any message',
-            kingpath: __filename
+            filename: __filename
         },
         async(sigma, citel, text) => {
             if (!citel.quoted) return citel.reply(`Please quote/reply to any message`);
@@ -386,13 +386,13 @@ Module_Exports({
         }
     )
     //---------------------------------------------------------------------------
-Module_Exports({
-            kingcmd: "fancy",
-            infocmd: "Makes stylish/fancy given text",
-            kingclass: "converter",
+cmd({
+            pattern: "fancy",
+            desc: "Makes stylish/fancy given text",
+            category: "converter",
             use: '56 SIGMA MD',
             //react: "✅",
-            kingpath: __filename
+            filename: __filename
         },
         async(sigma, citel, text) => {
             if (isNaN(text.split(" ")[0]) || !text) {
@@ -411,13 +411,13 @@ Module_Exports({
         }
     )
     //---------------------------------------------------------------------------
-Module_Exports({
-            kingcmd: "tiny",
-            infocmd: "Makes url tiny.",
-            kingclass: "converter",
+cmd({
+            pattern: "tiny",
+            desc: "Makes url tiny.",
+            category: "converter",
             use: 'www.google.com',
            // react: "✅",
-            kingpath: __filename
+            filename: __filename
         },
         async(sigma, citel, text) => {
             if (!text) return citel.reply(`_Give me Link_`)
@@ -431,13 +431,13 @@ Module_Exports({
         }
     )
     //---------------------------------------------------------------------------
-Module_Exports({
-        kingcmd: "toaudio",
+cmd({
+        pattern: "toaudio",
         shortcut:['mp3','tomp3'],
-        infocmd: "changes type to audio.",
-        kingclass: "converter",
+        desc: "changes type to audio.",
+        category: "converter",
         use: 'reply to any Video',
-        kingpath: __filename
+        filename: __filename
     },
    async(sigma, citel, text) => {
         if (!citel.quoted) return citel.reply(`_Reply to Any Video_`);
@@ -461,13 +461,13 @@ if (mime =="audioMessage" || mime =="videoMessage")
     }
 )
      //---------------------------------------------------------------------------
-Module_Exports({
-    kingcmd: "toMp4",
+cmd({
+    pattern: "toMp4",
     shortcut:['mp4','tovideo','tovid'],
-    infocmd: "changes type to audio.",
-    kingclass: "converter",
+    desc: "changes type to audio.",
+    category: "converter",
     use: 'reply to any Video',
-    kingpath: __filename
+    filename: __filename
 },
 async(sigma, citel, text) => {
     const { webp2mp4File } = require ("../lib")
@@ -484,12 +484,12 @@ async(sigma, citel, text) => {
 }
 )
 //-------------------------------------------------------------------
-Module_Exports({
-    kingcmd: "pastebin",
+cmd({
+    pattern: "pastebin",
     shortcut:["pbin"],
-    infocmd: "To check ping",
-    kingclass: "converter",
-    kingpath: __filename,
+    desc: "To check ping",
+    category: "converter",
+    filename: __filename,
 },
 async(Void, citel,text) => { 
 if (!text) { text=citel.quoted.text;}
@@ -499,11 +499,11 @@ if (!text) { text=citel.quoted.text;}
 }
 );
 //----------------------------------------------- ---------------------------
-Module_Exports({
-    kingcmd: "paste",
-    infocmd: "create paste of text.",
-    kingclass: "converter",
-    kingpath: __filename,
+cmd({
+    pattern: "paste",
+    desc: "create paste of text.",
+    category: "converter",
+    filename: __filename,
 },
 async(Void, citel,text) => {
 let a = citel.quoted ? citel.quoted.text : citel.text;
@@ -513,15 +513,15 @@ return citel.reply(`*Paste created on telegraph*\nName:${util.format(data.result
 );
 
 
-Module_Exports({
+cmd({
 
-    kingcmd: "attp1",
+    pattern: "attp1",
 
-    infocmd: "Makes glowing sticker of text.",
+    desc: "Makes glowing sticker of text.",
 
-    kingclass: "sticker",
+    category: "sticker",
 
-    kingpath: __filename,
+    filename: __filename,
 
 },
 
@@ -537,15 +537,15 @@ return citel.reply(a,{packname:'SIGMA_MD',author:'ZUBI'},"sticker")
 
 
 
-Module_Exports({
+cmd({
 
-    kingcmd: "attp2",
+    pattern: "attp2",
 
-    infocmd: "Makes glowing sticker of text.",
+    desc: "Makes glowing sticker of text.",
 
-    kingclass: "sticker",
+    category: "sticker",
 
-    kingpath: __filename,
+    filename: __filename,
 
 },
 
@@ -561,15 +561,15 @@ return citel.reply(a,{packname:'SIGMA_MD',author:'ZUBI'},"sticker")
 
 
 
-Module_Exports({
+cmd({
 
-    kingcmd: "attp3",
+    pattern: "attp3",
 
-    infocmd: "Makes glowing sticker of text.",
+    desc: "Makes glowing sticker of text.",
 
-    kingclass: "sticker",
+    category: "sticker",
 
-    kingpath: __filename,
+    filename: __filename,
 
 },
 
@@ -585,15 +585,15 @@ return citel.reply(a,{packname:'SIGMA_MD',author:'ZUBI'},"sticker")
 
 
 
-Module_Exports({
+cmd({
 
-    kingcmd: "ttp1",
+    pattern: "ttp1",
 
-    infocmd: "Makes glowing sticker of text.",
+    desc: "Makes glowing sticker of text.",
 
-    kingclass: "sticker",
+    category: "sticker",
 
-    kingpath: __filename,
+    filename: __filename,
 
 },
 
@@ -609,15 +609,15 @@ return citel.reply(a,{packname:'SIGMA_MD',author:'ZUBI'},"sticker")
 
 
 
-Module_Exports({
+cmd({
 
-    kingcmd: "ttp2",
+    pattern: "ttp2",
 
-    infocmd: "Makes glowing sticker of text.",
+    desc: "Makes glowing sticker of text.",
 
-    kingclass: "sticker",
+    category: "sticker",
 
-    kingpath: __filename,
+    filename: __filename,
 
 },
 
@@ -633,15 +633,15 @@ return citel.reply(a,{packname:'SIGMA_MD',author:'ZUBI'},"sticker")
 
 
 
-Module_Exports({
+cmd({
 
-    kingcmd: "ttp3",
+    pattern: "ttp3",
 
-    infocmd: "Makes glowing sticker of text.",
+    desc: "Makes glowing sticker of text.",
 
-    kingclass: "sticker",
+    category: "sticker",
 
-    kingpath: __filename,
+    filename: __filename,
 
 },
 
@@ -657,15 +657,15 @@ return citel.reply(a,{packname:'SIGMA_MD',author:'ZUBI'},"sticker")
 
 
 
-Module_Exports({
+cmd({
 
-    kingcmd: "ttp4",
+    pattern: "ttp4",
 
-    infocmd: "Makes glowing sticker of text.",
+    desc: "Makes glowing sticker of text.",
 
-    kingclass: "sticker",
+    category: "sticker",
 
-    kingpath: __filename,
+    filename: __filename,
 
 },
 
@@ -681,15 +681,15 @@ return citel.reply(a,{packname:'SIGMA_MD',author:'ZUBI'},"sticker")
 
 
 
-Module_Exports({
+cmd({
 
-    kingcmd: "ttp5",
+    pattern: "ttp5",
 
-    infocmd: "Makes glowing sticker of text.",
+    desc: "Makes glowing sticker of text.",
 
-    kingclass: "sticker",
+    category: "sticker",
 
-    kingpath: __filename,
+    filename: __filename,
 
 },
 
