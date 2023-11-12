@@ -1,4 +1,8 @@
-import fg from 'api-dylux';
+const os = require('os');
+const { tlang, botpic,cmd,formatp } = require('../lib')
+const axios = require('axios')
+const speed = require('performance-now')
+
 
 const handler = async (m, { conn, args, usedPrefix, command }) => {
   if (!args[0]) {
