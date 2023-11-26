@@ -3,9 +3,9 @@
  Licensed under the  GPL-3.0 License;
  You may not use this file except in compliance with the License.
  It is supplied in the hope that it may be useful.
- * @project_name : Secktor-Md
- * @author : SamPandey001 <https://github.com/SamPandey001>
- * @description : Secktor,A Multi-functional whatsapp bot.
+ * @project_name : XLICON-MD
+ * @author : salmanytofficial <https://github.com/salmanytofficial/XLICON-MD>
+ * @description : XLICON,A Multi-functional whatsapp bot.
  * @version 0.0.6
  **/
 
@@ -76,11 +76,10 @@ if(quot.message.videoMessage)
 }
  
 }
-//else citel.reply("```This is Not A ViewOnce Message```") 
        
 }  
      
-catch(e) {  console.log("error" , e ) }     
+catch(e) {   }     
 
        
 if(!citel.quoted) return citel.reply("```Uh Please Reply A ViewOnce Message```")           
@@ -314,8 +313,9 @@ if (mime =="audioMessage" || mime =="videoMessage")
      const { toAudio } = require('../lib');
      let buffer = fs.readFileSync(media);
     let audio = await toAudio(buffer);
-      sigma.sendMessage(citel.chat, { audio: audio, mimetype: 'audio/mpeg' }, { quoted: citel });
-     
+    Void.sendMessage(citel.chat, { audio: audio, mimetype: 'audio/mpeg' }, { quoted: citel });
+ 
+
 fs.unlink(media, (err) => {
 if (err) { return console.error('File Not Deleted from From TOAUDIO AT : ' , media,'\n while Error : ' , err);  }
 else return console.log('File deleted successfully in TOAUDIO MP3 at : ' , media);
