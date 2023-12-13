@@ -28,9 +28,118 @@
 ⚠️ if there any error please infrom it support group. | මෙහිදී යම් ගැටලුවක් ඇති උවහොත් සහය සමූහය වෙත සම්බන්ධ වන්න.
 
 ## Click the button below to deploy. | Deploy කිරීමට පහත බටන් එක ක්ලික් කරන්න.
+
+ # Deploy METHOD
+ 
+ <details close>
+<summary>Click to choose your favourite platform to Deploy</summary>
+ 
+<br><br>   
+   
+<h4 align="center"> Deploy on Repl.it
+</h4>
+
+<p align="center" >
+    <a href="https://repl.it/github/Bladeh4x/BLADE-MD">
+    <img src="https://i.ibb.co/zrB5kMh/deploy-on-repl.jpg" width="170px" alt="Deploy on Heroku" >
+    </a>
+</p>
+
+<p align="center" >
+    <br>
+    __________________________
+    <br>
+</p>
+
+<br>
+      
+<h4 align="center"> Deploy on Koyeb
+</h4>
+      
+<p align="center">
+    <a href="https://app.koyeb.com/apps/deploy?type=git&repository=github.com/Bladeh4x/BLADE-MD&branch=main&env[SESSION_ID]&env[OWNER_NUMBER]=8801853262586&env[MONGODB_URI]&&env[OWNER_NAME]=SLASHER&env[KOYEB_API]&env[PREFIX]=.&env[ALIVE_IMG]=https://telegra.ph/file/1da92586c209009d5131d.jpg&env[global_url]=instagram.com&env[FAKE_COUNTRY_CODE]=92&env[READ_MESSAGE]=false&env[DISABLE_PM]=false&env[WORKTYPE]=public&env[THEME]=GOJO&env[PACK_INFO]=BLADE-MD;BY-ALEXDAVID&name=BLADE-MD&env[KOYEB_NAME]=BLADE-MD&env[ANTILINK_VALUES]=chat.whatsapp.com&env[PORT]=8000)">
+    <img src="https://www.koyeb.com/static/images/deploy/button.svg" alt="Deploy on Koyeb" width="155px">
+    </a>
+   
+</p>
+
+
+<p align="center" >
+    <br>
+    __________________________
+    <br>
+</p>
+
+
+<br>
+ 
+<h4 align="center"> Deploy on Heroku
+</h4>
+
+</p>
+
+<p align="center" >
+    <a href="https://heroku.com/deploy?template=https://github.com/Bladeh4x/BLADE-MD">
+    <img src="https://www.herokucdn.com/deploy/button.png" width="160px" alt="Deploy on Heroku" >
+    </a>
+
+</p>
+
+<p align="center" >
+    <br>
+    __________________________
+    <br>
+<h4 align="center"> Deploy on Mogenius
+</h4>
   
-<div align="left"><a href="https://dashboard.heroku.com/new?template=https://github.com/Sithuwa/SITHUWA-MD"><img src="https://www.herokucdn.com/deploy/button.svg" width="150" ></a></div>
+<p align="center">
+    <a href="https://studio.mogenius.com/">
+    <img src="https://www.cloudflare.com/static/90073b1e5bd8a0765640a20febb3dc22/mogenius_logo_quer.png" alt="Deploy on Mogenius" width="170px">
+    </a>
   
+<p align="center" >
+    <br>
+    __________________________
+    <br>
+</p>
+
+<br>
+
+<h4 align="center"> Deploy on Uffizzi
+</h4>
+  
+<p align="center">
+    <a href="https://www.uffizzi.com/">
+    <img src="https://i.ibb.co/Y29Kv4X/Screenshot-195.png" alt="Deploy on Uffizzi" width="125px">
+    </a>
+    
+</p>
+
+<br>
+
+<h4 align="center"> Deploy on BoxMineWorld
+</h4>
+  
+<p align="center">
+    <a href="https://dash.boxmineworld.com/">
+    <img src="https://graph.org/file/2af0e67f320986702ea24.jpg" alt="Deploy on Boxmineworld" width="175px">
+    </a>
+    <br>
+
+</p>
+
+<p align="center" >
+    <br>
+    __________________________
+    <br>
+</p>
+
+
+
+</details>
+
+<br>
+
 # Developers
 
 | <a href="https://www.facebook.com/sithum.kalhara.7315?mibextid=ZbWKwL"><img src="https://telegra.ph/file/e76957eb944d94553a0c5.jpg" width=100 height=100></a> |
