@@ -140,9 +140,11 @@
 
 # Developers
 
-<h2 align="center">TEAM-BLADE
-</h2>
+<h2 align="center">TEAM-SITHUWA
+
 
 | <a href="https://www.facebook.com/sithum.kalhara.7315?mibextid=ZbWKwL"><img src="https://telegra.ph/file/e76957eb944d94553a0c5.jpg" width=100 height=100></a> |
 |---|
 | **[Sithum Kalhara](https://github.com/Sithuwa)**</br>Founder & Developer</br>*[Sithum Kalhara]* |
+
+</h2>
