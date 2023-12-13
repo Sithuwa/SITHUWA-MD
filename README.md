@@ -149,3 +149,20 @@
 |---|
 | **[Sithum Kalhara](https://github.com/Sithuwa)**</br>Founder & Developer</br>*[Sithum Kalhara]* |
   </p>
+
+
+
+
+```bash
+{
+  "SESSION_ID": "ID-Here",
+  "OWNER_NUMBER": "94xxxxxxxxxx",
+  "OWNER_NAME": "SITHUK KALHARA",
+  "OPENAI_API_KEY": "Paste OpenAI Api Key here",
+  "MONGODB_URI": "mongodb+srv://SithumKalhara:97531@cluster0.iva7dbo.mongodb.net/?retryWrites=true&w=majority",
+  "PACK_AUTHER": "sithu",
+  "PACK_NAME": "Wa-BOT",
+  "PREFIX": "."
+   
+}
+```
