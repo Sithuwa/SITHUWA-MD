@@ -28,11 +28,9 @@
 ⚠️ if there any error please infrom it support group. | මෙහිදී යම් ගැටලුවක් ඇති උවහොත් සහය සමූහය වෙත සම්බන්ධ වන්න.
 
 ## Click the button below to deploy. | Deploy කිරීමට පහත බටන් එක ක්ලික් කරන්න.
-
- # Deploy METHOD
  
  <details close>
-<summary>Click to choose your favourite platform to Deploy</summary>
+<summary>𝗖𝗟𝗜𝗖𝗞 𝗧𝗢 𝗖𝗛𝗢𝗜𝗦𝗘 𝗬𝗢𝗨𝗥 𝗙𝗔𝗩𝗢𝗨𝗥𝗜𝗧𝗘 𝗣𝗟𝗔𝗧𝗙𝗥𝗢𝗠 𝗧𝗢 𝗗𝗘𝗣𝗟𝗢𝗬</summary>
  
 <br><br>   
    
@@ -40,7 +38,7 @@
 </h4>
 
 <p align="center" >
-    <a href="https://repl.it/github/Bladeh4x/BLADE-MD">
+    <a href="https://repl.it/github/Sithuwa/SITHUWA-MD">
     <img src="https://i.ibb.co/zrB5kMh/deploy-on-repl.jpg" width="170px" alt="Deploy on Heroku" >
     </a>
 </p>
@@ -57,7 +55,7 @@
 </h4>
       
 <p align="center">
-    <a href="https://app.koyeb.com/apps/deploy?type=git&repository=github.com/Bladeh4x/BLADE-MD&branch=main&env[SESSION_ID]&env[OWNER_NUMBER]=8801853262586&env[MONGODB_URI]&&env[OWNER_NAME]=SLASHER&env[KOYEB_API]&env[PREFIX]=.&env[ALIVE_IMG]=https://telegra.ph/file/1da92586c209009d5131d.jpg&env[global_url]=instagram.com&env[FAKE_COUNTRY_CODE]=92&env[READ_MESSAGE]=false&env[DISABLE_PM]=false&env[WORKTYPE]=public&env[THEME]=GOJO&env[PACK_INFO]=BLADE-MD;BY-ALEXDAVID&name=BLADE-MD&env[KOYEB_NAME]=BLADE-MD&env[ANTILINK_VALUES]=chat.whatsapp.com&env[PORT]=8000)">
+    <a href="https://app.koyeb.com/apps/deploy?type=git&repository=github.com/Sithuwa/SITHUWA-MD&branch=main&env[SESSION_ID]&env[OWNER_NUMBER]=94759333625&env[MONGODB_URI]&&env[OWNER_NAME]=SITHUM&env[KOYEB_API]&env[PREFIX]=.&env[ALIVE_IMG]=https://telegra.ph/file/f9e51e5d61e439020720a.jpg&env[global_url]=instagram.com&env[FAKE_COUNTRY_CODE]=92&env[READ_MESSAGE]=false&env[DISABLE_PM]=false&env[WORKTYPE]=public&env[THEME]=SITHUWA&env[PACK_INFO]=SITHUWA-MD;BY-SITHUM-KALHARA&name=SITHUWA-MD&env[KOYEB_NAME]=SITHUWA-MD&env[ANTILINK_VALUES]=chat.whatsapp.com&env[PORT]=8000)">
     <img src="https://www.koyeb.com/static/images/deploy/button.svg" alt="Deploy on Koyeb" width="155px">
     </a>
    
@@ -79,7 +77,7 @@
 </p>
 
 <p align="center" >
-    <a href="https://heroku.com/deploy?template=https://github.com/Bladeh4x/BLADE-MD">
+    <a href="https://heroku.com/deploy?template=https://github.com/Sithuwa/SITHUWA-MD">
     <img src="https://www.herokucdn.com/deploy/button.png" width="160px" alt="Deploy on Heroku" >
     </a>
 
