@@ -25,7 +25,9 @@
 
 <div align="left"><a href="https://replit.com/@SithuwaHack/SITHUWA-BOT-MD-V1?v=1"><img src="https://repl.it/badge/github/quiec/whatsasena" width="150" ></a></div>
 
+```bash
 ⚠️ if there any error please infrom it support group. | මෙහිදී යම් ගැටලුවක් ඇති උවහොත් සහය සමූහය වෙත සම්බන්ධ වන්න.
+```
 
 ## Click the button below to deploy. | Deploy කිරීමට පහත බටන් එක ක්ලික් කරන්න.
  
@@ -150,19 +152,3 @@
 | **[Sithum Kalhara](https://github.com/Sithuwa)**</br>Founder & Developer</br>*[Sithum Kalhara]* |
   </p>
 
-
-
-
-```bash
-{
-  "SESSION_ID": "ID-Here",
-  "OWNER_NUMBER": "94xxxxxxxxxx",
-  "OWNER_NAME": "SITHUK KALHARA",
-  "OPENAI_API_KEY": "Paste OpenAI Api Key here",
-  "MONGODB_URI": "mongodb+srv://SithumKalhara:97531@cluster0.iva7dbo.mongodb.net/?retryWrites=true&w=majority",
-  "PACK_AUTHER": "sithu",
-  "PACK_NAME": "Wa-BOT",
-  "PREFIX": "."
-   
-}
-```
