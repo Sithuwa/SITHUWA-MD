@@ -41,12 +41,15 @@
 
 <p align="center" >
     <a href="https://repl.it/github/Sithuwa/SITHUWA-MD">
-    <img src="https://i.ibb.co/zrB5kMh/deploy-on-repl.jpg" width="170px" alt="Deploy on Heroku" >
+    <img src="https://i.ibb.co/zrB5kMh/deploy-on-repl.jpg" width="170px" alt="Deploy on Repl.it" >
     </a>
 </p>
 
 <p align="center" >
-<a href="https://youtu.be/6q7f1RmKaVw?si=aHENSzI1TVcDmlwp"><img alt="YouTube" src="https://img.shields.io/badge/-YouTube%20-lightgrey?style=for-the-badge&logo=YouTube&logoColor=red"/></a>
+<a href="https://youtu.be/6q7f1RmKaVw?si=aHENSzI1TVcDmlwp">
+    <img src="https://ibb.co/Z1rfzC7" width="170px" alt="Deploy on Repl.it" >
+    </a>
+</p>
 
 <p align="center" >
     <br>
