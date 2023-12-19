@@ -45,6 +45,7 @@
     </a>
 </p>
 
+<p align="center" >
 <a href="https://youtu.be/6q7f1RmKaVw?si=aHENSzI1TVcDmlwp"><img alt="YouTube" src="https://img.shields.io/badge/-YouTube%20-lightgrey?style=for-the-badge&logo=YouTube&logoColor=red"/></a>
 
 <p align="center" >
