@@ -47,7 +47,7 @@
 
 <p align="center" >
 <a href="https://youtu.be/6q7f1RmKaVw?si=aHENSzI1TVcDmlwp">
-    <img src="https://ibb.co/Z1rfzC7" width="170px" alt="Deploy on Repl.it" >
+    <img src="https://telegra.ph/file/ae251b53658a5505965ad.png" width="170px" alt="Deploy on Repl.it" >
     </a>
 </p>
 
