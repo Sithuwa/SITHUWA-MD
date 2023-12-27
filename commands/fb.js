@@ -1,3 +1,4 @@
+const {cmd } = require('../lib')
 cmd({
         pattern: "facebook",
 	    alias :  ['fb','fbdl'],
