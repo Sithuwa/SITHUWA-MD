@@ -1,10 +1,12 @@
 {
   "sticker": {},
   "database": {},
-  "game": {},
-  "others": { 
+   "game": {},
+  "others": {
     "vote": []
   },
-  "users": {},
-  "chats": { }
+  "users": {
+  },
+  "chats": {
+  }
 }
