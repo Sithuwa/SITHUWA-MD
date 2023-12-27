@@ -1,4 +1,4 @@
-FROM quay.io/suhailtechinfo/suhail
+FROM quay.io/sampandey001/secktor
 RUN git clone https://github.com/Sithuwa/SITHUWA-MD /root/sithuwa-md
 WORKDIR /root/sithuwa-md/
 RUN npm install
