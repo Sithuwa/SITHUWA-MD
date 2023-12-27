@@ -1,16 +1,16 @@
 {
-               "name": "SITHUWA-MD",
-               "version": "0.0.7",
-               "description": "Multi device whatsapp bot by SITHUWA-MD.",
+               "name": "sithuwa-md",
+               "version": "1.0.5",
+               "description": "Multi device whatsapp bot by Sithuwa.",
                "main": "lib/client.js",
                "type": "commonjs",
                "license": "GPL-3.0",
-               "scripts": {
-                  "start": "pm2 start lib/client.js --deep-monitoring --attach --name sithuwa-md",
-                  "stop": "pm2 stop sithuwa-md"
-               },
-               "author": "sithumkalhara",
-               "dependencies": {
+   "scripts": {
+                "start": "pm2 start lib/client.js --deep-monitoring --attach --name SITHUWA-MD",
+                "stop": "pm2 stop SITHUWA-MD"
+                },
+               "author": "SITHUM-KALHARA",
+              "dependencies": {
                        "@sampandey001/baileys": "latest", 
                        "@adiwajshing/keyed-db": "^0.2.4",
                        "awesome-phonenumber": "^3.3.0",
@@ -30,6 +30,7 @@
                        "mongoose": "^6.2.1",
                        "mumaker": "^1.0.0",
                        "google-it": "^1.6.2",
+                       "google-image-sr": "^1.0.0",
                        "file-type": "^16.5.3",
                        "form-data": "^4.0.0",
                        "ffmpeg": "^0.0.4",
@@ -54,10 +55,40 @@
                        "translatte": "^3.0.1",
                        "util": "^0.12.4",           
                        "secktor-pack": "latest",
+                       "g-i-s": "^2.1.6",
+                       "pornhub.js" : "^1.3.2",
                        "ytdl-secktor": "latest",
+                       "@blackamda/song_video_dl": "latest",
                        "pastebin-js": "latest",
-                       "fb-info-video":"^1.0.2",
-                       "wa-sticker-formatter": "^4.3.2"
+                       "aptoide-scraper": "latest",
+                       "getscreenshot.js": "latest",
+                       "vihangayt-fbdl": "latest",
+                       "mfiredlcore-vihangayt": "latest",
+                       "chatgpt-scraper": "latest",
+                       "@sl-code-lords/openai-chatgpt": "latest",
+                       "@sl-code-lords/text-pro-me": "latest",
+                       "@sl-code-lords/image-library": "^1.0.0",
+                       "@jeve/lyrics-finder" : "^1.0.1",
+                       "@sl-code-lords/esana-news": "latest",
+                       "@sl-code-lords/wabetainfo": "latest",
+                       "@sl-code-lords/si-subdl": "latest",
+                       "@sl-code-lords/openai-chatgpt": "latest",
+                       "hirunews-scraper": "latest",
+                       "sirasa-news": "latest",
+                       "tech-news-scraper": "latest",
+                       "ios-news": "latest",
+                       "nima-threads-dl-api": "latest",
+                       "@sl-code-lords/movie-dl": "^1.0.2",
+                       "@sl-code-lords/youtube-dl": "^1.0.2",
+                       "@bochilteam/scraper-downloader": "latest",
+                       "@saipulanuar/tiktok-scraper-ts": "latest",
+                       "@xaviabot/fb-downloader": "latest",
+                       "api-dylux": "latest",
+                       "@xct007/frieren-scraper": "latest",
+                       "fouadwa-scraper": "latest",
+                       "fb-info-video": "latest",
+                       "wa-sticker-formatter": "^4.3.2",
+                       "wa_set_pkg":"1.0.1"
                       },
                   "directories": {
                        "lib": "lib",
@@ -75,4 +106,3 @@
                   },
                  "homepage": "https://github.com/Sithuwa/SITHUWA-MD#readme"
                   }
- 
