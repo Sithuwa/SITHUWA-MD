@@ -21,10 +21,10 @@ const cheerio = require('cheerio')
 const axios= require('axios');
 
     cmd({
-        kingcmd: "facebook",
-        shortcut: ["fb","fbdl"],
-        kingclass: "downloader",
-        infocmd: "downloads facebook videos",
+        pattern: "facebook",
+        alias:["fb","fbdl"],
+        category: "downloader",
+        desc: "downloads facebook videos",
         use: "paste fb video link"
         },
        async(Void, citel, text) => {
@@ -61,10 +61,10 @@ async function tiktokdl (url) {
 
 
 cmd({
-            kingcmd: "tiktok",
-	    shortcut :  ['tt','ttdl'],
-            infocmd: "Downloads Tiktok Videos Via Url.",
-            kingclass: "downloader",
+            pattern: "tiktok",
+	    alias:['tt','ttdl'],
+            desc: "Downloads Tiktok Videos Via Url.",
+            category: "downloader",
             use: "paste tiktok video link",
 },
 
