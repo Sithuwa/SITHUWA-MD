@@ -73,7 +73,8 @@ cmd({
     const { thumb,lyrics,title,artist } = res.result, tbl= "```", tcl ="*_", tdl = "_*";
         const msg = lang.LYRICS.RESPONCE.format(tcl+artist+tdl,tcl+title+tdl)+`\n\n${tbl}${lyrics}${tbl}`;
         return await citel.client.sendMessage(citel.from, {
-            image: {url : thumb},
+            image: {
+             url : thumb},
             caption :msg,
         }, {
             quoted: citel,
