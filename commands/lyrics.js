@@ -23,6 +23,6 @@ cmd({
             image: {url : thumb},
             caption :msg
         }, {
-            quoted: m
+            quoted: citel
         })
 });
