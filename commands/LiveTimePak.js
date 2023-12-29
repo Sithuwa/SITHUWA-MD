@@ -10,7 +10,7 @@
  **/
 
 const { cmd, botpic, Config, tlang,getBuffer, prefix } = require('../lib')
-const hrs = new Date().getHours({ timeZone: 'Asia/Karachi' })
+const hrs = new Date().getHours({ timeZone: 'Asia/Colombo' })
 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 
 
@@ -23,7 +23,7 @@ cmd({
             use: '<group link.>',
         },
         async(Void, citel, text,{ isCreator }) => {
-var time = new Date().toLocaleString('HI', { timeZone: 'Asia/Karachi' }).split(' ')[1]
+var time = new Date().toLocaleString('HI', { timeZone: 'Asia/Colombo' }).split(' ')[1]
 var date = new Date().toLocaleDateString(get_localized_date)
 var wish = ''
 if (hrs < 12) wish = 'ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ ⛅'
