@@ -58,31 +58,6 @@ cmd({
         }
     )
 
-//---------------------------------------------------------------------------
-cmd({
-    pattern: 'lyrics',
-    desc: "LYRICS.DESC",
-    category: "search"
-    use: '<text>',
-    filename: __filename,
-   },
- async(Void, citel, text) => {
-    if (!text) return citel.reply_message.text;
-    const res = await fetchJson(config.BASE_URL+'api/lyrics?text='+match);
-    if(!res.status)  citel.send(lang.BASE.ERROR.format("Not Found"));
-    if(!res.result)  citel.send(lang.BASE.ERROR.format(",try again"));
-    const { thumb,lyrics,title,artist } = res.result, tbl= "```", tcl ="*_", tdl = "_*";
-        const msg = lang.LYRICS.RESPONCE.format(tcl+artist+tdl,tcl+title+tdl)+`\n\n${tbl}${lyrics}${tbl}`;
-        return await Void.sendMessage(citel.chat, {
-            image: {url : thumb,},
-            caption : msg,},
-        }, {
-            quoted: citel,
-        });
-   }
-)
-
-
     //---------------------------------------------------------------------------
 cmd({
             pattern: "weather",
