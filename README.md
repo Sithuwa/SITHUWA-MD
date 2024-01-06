@@ -23,7 +23,7 @@
 
 ## Click the button below to get the QR code. | QR කේතය ලබාගැනීමට පහත බටන් එක ක්ලික් කරන්න.
 
-<div align="left"><a href="https://replit.com/@SithumKalhara/SITHUWA-MD"><img src="https://repl.it/badge/github/quiec/whatsasena" width="150" ></a></div>
+<div align="left"><a href="https://replit.com/@SithumKalhara/SITHUWA-MD#Console"><img src="https://repl.it/badge/github/quiec/whatsasena" width="150" ></a></div>
 
 ```bash
 ⚠️ if there any error please infrom it support group. | මෙහිදී යම් ගැටලුවක් ඇති උවහොත් සහය සමූහය වෙත සම්බන්ධ වන්න.
