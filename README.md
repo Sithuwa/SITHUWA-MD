@@ -23,7 +23,7 @@
 
 ## Click the button below to get the QR code. | QR කේතය ලබාගැනීමට පහත බටන් එක ක්ලික් කරන්න.
 
-<div align="left"><a href="https://sithu-web-f87bb3eb3162.herokuapp.com/"><img src="https://repl.it/badge/github/quiec/whatsasena" width="150" ></a></div>
+<a href='https://sithu-web-f87bb3eb3162.herokuapp.com/' target="_blank"><img alt='SCAN QR' src='https://img.shields.io/badge/Scan_qr-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=black&color=black'/></a>
 
 ```bash
 ⚠️ if there any error please infrom it support group. | මෙහිදී යම් ගැටලුවක් ඇති උවහොත් සහය සමූහය වෙත සම්බන්ධ වන්න.
